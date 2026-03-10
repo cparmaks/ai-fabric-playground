@@ -1,0 +1,1957 @@
+{
+  "name": "ai-fabric-singlestripe",
+  "type": "clab",
+  "clab": {
+    "config": {
+      "prefix": "",
+      "mgmt": {
+        "network": "mgmt-net2",
+        "bridge": "br-214fce5f32c5",
+        "ipv4-subnet": "172.16.2.0/24",
+        "ipv4-gw": "172.16.2.1",
+        "external-access": true
+      }
+    }
+  },
+  "ssh-pub-keys": [],
+  "nodes": {
+    "singlestripe-gpu-svr-01": {
+      "index": "0",
+      "shortname": "singlestripe-gpu-svr-01",
+      "longname": "singlestripe-gpu-svr-01",
+      "fqdn": "singlestripe-gpu-svr-01.ai-fabric-singlestripe.io",
+      "group": "AI GPU Server01",
+      "labdir": "/root/ai-fabric-kits-EDA_25.12/Medium-Kit/clab-ai-fabric-singlestripe/singlestripe-gpu-svr-01",
+      "kind": "linux",
+      "image": "ghcr.io/srl-labs/network-multitool",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.16.2.21",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-214fce5f32c5",
+        "clab-node-group": "AI GPU Server01",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/root/ai-fabric-kits-EDA_25.12/Medium-Kit/clab-ai-fabric-singlestripe/singlestripe-gpu-svr-01",
+        "clab-node-longname": "singlestripe-gpu-svr-01",
+        "clab-node-name": "singlestripe-gpu-svr-01",
+        "clab-node-type": "linux",
+        "clab-owner": "root",
+        "clab-topo-file": "/root/ai-fabric-kits-EDA_25.12/Medium-Kit/ai-fabric-singlestripe.yaml",
+        "containerlab": "ai-fabric-singlestripe",
+        "graph-group": "GPU Servers",
+        "graph-groupLabelPos": "bottom-center",
+        "graph-level": "4",
+        "graph-posX": "-100",
+        "graph-posY": "500",
+        "topoViewer-group": "GPU Servers",
+        "topoViewer-groupLevel": "4",
+        "topoViewer-role": "gpu"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 1180,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 80,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 8080,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 11443,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "singlestripe-gpu-svr-02": {
+      "index": "1",
+      "shortname": "singlestripe-gpu-svr-02",
+      "longname": "singlestripe-gpu-svr-02",
+      "fqdn": "singlestripe-gpu-svr-02.ai-fabric-singlestripe.io",
+      "group": "AI GPU Server02",
+      "labdir": "/root/ai-fabric-kits-EDA_25.12/Medium-Kit/clab-ai-fabric-singlestripe/singlestripe-gpu-svr-02",
+      "kind": "linux",
+      "image": "ghcr.io/srl-labs/network-multitool",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.16.2.22",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-214fce5f32c5",
+        "clab-node-group": "AI GPU Server02",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/root/ai-fabric-kits-EDA_25.12/Medium-Kit/clab-ai-fabric-singlestripe/singlestripe-gpu-svr-02",
+        "clab-node-longname": "singlestripe-gpu-svr-02",
+        "clab-node-name": "singlestripe-gpu-svr-02",
+        "clab-node-type": "linux",
+        "clab-owner": "root",
+        "clab-topo-file": "/root/ai-fabric-kits-EDA_25.12/Medium-Kit/ai-fabric-singlestripe.yaml",
+        "containerlab": "ai-fabric-singlestripe",
+        "graph-group": "GPU Servers",
+        "graph-groupLabelPos": "bottom-center",
+        "graph-level": "4",
+        "graph-posX": "0",
+        "graph-posY": "500",
+        "topoViewer-group": "GPU Servers",
+        "topoViewer-groupLevel": "4",
+        "topoViewer-role": "gpu"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 80,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 8080,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 11443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 1180,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 22,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "singlestripe-gpu-svr-03": {
+      "index": "2",
+      "shortname": "singlestripe-gpu-svr-03",
+      "longname": "singlestripe-gpu-svr-03",
+      "fqdn": "singlestripe-gpu-svr-03.ai-fabric-singlestripe.io",
+      "group": "AI GPU Server03",
+      "labdir": "/root/ai-fabric-kits-EDA_25.12/Medium-Kit/clab-ai-fabric-singlestripe/singlestripe-gpu-svr-03",
+      "kind": "linux",
+      "image": "ghcr.io/srl-labs/network-multitool",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.16.2.23",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-214fce5f32c5",
+        "clab-node-group": "AI GPU Server03",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/root/ai-fabric-kits-EDA_25.12/Medium-Kit/clab-ai-fabric-singlestripe/singlestripe-gpu-svr-03",
+        "clab-node-longname": "singlestripe-gpu-svr-03",
+        "clab-node-name": "singlestripe-gpu-svr-03",
+        "clab-node-type": "linux",
+        "clab-owner": "root",
+        "clab-topo-file": "/root/ai-fabric-kits-EDA_25.12/Medium-Kit/ai-fabric-singlestripe.yaml",
+        "containerlab": "ai-fabric-singlestripe",
+        "graph-group": "GPU Servers",
+        "graph-groupLabelPos": "bottom-center",
+        "graph-level": "4",
+        "graph-posX": "100",
+        "graph-posY": "500",
+        "topoViewer-group": "GPU Servers",
+        "topoViewer-groupLevel": "4",
+        "topoViewer-role": "gpu"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 80,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 8080,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 11443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 1180,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 443,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "singlestripe-gpu-svr-04": {
+      "index": "3",
+      "shortname": "singlestripe-gpu-svr-04",
+      "longname": "singlestripe-gpu-svr-04",
+      "fqdn": "singlestripe-gpu-svr-04.ai-fabric-singlestripe.io",
+      "group": "AI GPU Server04",
+      "labdir": "/root/ai-fabric-kits-EDA_25.12/Medium-Kit/clab-ai-fabric-singlestripe/singlestripe-gpu-svr-04",
+      "kind": "linux",
+      "image": "ghcr.io/srl-labs/network-multitool",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.16.2.24",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-214fce5f32c5",
+        "clab-node-group": "AI GPU Server04",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/root/ai-fabric-kits-EDA_25.12/Medium-Kit/clab-ai-fabric-singlestripe/singlestripe-gpu-svr-04",
+        "clab-node-longname": "singlestripe-gpu-svr-04",
+        "clab-node-name": "singlestripe-gpu-svr-04",
+        "clab-node-type": "linux",
+        "clab-owner": "root",
+        "clab-topo-file": "/root/ai-fabric-kits-EDA_25.12/Medium-Kit/ai-fabric-singlestripe.yaml",
+        "containerlab": "ai-fabric-singlestripe",
+        "graph-group": "GPU Servers",
+        "graph-groupLabelPos": "bottom-center",
+        "graph-level": "4",
+        "graph-posX": "200",
+        "graph-posY": "500",
+        "topoViewer-group": "GPU Servers",
+        "topoViewer-groupLevel": "4",
+        "topoViewer-role": "gpu"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 11443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 1180,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 80,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 8080,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "singlestripe-gpu-svr-05": {
+      "index": "4",
+      "shortname": "singlestripe-gpu-svr-05",
+      "longname": "singlestripe-gpu-svr-05",
+      "fqdn": "singlestripe-gpu-svr-05.ai-fabric-singlestripe.io",
+      "group": "AI GPU Server05",
+      "labdir": "/root/ai-fabric-kits-EDA_25.12/Medium-Kit/clab-ai-fabric-singlestripe/singlestripe-gpu-svr-05",
+      "kind": "linux",
+      "image": "ghcr.io/srl-labs/network-multitool",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.16.2.25",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-214fce5f32c5",
+        "clab-node-group": "AI GPU Server05",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/root/ai-fabric-kits-EDA_25.12/Medium-Kit/clab-ai-fabric-singlestripe/singlestripe-gpu-svr-05",
+        "clab-node-longname": "singlestripe-gpu-svr-05",
+        "clab-node-name": "singlestripe-gpu-svr-05",
+        "clab-node-type": "linux",
+        "clab-owner": "root",
+        "clab-topo-file": "/root/ai-fabric-kits-EDA_25.12/Medium-Kit/ai-fabric-singlestripe.yaml",
+        "containerlab": "ai-fabric-singlestripe",
+        "graph-group": "GPU Servers",
+        "graph-groupLabelPos": "bottom-center",
+        "graph-level": "4",
+        "graph-posX": "300",
+        "graph-posY": "500",
+        "topoViewer-group": "GPU Servers",
+        "topoViewer-groupLevel": "4",
+        "topoViewer-role": "gpu"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 80,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 8080,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 11443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 1180,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 22,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "singlestripe-gpu-svr-06": {
+      "index": "5",
+      "shortname": "singlestripe-gpu-svr-06",
+      "longname": "singlestripe-gpu-svr-06",
+      "fqdn": "singlestripe-gpu-svr-06.ai-fabric-singlestripe.io",
+      "group": "AI GPU Server06",
+      "labdir": "/root/ai-fabric-kits-EDA_25.12/Medium-Kit/clab-ai-fabric-singlestripe/singlestripe-gpu-svr-06",
+      "kind": "linux",
+      "image": "ghcr.io/srl-labs/network-multitool",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.16.2.26",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-214fce5f32c5",
+        "clab-node-group": "AI GPU Server06",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/root/ai-fabric-kits-EDA_25.12/Medium-Kit/clab-ai-fabric-singlestripe/singlestripe-gpu-svr-06",
+        "clab-node-longname": "singlestripe-gpu-svr-06",
+        "clab-node-name": "singlestripe-gpu-svr-06",
+        "clab-node-type": "linux",
+        "clab-owner": "root",
+        "clab-topo-file": "/root/ai-fabric-kits-EDA_25.12/Medium-Kit/ai-fabric-singlestripe.yaml",
+        "containerlab": "ai-fabric-singlestripe",
+        "graph-group": "GPU Servers",
+        "graph-groupLabelPos": "bottom-center",
+        "graph-level": "4",
+        "graph-posX": "400",
+        "graph-posY": "500",
+        "topoViewer-group": "GPU Servers",
+        "topoViewer-groupLevel": "4",
+        "topoViewer-role": "gpu"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 11443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 1180,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 80,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 8080,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "singlestripe-gpu-svr-07": {
+      "index": "6",
+      "shortname": "singlestripe-gpu-svr-07",
+      "longname": "singlestripe-gpu-svr-07",
+      "fqdn": "singlestripe-gpu-svr-07.ai-fabric-singlestripe.io",
+      "group": "AI GPU Server07",
+      "labdir": "/root/ai-fabric-kits-EDA_25.12/Medium-Kit/clab-ai-fabric-singlestripe/singlestripe-gpu-svr-07",
+      "kind": "linux",
+      "image": "ghcr.io/srl-labs/network-multitool",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.16.2.27",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-214fce5f32c5",
+        "clab-node-group": "AI GPU Server07",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/root/ai-fabric-kits-EDA_25.12/Medium-Kit/clab-ai-fabric-singlestripe/singlestripe-gpu-svr-07",
+        "clab-node-longname": "singlestripe-gpu-svr-07",
+        "clab-node-name": "singlestripe-gpu-svr-07",
+        "clab-node-type": "linux",
+        "clab-owner": "root",
+        "clab-topo-file": "/root/ai-fabric-kits-EDA_25.12/Medium-Kit/ai-fabric-singlestripe.yaml",
+        "containerlab": "ai-fabric-singlestripe",
+        "graph-group": "GPU Servers",
+        "graph-groupLabelPos": "bottom-center",
+        "graph-level": "4",
+        "graph-posX": "500",
+        "graph-posY": "500",
+        "topoViewer-group": "GPU Servers",
+        "topoViewer-groupLevel": "4",
+        "topoViewer-role": "gpu"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 11443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 1180,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 80,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 8080,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "singlestripe-gpu-svr-08": {
+      "index": "7",
+      "shortname": "singlestripe-gpu-svr-08",
+      "longname": "singlestripe-gpu-svr-08",
+      "fqdn": "singlestripe-gpu-svr-08.ai-fabric-singlestripe.io",
+      "group": "AI GPU Server08",
+      "labdir": "/root/ai-fabric-kits-EDA_25.12/Medium-Kit/clab-ai-fabric-singlestripe/singlestripe-gpu-svr-08",
+      "kind": "linux",
+      "image": "ghcr.io/srl-labs/network-multitool",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.16.2.28",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-214fce5f32c5",
+        "clab-node-group": "AI GPU Server08",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/root/ai-fabric-kits-EDA_25.12/Medium-Kit/clab-ai-fabric-singlestripe/singlestripe-gpu-svr-08",
+        "clab-node-longname": "singlestripe-gpu-svr-08",
+        "clab-node-name": "singlestripe-gpu-svr-08",
+        "clab-node-type": "linux",
+        "clab-owner": "root",
+        "clab-topo-file": "/root/ai-fabric-kits-EDA_25.12/Medium-Kit/ai-fabric-singlestripe.yaml",
+        "containerlab": "ai-fabric-singlestripe",
+        "graph-group": "GPU Servers",
+        "graph-groupLabelPos": "bottom-center",
+        "graph-level": "4",
+        "graph-posX": "600",
+        "graph-posY": "500",
+        "topoViewer-group": "GPU Servers",
+        "topoViewer-groupLevel": "4",
+        "topoViewer-role": "gpu"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 80,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 8080,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 11443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 1180,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 443,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "singlestripe-leaf-01": {
+      "index": "8",
+      "shortname": "singlestripe-leaf-01",
+      "longname": "singlestripe-leaf-01",
+      "fqdn": "singlestripe-leaf-01.ai-fabric-singlestripe.io",
+      "group": "",
+      "labdir": "/root/ai-fabric-kits-EDA_25.12/Medium-Kit/clab-ai-fabric-singlestripe/singlestripe-leaf-01",
+      "kind": "nokia_srlinux",
+      "image": "ghcr.io/nokia/srlinux:25.10.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.16.2.11",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "1a:cf:08:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-214fce5f32c5",
+        "clab-node-group": "",
+        "clab-node-kind": "nokia_srlinux",
+        "clab-node-lab-dir": "/root/ai-fabric-kits-EDA_25.12/Medium-Kit/clab-ai-fabric-singlestripe/singlestripe-leaf-01",
+        "clab-node-longname": "singlestripe-leaf-01",
+        "clab-node-name": "singlestripe-leaf-01",
+        "clab-node-type": "ixrh4",
+        "clab-owner": "root",
+        "clab-topo-file": "/root/ai-fabric-kits-EDA_25.12/Medium-Kit/ai-fabric-singlestripe.yaml",
+        "containerlab": "ai-fabric-singlestripe",
+        "graph-group": "Data Center Stripe01",
+        "graph-groupLabelPos": "top-center",
+        "graph-level": "2",
+        "graph-posX": "-100",
+        "graph-posY": "258",
+        "topoViewer-group": "Data Center Stripe01",
+        "topoViewer-groupLevel": "2",
+        "topoViewer-role": "leaf"
+      },
+      "port-bindings": [
+      ]
+    },
+    "singlestripe-leaf-02": {
+      "index": "9",
+      "shortname": "singlestripe-leaf-02",
+      "longname": "singlestripe-leaf-02",
+      "fqdn": "singlestripe-leaf-02.ai-fabric-singlestripe.io",
+      "group": "",
+      "labdir": "/root/ai-fabric-kits-EDA_25.12/Medium-Kit/clab-ai-fabric-singlestripe/singlestripe-leaf-02",
+      "kind": "nokia_srlinux",
+      "image": "ghcr.io/nokia/srlinux:25.10.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.16.2.12",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "1a:61:09:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-214fce5f32c5",
+        "clab-node-group": "",
+        "clab-node-kind": "nokia_srlinux",
+        "clab-node-lab-dir": "/root/ai-fabric-kits-EDA_25.12/Medium-Kit/clab-ai-fabric-singlestripe/singlestripe-leaf-02",
+        "clab-node-longname": "singlestripe-leaf-02",
+        "clab-node-name": "singlestripe-leaf-02",
+        "clab-node-type": "ixrh4",
+        "clab-owner": "root",
+        "clab-topo-file": "/root/ai-fabric-kits-EDA_25.12/Medium-Kit/ai-fabric-singlestripe.yaml",
+        "containerlab": "ai-fabric-singlestripe",
+        "graph-group": "Data Center Stripe01",
+        "graph-groupLabelPos": "top-center",
+        "graph-level": "2",
+        "graph-posX": "0",
+        "graph-posY": "258",
+        "topoViewer-group": "Data Center Stripe01",
+        "topoViewer-groupLevel": "2",
+        "topoViewer-role": "leaf"
+      },
+      "port-bindings": [
+      ]
+    },
+    "singlestripe-leaf-03": {
+      "index": "10",
+      "shortname": "singlestripe-leaf-03",
+      "longname": "singlestripe-leaf-03",
+      "fqdn": "singlestripe-leaf-03.ai-fabric-singlestripe.io",
+      "group": "",
+      "labdir": "/root/ai-fabric-kits-EDA_25.12/Medium-Kit/clab-ai-fabric-singlestripe/singlestripe-leaf-03",
+      "kind": "nokia_srlinux",
+      "image": "ghcr.io/nokia/srlinux:25.10.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.16.2.13",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "1a:67:0a:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-214fce5f32c5",
+        "clab-node-group": "",
+        "clab-node-kind": "nokia_srlinux",
+        "clab-node-lab-dir": "/root/ai-fabric-kits-EDA_25.12/Medium-Kit/clab-ai-fabric-singlestripe/singlestripe-leaf-03",
+        "clab-node-longname": "singlestripe-leaf-03",
+        "clab-node-name": "singlestripe-leaf-03",
+        "clab-node-type": "ixrh4",
+        "clab-owner": "root",
+        "clab-topo-file": "/root/ai-fabric-kits-EDA_25.12/Medium-Kit/ai-fabric-singlestripe.yaml",
+        "containerlab": "ai-fabric-singlestripe",
+        "graph-group": "Data Center Stripe01",
+        "graph-groupLabelPos": "top-center",
+        "graph-level": "2",
+        "graph-posX": "100",
+        "graph-posY": "258",
+        "topoViewer-group": "Data Center Stripe01",
+        "topoViewer-groupLevel": "2",
+        "topoViewer-role": "leaf"
+      },
+      "port-bindings": [
+      ]
+    },
+    "singlestripe-leaf-04": {
+      "index": "11",
+      "shortname": "singlestripe-leaf-04",
+      "longname": "singlestripe-leaf-04",
+      "fqdn": "singlestripe-leaf-04.ai-fabric-singlestripe.io",
+      "group": "",
+      "labdir": "/root/ai-fabric-kits-EDA_25.12/Medium-Kit/clab-ai-fabric-singlestripe/singlestripe-leaf-04",
+      "kind": "nokia_srlinux",
+      "image": "ghcr.io/nokia/srlinux:25.10.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.16.2.14",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "1a:f8:0b:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-214fce5f32c5",
+        "clab-node-group": "",
+        "clab-node-kind": "nokia_srlinux",
+        "clab-node-lab-dir": "/root/ai-fabric-kits-EDA_25.12/Medium-Kit/clab-ai-fabric-singlestripe/singlestripe-leaf-04",
+        "clab-node-longname": "singlestripe-leaf-04",
+        "clab-node-name": "singlestripe-leaf-04",
+        "clab-node-type": "ixrh4",
+        "clab-owner": "root",
+        "clab-topo-file": "/root/ai-fabric-kits-EDA_25.12/Medium-Kit/ai-fabric-singlestripe.yaml",
+        "containerlab": "ai-fabric-singlestripe",
+        "graph-group": "Data Center Stripe01",
+        "graph-groupLabelPos": "top-center",
+        "graph-level": "2",
+        "graph-posX": "200",
+        "graph-posY": "258",
+        "topoViewer-group": "Data Center Stripe01",
+        "topoViewer-groupLevel": "2",
+        "topoViewer-role": "leaf"
+      },
+      "port-bindings": [
+      ]
+    },
+    "singlestripe-leaf-05": {
+      "index": "12",
+      "shortname": "singlestripe-leaf-05",
+      "longname": "singlestripe-leaf-05",
+      "fqdn": "singlestripe-leaf-05.ai-fabric-singlestripe.io",
+      "group": "",
+      "labdir": "/root/ai-fabric-kits-EDA_25.12/Medium-Kit/clab-ai-fabric-singlestripe/singlestripe-leaf-05",
+      "kind": "nokia_srlinux",
+      "image": "ghcr.io/nokia/srlinux:25.10.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.16.2.15",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "1a:03:0c:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-214fce5f32c5",
+        "clab-node-group": "",
+        "clab-node-kind": "nokia_srlinux",
+        "clab-node-lab-dir": "/root/ai-fabric-kits-EDA_25.12/Medium-Kit/clab-ai-fabric-singlestripe/singlestripe-leaf-05",
+        "clab-node-longname": "singlestripe-leaf-05",
+        "clab-node-name": "singlestripe-leaf-05",
+        "clab-node-type": "ixrh4",
+        "clab-owner": "root",
+        "clab-topo-file": "/root/ai-fabric-kits-EDA_25.12/Medium-Kit/ai-fabric-singlestripe.yaml",
+        "containerlab": "ai-fabric-singlestripe",
+        "graph-group": "Data Center Stripe01",
+        "graph-groupLabelPos": "top-center",
+        "graph-level": "2",
+        "graph-posX": "300",
+        "graph-posY": "258",
+        "topoViewer-group": "Data Center Stripe01",
+        "topoViewer-groupLevel": "2",
+        "topoViewer-role": "leaf"
+      },
+      "port-bindings": [
+      ]
+    },
+    "singlestripe-leaf-06": {
+      "index": "13",
+      "shortname": "singlestripe-leaf-06",
+      "longname": "singlestripe-leaf-06",
+      "fqdn": "singlestripe-leaf-06.ai-fabric-singlestripe.io",
+      "group": "",
+      "labdir": "/root/ai-fabric-kits-EDA_25.12/Medium-Kit/clab-ai-fabric-singlestripe/singlestripe-leaf-06",
+      "kind": "nokia_srlinux",
+      "image": "ghcr.io/nokia/srlinux:25.10.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.16.2.16",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "1a:26:0d:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-214fce5f32c5",
+        "clab-node-group": "",
+        "clab-node-kind": "nokia_srlinux",
+        "clab-node-lab-dir": "/root/ai-fabric-kits-EDA_25.12/Medium-Kit/clab-ai-fabric-singlestripe/singlestripe-leaf-06",
+        "clab-node-longname": "singlestripe-leaf-06",
+        "clab-node-name": "singlestripe-leaf-06",
+        "clab-node-type": "ixrh4",
+        "clab-owner": "root",
+        "clab-topo-file": "/root/ai-fabric-kits-EDA_25.12/Medium-Kit/ai-fabric-singlestripe.yaml",
+        "containerlab": "ai-fabric-singlestripe",
+        "graph-group": "Data Center Stripe01",
+        "graph-groupLabelPos": "top-center",
+        "graph-level": "2",
+        "graph-posX": "400",
+        "graph-posY": "258",
+        "topoViewer-group": "Data Center Stripe01",
+        "topoViewer-groupLevel": "2",
+        "topoViewer-role": "leaf"
+      },
+      "port-bindings": [
+      ]
+    },
+    "singlestripe-leaf-07": {
+      "index": "14",
+      "shortname": "singlestripe-leaf-07",
+      "longname": "singlestripe-leaf-07",
+      "fqdn": "singlestripe-leaf-07.ai-fabric-singlestripe.io",
+      "group": "",
+      "labdir": "/root/ai-fabric-kits-EDA_25.12/Medium-Kit/clab-ai-fabric-singlestripe/singlestripe-leaf-07",
+      "kind": "nokia_srlinux",
+      "image": "ghcr.io/nokia/srlinux:25.10.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.16.2.17",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "1a:30:0e:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-214fce5f32c5",
+        "clab-node-group": "",
+        "clab-node-kind": "nokia_srlinux",
+        "clab-node-lab-dir": "/root/ai-fabric-kits-EDA_25.12/Medium-Kit/clab-ai-fabric-singlestripe/singlestripe-leaf-07",
+        "clab-node-longname": "singlestripe-leaf-07",
+        "clab-node-name": "singlestripe-leaf-07",
+        "clab-node-type": "ixrh4",
+        "clab-owner": "root",
+        "clab-topo-file": "/root/ai-fabric-kits-EDA_25.12/Medium-Kit/ai-fabric-singlestripe.yaml",
+        "containerlab": "ai-fabric-singlestripe",
+        "graph-group": "Data Center Stripe01",
+        "graph-groupLabelPos": "top-center",
+        "graph-level": "2",
+        "graph-posX": "500",
+        "graph-posY": "258",
+        "topoViewer-group": "Data Center Stripe01",
+        "topoViewer-groupLevel": "2",
+        "topoViewer-role": "leaf"
+      },
+      "port-bindings": [
+      ]
+    },
+    "singlestripe-leaf-08": {
+      "index": "15",
+      "shortname": "singlestripe-leaf-08",
+      "longname": "singlestripe-leaf-08",
+      "fqdn": "singlestripe-leaf-08.ai-fabric-singlestripe.io",
+      "group": "",
+      "labdir": "/root/ai-fabric-kits-EDA_25.12/Medium-Kit/clab-ai-fabric-singlestripe/singlestripe-leaf-08",
+      "kind": "nokia_srlinux",
+      "image": "ghcr.io/nokia/srlinux:25.10.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.16.2.18",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "1a:c4:0f:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-214fce5f32c5",
+        "clab-node-group": "",
+        "clab-node-kind": "nokia_srlinux",
+        "clab-node-lab-dir": "/root/ai-fabric-kits-EDA_25.12/Medium-Kit/clab-ai-fabric-singlestripe/singlestripe-leaf-08",
+        "clab-node-longname": "singlestripe-leaf-08",
+        "clab-node-name": "singlestripe-leaf-08",
+        "clab-node-type": "ixrh4",
+        "clab-owner": "root",
+        "clab-topo-file": "/root/ai-fabric-kits-EDA_25.12/Medium-Kit/ai-fabric-singlestripe.yaml",
+        "containerlab": "ai-fabric-singlestripe",
+        "graph-group": "Data Center Stripe01",
+        "graph-groupLabelPos": "top-center",
+        "graph-level": "2",
+        "graph-posX": "600",
+        "graph-posY": "258",
+        "topoViewer-group": "Data Center Stripe01",
+        "topoViewer-groupLevel": "2",
+        "topoViewer-role": "leaf"
+      },
+      "port-bindings": [
+      ]
+    }
+  },
+  "links": [
+    {
+      "endpoints": {
+        "a": {
+          "node": "singlestripe-leaf-01",
+          "interface": "e1-1",
+          "mac": "aa:c1:ab:8e:ea:9a",
+          "peer": "z"
+        },
+        "z": {
+          "node": "singlestripe-gpu-svr-01",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:64:64:c0",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "singlestripe-leaf-01",
+          "interface": "e1-2",
+          "mac": "aa:c1:ab:85:d6:65",
+          "peer": "z"
+        },
+        "z": {
+          "node": "singlestripe-gpu-svr-02",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:aa:90:9e",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "singlestripe-leaf-01",
+          "interface": "e1-3",
+          "mac": "aa:c1:ab:7e:51:0e",
+          "peer": "z"
+        },
+        "z": {
+          "node": "singlestripe-gpu-svr-03",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:cc:21:e4",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "singlestripe-leaf-01",
+          "interface": "e1-4",
+          "mac": "aa:c1:ab:35:df:95",
+          "peer": "z"
+        },
+        "z": {
+          "node": "singlestripe-gpu-svr-04",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:8f:cb:a9",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "singlestripe-leaf-01",
+          "interface": "e1-5",
+          "mac": "aa:c1:ab:31:50:e4",
+          "peer": "z"
+        },
+        "z": {
+          "node": "singlestripe-gpu-svr-05",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:a7:f1:08",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "singlestripe-leaf-01",
+          "interface": "e1-6",
+          "mac": "aa:c1:ab:27:4b:93",
+          "peer": "z"
+        },
+        "z": {
+          "node": "singlestripe-gpu-svr-06",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:26:07:7b",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "singlestripe-leaf-01",
+          "interface": "e1-7",
+          "mac": "aa:c1:ab:d8:c6:19",
+          "peer": "z"
+        },
+        "z": {
+          "node": "singlestripe-gpu-svr-07",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:1c:8e:f6",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "singlestripe-leaf-01",
+          "interface": "e1-8",
+          "mac": "aa:c1:ab:f1:fe:5f",
+          "peer": "z"
+        },
+        "z": {
+          "node": "singlestripe-gpu-svr-08",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:0b:e9:55",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "singlestripe-leaf-02",
+          "interface": "e1-1",
+          "mac": "aa:c1:ab:36:08:e8",
+          "peer": "z"
+        },
+        "z": {
+          "node": "singlestripe-gpu-svr-01",
+          "interface": "eth2",
+          "mac": "aa:c1:ab:3b:0d:62",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "singlestripe-leaf-02",
+          "interface": "e1-2",
+          "mac": "aa:c1:ab:bb:25:c8",
+          "peer": "z"
+        },
+        "z": {
+          "node": "singlestripe-gpu-svr-02",
+          "interface": "eth2",
+          "mac": "aa:c1:ab:2f:e8:b6",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "singlestripe-leaf-02",
+          "interface": "e1-3",
+          "mac": "aa:c1:ab:c5:36:55",
+          "peer": "z"
+        },
+        "z": {
+          "node": "singlestripe-gpu-svr-03",
+          "interface": "eth2",
+          "mac": "aa:c1:ab:dd:a0:db",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "singlestripe-leaf-02",
+          "interface": "e1-4",
+          "mac": "aa:c1:ab:b3:e3:8c",
+          "peer": "z"
+        },
+        "z": {
+          "node": "singlestripe-gpu-svr-04",
+          "interface": "eth2",
+          "mac": "aa:c1:ab:88:35:d2",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "singlestripe-leaf-02",
+          "interface": "e1-5",
+          "mac": "aa:c1:ab:3e:85:ff",
+          "peer": "z"
+        },
+        "z": {
+          "node": "singlestripe-gpu-svr-05",
+          "interface": "eth2",
+          "mac": "aa:c1:ab:9b:8d:74",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "singlestripe-leaf-02",
+          "interface": "e1-6",
+          "mac": "aa:c1:ab:9d:9e:81",
+          "peer": "z"
+        },
+        "z": {
+          "node": "singlestripe-gpu-svr-06",
+          "interface": "eth2",
+          "mac": "aa:c1:ab:a1:da:8a",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "singlestripe-leaf-02",
+          "interface": "e1-7",
+          "mac": "aa:c1:ab:80:2e:92",
+          "peer": "z"
+        },
+        "z": {
+          "node": "singlestripe-gpu-svr-07",
+          "interface": "eth2",
+          "mac": "aa:c1:ab:ae:6a:68",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "singlestripe-leaf-02",
+          "interface": "e1-8",
+          "mac": "aa:c1:ab:00:34:cb",
+          "peer": "z"
+        },
+        "z": {
+          "node": "singlestripe-gpu-svr-08",
+          "interface": "eth2",
+          "mac": "aa:c1:ab:c6:3f:76",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "singlestripe-leaf-03",
+          "interface": "e1-1",
+          "mac": "aa:c1:ab:71:32:ab",
+          "peer": "z"
+        },
+        "z": {
+          "node": "singlestripe-gpu-svr-01",
+          "interface": "eth3",
+          "mac": "aa:c1:ab:3c:50:f2",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "singlestripe-leaf-03",
+          "interface": "e1-2",
+          "mac": "aa:c1:ab:9f:ab:cc",
+          "peer": "z"
+        },
+        "z": {
+          "node": "singlestripe-gpu-svr-02",
+          "interface": "eth3",
+          "mac": "aa:c1:ab:5d:e2:d6",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "singlestripe-leaf-03",
+          "interface": "e1-3",
+          "mac": "aa:c1:ab:bb:41:20",
+          "peer": "z"
+        },
+        "z": {
+          "node": "singlestripe-gpu-svr-03",
+          "interface": "eth3",
+          "mac": "aa:c1:ab:56:fd:47",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "singlestripe-leaf-03",
+          "interface": "e1-4",
+          "mac": "aa:c1:ab:03:26:52",
+          "peer": "z"
+        },
+        "z": {
+          "node": "singlestripe-gpu-svr-04",
+          "interface": "eth3",
+          "mac": "aa:c1:ab:d8:46:d9",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "singlestripe-leaf-03",
+          "interface": "e1-5",
+          "mac": "aa:c1:ab:19:56:57",
+          "peer": "z"
+        },
+        "z": {
+          "node": "singlestripe-gpu-svr-05",
+          "interface": "eth3",
+          "mac": "aa:c1:ab:09:17:e5",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "singlestripe-leaf-03",
+          "interface": "e1-6",
+          "mac": "aa:c1:ab:cf:53:d1",
+          "peer": "z"
+        },
+        "z": {
+          "node": "singlestripe-gpu-svr-06",
+          "interface": "eth3",
+          "mac": "aa:c1:ab:15:a1:de",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "singlestripe-leaf-03",
+          "interface": "e1-7",
+          "mac": "aa:c1:ab:d4:89:95",
+          "peer": "z"
+        },
+        "z": {
+          "node": "singlestripe-gpu-svr-07",
+          "interface": "eth3",
+          "mac": "aa:c1:ab:8b:20:72",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "singlestripe-leaf-03",
+          "interface": "e1-8",
+          "mac": "aa:c1:ab:cc:ec:bc",
+          "peer": "z"
+        },
+        "z": {
+          "node": "singlestripe-gpu-svr-08",
+          "interface": "eth3",
+          "mac": "aa:c1:ab:cf:82:8c",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "singlestripe-leaf-04",
+          "interface": "e1-1",
+          "mac": "aa:c1:ab:e0:04:3d",
+          "peer": "z"
+        },
+        "z": {
+          "node": "singlestripe-gpu-svr-01",
+          "interface": "eth4",
+          "mac": "aa:c1:ab:44:9b:0d",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "singlestripe-leaf-04",
+          "interface": "e1-2",
+          "mac": "aa:c1:ab:6c:94:b8",
+          "peer": "z"
+        },
+        "z": {
+          "node": "singlestripe-gpu-svr-02",
+          "interface": "eth4",
+          "mac": "aa:c1:ab:ac:d0:6e",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "singlestripe-leaf-04",
+          "interface": "e1-3",
+          "mac": "aa:c1:ab:4c:3a:30",
+          "peer": "z"
+        },
+        "z": {
+          "node": "singlestripe-gpu-svr-03",
+          "interface": "eth4",
+          "mac": "aa:c1:ab:96:c4:49",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "singlestripe-leaf-04",
+          "interface": "e1-4",
+          "mac": "aa:c1:ab:36:ea:f1",
+          "peer": "z"
+        },
+        "z": {
+          "node": "singlestripe-gpu-svr-04",
+          "interface": "eth4",
+          "mac": "aa:c1:ab:8c:93:3a",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "singlestripe-leaf-04",
+          "interface": "e1-5",
+          "mac": "aa:c1:ab:29:5e:f7",
+          "peer": "z"
+        },
+        "z": {
+          "node": "singlestripe-gpu-svr-05",
+          "interface": "eth4",
+          "mac": "aa:c1:ab:9b:7a:7b",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "singlestripe-leaf-04",
+          "interface": "e1-6",
+          "mac": "aa:c1:ab:be:f3:39",
+          "peer": "z"
+        },
+        "z": {
+          "node": "singlestripe-gpu-svr-06",
+          "interface": "eth4",
+          "mac": "aa:c1:ab:ab:95:07",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "singlestripe-leaf-04",
+          "interface": "e1-7",
+          "mac": "aa:c1:ab:f0:2a:1c",
+          "peer": "z"
+        },
+        "z": {
+          "node": "singlestripe-gpu-svr-07",
+          "interface": "eth4",
+          "mac": "aa:c1:ab:64:cc:16",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "singlestripe-leaf-04",
+          "interface": "e1-8",
+          "mac": "aa:c1:ab:40:ae:4d",
+          "peer": "z"
+        },
+        "z": {
+          "node": "singlestripe-gpu-svr-08",
+          "interface": "eth4",
+          "mac": "aa:c1:ab:f8:33:e0",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "singlestripe-leaf-05",
+          "interface": "e1-1",
+          "mac": "aa:c1:ab:07:78:fc",
+          "peer": "z"
+        },
+        "z": {
+          "node": "singlestripe-gpu-svr-01",
+          "interface": "eth5",
+          "mac": "aa:c1:ab:c6:ea:50",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "singlestripe-leaf-05",
+          "interface": "e1-2",
+          "mac": "aa:c1:ab:a4:18:8e",
+          "peer": "z"
+        },
+        "z": {
+          "node": "singlestripe-gpu-svr-02",
+          "interface": "eth5",
+          "mac": "aa:c1:ab:ee:99:af",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "singlestripe-leaf-05",
+          "interface": "e1-3",
+          "mac": "aa:c1:ab:b9:77:b7",
+          "peer": "z"
+        },
+        "z": {
+          "node": "singlestripe-gpu-svr-03",
+          "interface": "eth5",
+          "mac": "aa:c1:ab:1a:a7:b0",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "singlestripe-leaf-05",
+          "interface": "e1-4",
+          "mac": "aa:c1:ab:01:a2:37",
+          "peer": "z"
+        },
+        "z": {
+          "node": "singlestripe-gpu-svr-04",
+          "interface": "eth5",
+          "mac": "aa:c1:ab:89:2a:6a",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "singlestripe-leaf-05",
+          "interface": "e1-5",
+          "mac": "aa:c1:ab:a6:82:69",
+          "peer": "z"
+        },
+        "z": {
+          "node": "singlestripe-gpu-svr-05",
+          "interface": "eth5",
+          "mac": "aa:c1:ab:0f:82:00",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "singlestripe-leaf-05",
+          "interface": "e1-6",
+          "mac": "aa:c1:ab:d3:2f:ec",
+          "peer": "z"
+        },
+        "z": {
+          "node": "singlestripe-gpu-svr-06",
+          "interface": "eth5",
+          "mac": "aa:c1:ab:9f:1a:01",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "singlestripe-leaf-05",
+          "interface": "e1-7",
+          "mac": "aa:c1:ab:01:ee:16",
+          "peer": "z"
+        },
+        "z": {
+          "node": "singlestripe-gpu-svr-07",
+          "interface": "eth5",
+          "mac": "aa:c1:ab:40:6c:84",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "singlestripe-leaf-05",
+          "interface": "e1-8",
+          "mac": "aa:c1:ab:d0:fa:3f",
+          "peer": "z"
+        },
+        "z": {
+          "node": "singlestripe-gpu-svr-08",
+          "interface": "eth5",
+          "mac": "aa:c1:ab:44:a6:f5",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "singlestripe-leaf-06",
+          "interface": "e1-1",
+          "mac": "aa:c1:ab:16:b5:b0",
+          "peer": "z"
+        },
+        "z": {
+          "node": "singlestripe-gpu-svr-01",
+          "interface": "eth6",
+          "mac": "aa:c1:ab:63:20:39",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "singlestripe-leaf-06",
+          "interface": "e1-2",
+          "mac": "aa:c1:ab:77:42:c3",
+          "peer": "z"
+        },
+        "z": {
+          "node": "singlestripe-gpu-svr-02",
+          "interface": "eth6",
+          "mac": "aa:c1:ab:b0:43:a9",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "singlestripe-leaf-06",
+          "interface": "e1-3",
+          "mac": "aa:c1:ab:89:ab:38",
+          "peer": "z"
+        },
+        "z": {
+          "node": "singlestripe-gpu-svr-03",
+          "interface": "eth6",
+          "mac": "aa:c1:ab:af:1f:07",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "singlestripe-leaf-06",
+          "interface": "e1-4",
+          "mac": "aa:c1:ab:56:ff:a7",
+          "peer": "z"
+        },
+        "z": {
+          "node": "singlestripe-gpu-svr-04",
+          "interface": "eth6",
+          "mac": "aa:c1:ab:1e:51:aa",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "singlestripe-leaf-06",
+          "interface": "e1-5",
+          "mac": "aa:c1:ab:22:9e:57",
+          "peer": "z"
+        },
+        "z": {
+          "node": "singlestripe-gpu-svr-05",
+          "interface": "eth6",
+          "mac": "aa:c1:ab:72:32:17",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "singlestripe-leaf-06",
+          "interface": "e1-6",
+          "mac": "aa:c1:ab:5b:5f:f8",
+          "peer": "z"
+        },
+        "z": {
+          "node": "singlestripe-gpu-svr-06",
+          "interface": "eth6",
+          "mac": "aa:c1:ab:4b:38:0b",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "singlestripe-leaf-06",
+          "interface": "e1-7",
+          "mac": "aa:c1:ab:c2:a7:e1",
+          "peer": "z"
+        },
+        "z": {
+          "node": "singlestripe-gpu-svr-07",
+          "interface": "eth6",
+          "mac": "aa:c1:ab:be:8e:1d",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "singlestripe-leaf-06",
+          "interface": "e1-8",
+          "mac": "aa:c1:ab:35:47:5a",
+          "peer": "z"
+        },
+        "z": {
+          "node": "singlestripe-gpu-svr-08",
+          "interface": "eth6",
+          "mac": "aa:c1:ab:4f:f1:f2",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "singlestripe-leaf-07",
+          "interface": "e1-1",
+          "mac": "aa:c1:ab:50:62:11",
+          "peer": "z"
+        },
+        "z": {
+          "node": "singlestripe-gpu-svr-01",
+          "interface": "eth7",
+          "mac": "aa:c1:ab:21:dc:4e",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "singlestripe-leaf-07",
+          "interface": "e1-2",
+          "mac": "aa:c1:ab:b4:9c:d3",
+          "peer": "z"
+        },
+        "z": {
+          "node": "singlestripe-gpu-svr-02",
+          "interface": "eth7",
+          "mac": "aa:c1:ab:18:cd:30",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "singlestripe-leaf-07",
+          "interface": "e1-3",
+          "mac": "aa:c1:ab:52:8b:fa",
+          "peer": "z"
+        },
+        "z": {
+          "node": "singlestripe-gpu-svr-03",
+          "interface": "eth7",
+          "mac": "aa:c1:ab:0d:2b:92",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "singlestripe-leaf-07",
+          "interface": "e1-4",
+          "mac": "aa:c1:ab:c5:97:0d",
+          "peer": "z"
+        },
+        "z": {
+          "node": "singlestripe-gpu-svr-04",
+          "interface": "eth7",
+          "mac": "aa:c1:ab:5d:b1:03",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "singlestripe-leaf-07",
+          "interface": "e1-5",
+          "mac": "aa:c1:ab:d5:a8:86",
+          "peer": "z"
+        },
+        "z": {
+          "node": "singlestripe-gpu-svr-05",
+          "interface": "eth7",
+          "mac": "aa:c1:ab:c7:58:ef",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "singlestripe-leaf-07",
+          "interface": "e1-6",
+          "mac": "aa:c1:ab:c6:63:d6",
+          "peer": "z"
+        },
+        "z": {
+          "node": "singlestripe-gpu-svr-06",
+          "interface": "eth7",
+          "mac": "aa:c1:ab:ed:db:55",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "singlestripe-leaf-07",
+          "interface": "e1-7",
+          "mac": "aa:c1:ab:08:64:e0",
+          "peer": "z"
+        },
+        "z": {
+          "node": "singlestripe-gpu-svr-07",
+          "interface": "eth7",
+          "mac": "aa:c1:ab:46:c2:bc",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "singlestripe-leaf-07",
+          "interface": "e1-8",
+          "mac": "aa:c1:ab:c5:4a:85",
+          "peer": "z"
+        },
+        "z": {
+          "node": "singlestripe-gpu-svr-08",
+          "interface": "eth7",
+          "mac": "aa:c1:ab:54:1d:a2",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "singlestripe-leaf-08",
+          "interface": "e1-1",
+          "mac": "aa:c1:ab:79:40:5e",
+          "peer": "z"
+        },
+        "z": {
+          "node": "singlestripe-gpu-svr-01",
+          "interface": "eth8",
+          "mac": "aa:c1:ab:2f:26:4f",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "singlestripe-leaf-08",
+          "interface": "e1-2",
+          "mac": "aa:c1:ab:2c:d3:53",
+          "peer": "z"
+        },
+        "z": {
+          "node": "singlestripe-gpu-svr-02",
+          "interface": "eth8",
+          "mac": "aa:c1:ab:0f:32:ce",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "singlestripe-leaf-08",
+          "interface": "e1-3",
+          "mac": "aa:c1:ab:8f:b3:d4",
+          "peer": "z"
+        },
+        "z": {
+          "node": "singlestripe-gpu-svr-03",
+          "interface": "eth8",
+          "mac": "aa:c1:ab:3c:3e:8c",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "singlestripe-leaf-08",
+          "interface": "e1-4",
+          "mac": "aa:c1:ab:22:9f:42",
+          "peer": "z"
+        },
+        "z": {
+          "node": "singlestripe-gpu-svr-04",
+          "interface": "eth8",
+          "mac": "aa:c1:ab:8d:59:14",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "singlestripe-leaf-08",
+          "interface": "e1-5",
+          "mac": "aa:c1:ab:27:81:04",
+          "peer": "z"
+        },
+        "z": {
+          "node": "singlestripe-gpu-svr-05",
+          "interface": "eth8",
+          "mac": "aa:c1:ab:9f:9a:d2",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "singlestripe-leaf-08",
+          "interface": "e1-6",
+          "mac": "aa:c1:ab:74:45:eb",
+          "peer": "z"
+        },
+        "z": {
+          "node": "singlestripe-gpu-svr-06",
+          "interface": "eth8",
+          "mac": "aa:c1:ab:94:69:2f",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "singlestripe-leaf-08",
+          "interface": "e1-7",
+          "mac": "aa:c1:ab:b4:51:73",
+          "peer": "z"
+        },
+        "z": {
+          "node": "singlestripe-gpu-svr-07",
+          "interface": "eth8",
+          "mac": "aa:c1:ab:05:57:6e",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "singlestripe-leaf-08",
+          "interface": "e1-8",
+          "mac": "aa:c1:ab:a0:13:46",
+          "peer": "z"
+        },
+        "z": {
+          "node": "singlestripe-gpu-svr-08",
+          "interface": "eth8",
+          "mac": "aa:c1:ab:fc:c3:7f",
+          "peer": "a"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+ "users": {
+  "admin": {
+   "password": [
+    "$y$j9T$pNVjOgcNNGIWjBcdDfK/7.$Ir4uYxszxtqzVj5AGiZvdWJGs.bpLWBJvHON3YgqnC2",
+    "$y$j9T$3a1c519c2aec0a8d$aqkR8Q/3o9uv6Y87G/UvnCt9WjixedVBRjpxhYe0j3C"
+   ],
+   "failed_login_count": 0,
+   "locked_out": false,
+   "password_changed_after_first_login": true,
+   "password_update_time": "2025-09-01T05:04:12Z",
+   "last_successful_login_time": "2025-09-01T05:08:02Z"
+  }
+ },
+ "ntp_sync": false,
+ "password_change_after_first_login": false
+}

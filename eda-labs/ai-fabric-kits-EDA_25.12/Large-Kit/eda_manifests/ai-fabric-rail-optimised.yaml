@@ -1,0 +1,42 @@
+apiVersion: aifabrics.eda.nokia.com/v1alpha1
+kind: Backend
+metadata:
+  name: ai-backend-fabric
+  namespace: clab-ai-fabric-2tier
+  labels: {}
+  annotations: {}
+spec:
+  asnPool: asn-pool
+  gpuIsolationGroups:
+    - interfaceSelector:
+        - eda.nokia.com/tenant-id=tenant1
+      name: group-tenant1
+  rocev2QoS:
+    ecnMaxDropProbabilityPercent: 100
+    ecnSlopeMaxThresholdPercent: 80
+    ecnSlopeMinThresholdPercent: 5
+    pfcDeadlockDetectionTimer: 750
+    pfcDeadlockRecoveryTimer: 750
+    queueMaximumBurstSize: 52110640
+  stripeConnector:
+    asnPool: asn-pool
+    linkSelector:
+      - eda.nokia.com/role=interSwitch
+    name: stripe-conn
+    nodeSelector:
+      - eda.nokia.com/stripe-conn=true
+    systemPoolIPV4: system0
+  stripes:
+    - asnPool: asn-pool
+      gpuVlan: 1
+      name: stripe01
+      nodeSelector:
+        - eda.nokia.com/stripe-id=stripe1
+      stripeID: 1
+    - asnPool: asn-pool
+      gpuVlan: 2
+      name: stripe02
+      nodeSelector:
+        - eda.nokia.com/stripe-id=stripe2
+      stripeID: 2
+  systemPoolIPV4: system0

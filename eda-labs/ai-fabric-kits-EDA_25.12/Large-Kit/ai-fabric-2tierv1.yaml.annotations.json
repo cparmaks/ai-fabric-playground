@@ -1,0 +1,201 @@
+{
+  "freeTextAnnotations": [],
+  "freeShapeAnnotations": [],
+  "groupStyleAnnotations": [],
+  "networkNodeAnnotations": [],
+  "nodeAnnotations": [
+    {
+      "id": "2tier-spine-01",
+      "position": {
+        "x": 289,
+        "y": 10
+      },
+      "group": "Data Center Stripe Connectors",
+      "level": "1",
+      "groupLabelPos": "top-center",
+      "interfacePattern": "e1-{n}"
+    },
+    {
+      "id": "2tier-spine-02",
+      "position": {
+        "x": 428,
+        "y": 10
+      },
+      "group": "Data Center Stripe Connectors",
+      "level": "1",
+      "groupLabelPos": "top-center",
+      "interfacePattern": "e1-{n}"
+    },
+    {
+      "id": "2tier-leaf-01",
+      "position": {
+        "x": -98,
+        "y": 258
+      },
+      "group": "Data Center Stripe01",
+      "level": "2",
+      "groupLabelPos": "bottom-center",
+      "interfacePattern": "e1-{n}"
+    },
+    {
+      "id": "2tier-leaf-02",
+      "position": {
+        "x": 32,
+        "y": 258
+      },
+      "group": "Data Center Stripe01",
+      "level": "2",
+      "groupLabelPos": "bottom-center",
+      "interfacePattern": "e1-{n}"
+    },
+    {
+      "id": "2tier-leaf-03",
+      "position": {
+        "x": 163,
+        "y": 258
+      },
+      "group": "Data Center Stripe01",
+      "level": "2",
+      "groupLabelPos": "bottom-center",
+      "interfacePattern": "e1-{n}"
+    },
+    {
+      "id": "2tier-leaf-04",
+      "position": {
+        "x": 293,
+        "y": 258
+      },
+      "group": "Data Center Stripe01",
+      "level": "2",
+      "groupLabelPos": "bottom-center",
+      "interfacePattern": "e1-{n}"
+    },
+    {
+      "id": "2tier-leaf-05",
+      "position": {
+        "x": 424,
+        "y": 258
+      },
+      "group": "Data Center Stripe02",
+      "level": "2",
+      "groupLabelPos": "bottom-center",
+      "interfacePattern": "e1-{n}"
+    },
+    {
+      "id": "2tier-leaf-06",
+      "position": {
+        "x": 555,
+        "y": 258
+      },
+      "group": "Data Center Stripe02",
+      "level": "2",
+      "groupLabelPos": "bottom-center",
+      "interfacePattern": "e1-{n}"
+    },
+    {
+      "id": "2tier-leaf-07",
+      "position": {
+        "x": 685,
+        "y": 258
+      },
+      "group": "Data Center Stripe02",
+      "level": "2",
+      "groupLabelPos": "bottom-center",
+      "interfacePattern": "e1-{n}"
+    },
+    {
+      "id": "2tier-leaf-08",
+      "position": {
+        "x": 816,
+        "y": 258
+      },
+      "group": "Data Center Stripe02",
+      "level": "2",
+      "groupLabelPos": "bottom-center",
+      "interfacePattern": "e1-{n}"
+    },
+    {
+      "id": "2tier-gpu-01",
+      "position": {
+        "x": -105,
+        "y": 506
+      },
+      "group": "GPU Servers Stripe01",
+      "level": "4",
+      "groupLabelPos": "bottom-center"
+    },
+    {
+      "id": "2tier-gpu-02",
+      "position": {
+        "x": 27,
+        "y": 506
+      },
+      "group": "GPU Servers Stripe01",
+      "level": "4",
+      "groupLabelPos": "bottom-center"
+    },
+    {
+      "id": "2tier-gpu-03",
+      "position": {
+        "x": 160,
+        "y": 506
+      },
+      "group": "GPU Servers Stripe01",
+      "level": "4",
+      "groupLabelPos": "bottom-center"
+    },
+    {
+      "id": "2tier-gpu-04",
+      "position": {
+        "x": 293,
+        "y": 506
+      },
+      "group": "GPU Servers Stripe01",
+      "level": "4",
+      "groupLabelPos": "bottom-center"
+    },
+    {
+      "id": "2tier-gpu-05",
+      "position": {
+        "x": 425,
+        "y": 506
+      },
+      "group": "GPU Servers Stripe02",
+      "level": "4",
+      "groupLabelPos": "bottom-center"
+    },
+    {
+      "id": "2tier-gpu-06",
+      "position": {
+        "x": 558,
+        "y": 506
+      },
+      "group": "GPU Servers Stripe02",
+      "level": "4",
+      "groupLabelPos": "bottom-center"
+    },
+    {
+      "id": "2tier-gpu-07",
+      "position": {
+        "x": 690,
+        "y": 506
+      },
+      "group": "GPU Servers Stripe02",
+      "level": "4",
+      "groupLabelPos": "bottom-center"
+    },
+    {
+      "id": "2tier-gpu-08",
+      "position": {
+        "x": 823,
+        "y": 506
+      },
+      "group": "GPU Servers Stripe02",
+      "level": "4",
+      "groupLabelPos": "bottom-center"
+    }
+  ],
+  "edgeAnnotations": [],
+  "aliasEndpointAnnotations": [],
+  "viewerSettings": {}
+}

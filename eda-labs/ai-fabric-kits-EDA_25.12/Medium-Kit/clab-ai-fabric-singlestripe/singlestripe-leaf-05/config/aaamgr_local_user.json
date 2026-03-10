@@ -1,0 +1,21 @@
+{
+ "users": {
+  "admin": {
+   "password": [
+    "$y$j9T$pNVjOgcNNGIWjBcdDfK/7.$Ir4uYxszxtqzVj5AGiZvdWJGs.bpLWBJvHON3YgqnC2",
+    "$y$j9T$c020802e012d14a2$lY3agBH44NBf92pSCQf3wDa4xLdYvbhcpjd83QRnet/",
+    "$y$j9T$1c3da498fbac307a$J6XzqPPV7nAUGLawOABOmgjpewYAjpJiAKhyU1c8ty5",
+    "$y$j9T$5ae8e966f530b322$kPC12.TSJD5NOkQeMmUsfthlD7kOTa45CkUvAjFQFb7",
+    "$y$j9T$1fae32d155a9b2b7$vmPSwUoTS.pxUgF8dGyoGQS1LBFo12FTC.2NHBRnjS9",
+    "$y$j9T$be52469d358a02bc$8BzoRyGLpYt3mRcqZHQSOWAJowPCfvzDVbWQl/tGK3/"
+   ],
+   "failed_login_count": 0,
+   "locked_out": false,
+   "password_changed_after_first_login": true,
+   "password_update_time": "2026-02-26T22:22:09Z",
+   "last_successful_login_time": "2026-03-10T16:13:12Z"
+  }
+ },
+ "ntp_sync": false,
+ "password_change_after_first_login": false
+}

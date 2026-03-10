@@ -1,0 +1,415 @@
+{
+  "freeTextAnnotations": [],
+  "groupStyleAnnotations": [],
+  "cloudNodeAnnotations": [],
+  "nodeAnnotations": [
+    {
+      "id": "2tier-spine-01",
+      "position": {
+        "x": 280,
+        "y": 17
+      },
+      "icon": "stripe",
+      "geoCoordinates": {
+        "lat": 48.74715403837108,
+        "lng": 9.086182400793737
+      },
+      "groupLabelPos": "top-center",
+      "group": "Stripe Connector",
+      "level": "1",
+      "interfacePattern": "e1-{n}"
+    },
+    {
+      "id": "2tier-spine-02",
+      "position": {
+        "x": 686,
+        "y": 17
+      },
+      "icon": "stripe",
+      "geoCoordinates": {
+        "lat": 48.81482284519321,
+        "lng": 9.429925668194427
+      },
+      "groupLabelPos": "top-center",
+      "group": "Stripe Connector",
+      "level": "1",
+      "interfacePattern": "e1-{n}"
+    },
+    {
+      "id": "2tier-leaf-01",
+      "position": {
+        "x": -273,
+        "y": 241
+      },
+      "icon": "leaf",
+      "geoCoordinates": {
+        "lat": 49.06904208534602,
+        "lng": 9.825954226227646
+      },
+      "groupLabelPos": "top-center",
+      "group": "Data Center Stripe01",
+      "level": "2",
+      "interfacePattern": "e1-{n}"
+    },
+    {
+      "id": "2tier-leaf-02",
+      "position": {
+        "x": -175,
+        "y": 241
+      },
+      "icon": "leaf",
+      "geoCoordinates": {
+        "lat": 49.46629302942882,
+        "lng": 9.837091173462458
+      },
+      "groupLabelPos": "top-center",
+      "group": "Data Center Stripe01",
+      "level": "2",
+      "interfacePattern": "e1-{n}"
+    },
+    {
+      "id": "2tier-leaf-03",
+      "position": {
+        "x": -77,
+        "y": 241
+      },
+      "icon": "leaf",
+      "geoCoordinates": {
+        "lat": 48.94417166134211,
+        "lng": 9.698606848345527
+      },
+      "groupLabelPos": "top-center",
+      "group": "Data Center Stripe01",
+      "level": "2",
+      "interfacePattern": "e1-{n}"
+    },
+    {
+      "id": "2tier-leaf-04",
+      "position": {
+        "x": 21,
+        "y": 241
+      },
+      "icon": "leaf",
+      "geoCoordinates": {
+        "lat": 49.0302397201501,
+        "lng": 9.487467730021224
+      },
+      "groupLabelPos": "top-center",
+      "group": "Data Center Stripe01",
+      "level": "2",
+      "interfacePattern": "e1-{n}"
+    },
+    {
+      "id": "2tier-leaf-05",
+      "position": {
+        "x": 119,
+        "y": 241
+      },
+      "icon": "leaf",
+      "geoCoordinates": {
+        "lat": 49.50343150198683,
+        "lng": 9.867581636675931
+      },
+      "groupLabelPos": "top-center",
+      "group": "Data Center Stripe01",
+      "level": "2",
+      "interfacePattern": "e1-{n}"
+    },
+    {
+      "id": "2tier-leaf-06",
+      "position": {
+        "x": 217,
+        "y": 241
+      },
+      "icon": "leaf",
+      "geoCoordinates": {
+        "lat": 49.013294201379296,
+        "lng": 9.67802558177881
+      },
+      "groupLabelPos": "top-center",
+      "group": "Data Center Stripe01",
+      "level": "2",
+      "interfacePattern": "e1-{n}"
+    },
+    {
+      "id": "2tier-leaf-07",
+      "position": {
+        "x": 315,
+        "y": 241
+      },
+      "icon": "leaf",
+      "geoCoordinates": {
+        "lat": 48.803433072304195,
+        "lng": 9.152347120948706
+      },
+      "groupLabelPos": "top-center",
+      "group": "Data Center Stripe01",
+      "level": "2",
+      "interfacePattern": "e1-{n}"
+    },
+    {
+      "id": "2tier-leaf-08",
+      "position": {
+        "x": 427,
+        "y": 241
+      },
+      "icon": "leaf",
+      "geoCoordinates": {
+        "lat": 48.69675231649547,
+        "lng": 9.560239980440143
+      },
+      "groupLabelPos": "top-center",
+      "group": "Data Center Stripe01",
+      "level": "2",
+      "interfacePattern": "e1-{n}"
+    },
+    {
+      "id": "2tier-leaf-09",
+      "position": {
+        "x": 539,
+        "y": 241
+      },
+      "icon": "leaf",
+      "geoCoordinates": {
+        "lat": 48.87391314724228,
+        "lng": 9.148453717273188
+      },
+      "groupLabelPos": "top-center",
+      "group": "Data Center Stripe02",
+      "level": "2",
+      "interfacePattern": "e1-{n}"
+    },
+    {
+      "id": "2tier-leaf-10",
+      "position": {
+        "x": 637,
+        "y": 241
+      },
+      "icon": "leaf",
+      "geoCoordinates": {
+        "lat": 49.536089957046364,
+        "lng": 9.659109284851505
+      },
+      "groupLabelPos": "top-center",
+      "group": "Data Center Stripe02",
+      "level": "2",
+      "interfacePattern": "e1-{n}"
+    },
+    {
+      "id": "2tier-leaf-11",
+      "position": {
+        "x": 735,
+        "y": 241
+      },
+      "icon": "leaf",
+      "geoCoordinates": {
+        "lat": 49.040853676518644,
+        "lng": 9.672502837133138
+      },
+      "groupLabelPos": "top-center",
+      "group": "Data Center Stripe02",
+      "level": "2",
+      "interfacePattern": "e1-{n}"
+    },
+    {
+      "id": "2tier-leaf-12",
+      "position": {
+        "x": 833,
+        "y": 241
+      },
+      "icon": "leaf",
+      "geoCoordinates": {
+        "lat": 49.45135523351043,
+        "lng": 9.698403240618662
+      },
+      "groupLabelPos": "top-center",
+      "group": "Data Center Stripe02",
+      "level": "2",
+      "interfacePattern": "e1-{n}"
+    },
+    {
+      "id": "2tier-leaf-13",
+      "position": {
+        "x": 931,
+        "y": 241
+      },
+      "icon": "leaf",
+      "geoCoordinates": {
+        "lat": 49.51611555406326,
+        "lng": 9.185133842231602
+      },
+      "groupLabelPos": "top-center",
+      "group": "Data Center Stripe02",
+      "level": "2",
+      "interfacePattern": "e1-{n}"
+    },
+    {
+      "id": "2tier-leaf-14",
+      "position": {
+        "x": 1029,
+        "y": 241
+      },
+      "icon": "leaf",
+      "geoCoordinates": {
+        "lat": 49.20265633899547,
+        "lng": 9.534142675611255
+      },
+      "groupLabelPos": "top-center",
+      "group": "Data Center Stripe02",
+      "level": "2",
+      "interfacePattern": "e1-{n}"
+    },
+    {
+      "id": "2tier-leaf-15",
+      "position": {
+        "x": 1127,
+        "y": 241
+      },
+      "icon": "leaf",
+      "geoCoordinates": {
+        "lat": 48.81667249672553,
+        "lng": 9.902709855281417
+      },
+      "groupLabelPos": "top-center",
+      "group": "Data Center Stripe02",
+      "level": "2",
+      "interfacePattern": "e1-{n}"
+    },
+    {
+      "id": "2tier-leaf-16",
+      "position": {
+        "x": 1239,
+        "y": 241
+      },
+      "icon": "leaf",
+      "geoCoordinates": {
+        "lat": 48.94837383362442,
+        "lng": 9.866804404596213
+      },
+      "groupLabelPos": "top-center",
+      "group": "Data Center Stripe02",
+      "level": "2",
+      "interfacePattern": "e1-{n}"
+    },
+    {
+      "id": "2tier-gpu-svr-01",
+      "position": {
+        "x": -210,
+        "y": 493
+      },
+      "icon": "gpu",
+      "geoCoordinates": {
+        "lat": 49.332906095867116,
+        "lng": 9.024800633555348
+      },
+      "groupLabelPos": "bottom-center",
+      "group": "GPU Servers Group1",
+      "level": "3"
+    },
+    {
+      "id": "2tier-gpu-svr-02",
+      "position": {
+        "x": 0,
+        "y": 493
+      },
+      "icon": "gpu",
+      "geoCoordinates": {
+        "lat": 49.14544095257444,
+        "lng": 9.392509026765673
+      },
+      "groupLabelPos": "bottom-center",
+      "group": "GPU Servers Group1",
+      "level": "3"
+    },
+    {
+      "id": "2tier-gpu-svr-03",
+      "position": {
+        "x": 196,
+        "y": 493
+      },
+      "icon": "gpu",
+      "geoCoordinates": {
+        "lat": 49.466401587022816,
+        "lng": 9.027664742367616
+      },
+      "groupLabelPos": "bottom-center",
+      "group": "GPU Servers Group1",
+      "level": "3"
+    },
+    {
+      "id": "2tier-gpu-svr-04",
+      "position": {
+        "x": 392,
+        "y": 493
+      },
+      "icon": "gpu",
+      "geoCoordinates": {
+        "lat": 49.52210034181684,
+        "lng": 9.904425157280123
+      },
+      "groupLabelPos": "bottom-center",
+      "group": "GPU Servers Group1",
+      "level": "3"
+    },
+    {
+      "id": "2tier-gpu-svr-05",
+      "position": {
+        "x": 588,
+        "y": 493
+      },
+      "icon": "gpu",
+      "geoCoordinates": {
+        "lat": 49.35554819500711,
+        "lng": 9.252323919784534
+      },
+      "groupLabelPos": "bottom-center",
+      "group": "GPU Servers Group2",
+      "level": "3"
+    },
+    {
+      "id": "2tier-gpu-svr-06",
+      "position": {
+        "x": 798,
+        "y": 493
+      },
+      "icon": "gpu",
+      "geoCoordinates": {
+        "lat": 48.936831877075655,
+        "lng": 9.581893230019944
+      },
+      "groupLabelPos": "bottom-center",
+      "group": "GPU Servers Group2",
+      "level": "3"
+    },
+    {
+      "id": "2tier-gpu-svr-07",
+      "position": {
+        "x": 994,
+        "y": 493
+      },
+      "icon": "gpu",
+      "geoCoordinates": {
+        "lat": 49.35317579917625,
+        "lng": 9.237610323493207
+      },
+      "groupLabelPos": "bottom-center",
+      "group": "GPU Servers Group2",
+      "level": "3"
+    },
+    {
+      "id": "2tier-gpu-svr-08",
+      "position": {
+        "x": 1190,
+        "y": 493
+      },
+      "icon": "gpu",
+      "geoCoordinates": {
+        "lat": 49.231974824608045,
+        "lng": 9.150394927199915
+      },
+      "groupLabelPos": "bottom-center",
+      "group": "GPU Servers Group2",
+      "level": "3"
+    }
+  ]
+}

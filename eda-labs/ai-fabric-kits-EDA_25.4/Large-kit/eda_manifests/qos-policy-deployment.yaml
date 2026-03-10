@@ -1,0 +1,15 @@
+apiVersion: qos.eda.nokia.com/v1
+kind: PolicyDeployment
+metadata:
+  name: fabric-edge-interfaces
+  namespace: clab-ai-fabric-2tier
+  labels: {}
+  annotations: {}
+spec:
+  egressPolicy: egress-backend-ai-backend-fabric
+  ingressPolicy: ingress-backend-ai-backend-fabric
+  interfaceSelector: eda.nokia.com/role=edge
+  interfaceType: ACCESS
+  node: ''
+  nodeSelector: ''
+  interfaces: []

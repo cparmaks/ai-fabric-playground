@@ -1,0 +1,1 @@
+{ "authenticate-client": false, "relaxed-crl-verification": true, "dynamic": true, "cipher-list": [ "ecdhe-ecdsa-aes256-gcm-sha384", "ecdhe-ecdsa-aes128-gcm-sha256", "ecdhe-rsa-aes256-gcm-sha384", "ecdhe-rsa-aes128-gcm-sha256" ], "certz": { "ssl-profile-id": "EDA", "certificate": { "version": "eda-10_20_25_21_17_14", "created-on": "2025-10-20T21:17:14.000Z" } } }

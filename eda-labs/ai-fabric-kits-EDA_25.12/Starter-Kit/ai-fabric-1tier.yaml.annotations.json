@@ -1,0 +1,73 @@
+{
+  "freeTextAnnotations": [],
+  "freeShapeAnnotations": [],
+  "groupStyleAnnotations": [],
+  "networkNodeAnnotations": [],
+  "nodeAnnotations": [
+    {
+      "id": "1tier-leaf-01",
+      "position": {
+        "x": 49,
+        "y": 245
+      },
+      "group": "Data Center Stripe-01",
+      "level": "2",
+      "groupLabelPos": "top-center",
+      "interfacePattern": "e1-{n}"
+    },
+    {
+      "id": "1tier-leaf-02",
+      "position": {
+        "x": 161,
+        "y": 245
+      },
+      "group": "Data Center Stripe-01",
+      "level": "2",
+      "groupLabelPos": "top-center",
+      "interfacePattern": "e1-{n}"
+    },
+    {
+      "id": "1tier-gpu-svr-01",
+      "position": {
+        "x": -77,
+        "y": 357
+      },
+      "group": "GPU Servers",
+      "level": "4",
+      "groupLabelPos": "bottom-center"
+    },
+    {
+      "id": "1tier-gpu-svr-02",
+      "position": {
+        "x": 21,
+        "y": 427
+      },
+      "group": "GPU Servers",
+      "level": "4",
+      "groupLabelPos": "bottom-center"
+    },
+    {
+      "id": "1tier-gpu-svr-03",
+      "position": {
+        "x": 175,
+        "y": 427
+      },
+      "group": "GPU Servers",
+      "level": "4",
+      "groupLabelPos": "bottom-center"
+    },
+    {
+      "id": "1tier-gpu-svr-04",
+      "position": {
+        "x": 273,
+        "y": 357
+      },
+      "group": "GPU Servers",
+      "level": "4",
+      "groupLabelPos": "bottom-center"
+    }
+  ],
+  "edgeAnnotations": [],
+  "aliasEndpointAnnotations": [],
+  "viewerSettings": {}
+}

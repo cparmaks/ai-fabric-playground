@@ -1,0 +1,51 @@
+---
+1tier-gpu-svr-01:
+    username: 
+    password: 
+    platform: linux
+    hostname: 192.168.100.21
+1tier-gpu-svr-02:
+    username: 
+    password: 
+    platform: linux
+    hostname: 192.168.100.22
+1tier-gpu-svr-03:
+    username: 
+    password: 
+    platform: linux
+    hostname: 192.168.100.23
+1tier-gpu-svr-04:
+    username: 
+    password: 
+    platform: linux
+    hostname: 192.168.100.24
+1tier-leaf-01:
+    username: admin
+    password: NokiaSrl1!
+    platform: nokia_srlinux
+    hostname: 192.168.100.11
+1tier-leaf-02:
+    username: admin
+    password: NokiaSrl1!
+    platform: nokia_srlinux
+    hostname: 192.168.100.12
+1tier-leaf-03:
+    username: admin
+    password: NokiaSrl1!
+    platform: nokia_srlinux
+    hostname: 192.168.100.13
+1tier-leaf-04:
+    username: admin
+    password: NokiaSrl1!
+    platform: nokia_srlinux
+    hostname: 192.168.100.14
+1tier-leaf-05:
+    username: admin
+    password: NokiaSrl1!
+    platform: nokia_srlinux
+    hostname: 192.168.100.15
+1tier-leaf-06:
+    username: admin
+    password: NokiaSrl1!
+    platform: nokia_srlinux
+    hostname: 192.168.100.16

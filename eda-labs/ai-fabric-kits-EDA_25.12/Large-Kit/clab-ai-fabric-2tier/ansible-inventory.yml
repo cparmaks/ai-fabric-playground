@@ -1,0 +1,70 @@
+all:
+  vars:
+    # The generated inventory is assumed to be used from the clab host.
+    # Hence no http proxy should be used. Therefore we make sure the http
+    # module does not attempt using any global http proxy.
+    ansible_httpapi_use_proxy: false
+  children:
+    linux:
+      hosts:
+        2tier-gpu-svr-01:
+          ansible_host: 172.16.3.51
+        2tier-gpu-svr-02:
+          ansible_host: 172.16.3.52
+        2tier-gpu-svr-03:
+          ansible_host: 172.16.3.53
+        2tier-gpu-svr-04:
+          ansible_host: 172.16.3.54
+        2tier-gpu-svr-05:
+          ansible_host: 172.16.3.55
+        2tier-gpu-svr-06:
+          ansible_host: 172.16.3.56
+        2tier-gpu-svr-07:
+          ansible_host: 172.16.3.57
+        2tier-gpu-svr-08:
+          ansible_host: 172.16.3.58
+    nokia_srlinux:
+      vars:
+        ansible_network_os: nokia.srlinux.srlinux
+        # default connection type for nodes of this kind
+        # feel free to override this in your inventory
+        ansible_connection: ansible.netcommon.httpapi
+        ansible_user: admin
+        ansible_password: NokiaSrl1!
+      hosts:
+        2tier-leaf-01:
+          ansible_host: 172.16.3.11
+        2tier-leaf-02:
+          ansible_host: 172.16.3.12
+        2tier-leaf-03:
+          ansible_host: 172.16.3.13
+        2tier-leaf-04:
+          ansible_host: 172.16.3.14
+        2tier-leaf-05:
+          ansible_host: 172.16.3.15
+        2tier-leaf-06:
+          ansible_host: 172.16.3.16
+        2tier-leaf-07:
+          ansible_host: 172.16.3.17
+        2tier-leaf-08:
+          ansible_host: 172.16.3.18
+        2tier-leaf-09:
+          ansible_host: 172.16.3.19
+        2tier-leaf-10:
+          ansible_host: 172.16.3.20
+        2tier-leaf-11:
+          ansible_host: 172.16.3.21
+        2tier-leaf-12:
+          ansible_host: 172.16.3.22
+        2tier-leaf-13:
+          ansible_host: 172.16.3.23
+        2tier-leaf-14:
+          ansible_host: 172.16.3.24
+        2tier-leaf-15:
+          ansible_host: 172.16.3.25
+        2tier-leaf-16:
+          ansible_host: 172.16.3.26
+        2tier-spine-01:
+          ansible_host: 172.16.3.9
+        2tier-spine-02:
+          ansible_host: 172.16.3.10

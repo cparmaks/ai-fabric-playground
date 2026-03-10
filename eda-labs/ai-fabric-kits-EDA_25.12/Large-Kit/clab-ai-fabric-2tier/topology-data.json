@@ -1,0 +1,4251 @@
+{
+  "name": "ai-fabric-2tier",
+  "type": "clab",
+  "clab": {
+    "config": {
+      "prefix": "",
+      "mgmt": {
+        "network": "mgmt-net3",
+        "bridge": "br-56edddcc379d",
+        "ipv4-subnet": "172.16.3.0/24",
+        "ipv4-gw": "172.16.3.1",
+        "external-access": true
+      }
+    }
+  },
+  "ssh-pub-keys": [],
+  "nodes": {
+    "2tier-gpu-svr-01": {
+      "index": "0",
+      "shortname": "2tier-gpu-svr-01",
+      "longname": "2tier-gpu-svr-01",
+      "fqdn": "2tier-gpu-svr-01.ai-fabric-2tier.io",
+      "group": "",
+      "labdir": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/clab-ai-fabric-2tier/2tier-gpu-svr-01",
+      "kind": "linux",
+      "image": "ghcr.io/srl-labs/network-multitool",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.16.3.51",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-56edddcc379d",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/clab-ai-fabric-2tier/2tier-gpu-svr-01",
+        "clab-node-longname": "2tier-gpu-svr-01",
+        "clab-node-name": "2tier-gpu-svr-01",
+        "clab-node-type": "linux",
+        "clab-owner": "root",
+        "clab-topo-file": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/ai-fabric-2tierv2.yaml",
+        "containerlab": "ai-fabric-2tier",
+        "graph-group": "GPU Servers Group1",
+        "graph-groupLabelPos": "bottom-center",
+        "graph-level": "3",
+        "graph-posX": "150",
+        "graph-posY": "520",
+        "topoViewer-group": "GPU Servers Group1",
+        "topoViewer-groupLevel": "3",
+        "topoViewer-role": "gpu"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 80,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 8080,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 11443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 1180,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 443,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "2tier-gpu-svr-02": {
+      "index": "1",
+      "shortname": "2tier-gpu-svr-02",
+      "longname": "2tier-gpu-svr-02",
+      "fqdn": "2tier-gpu-svr-02.ai-fabric-2tier.io",
+      "group": "",
+      "labdir": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/clab-ai-fabric-2tier/2tier-gpu-svr-02",
+      "kind": "linux",
+      "image": "ghcr.io/srl-labs/network-multitool",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.16.3.52",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-56edddcc379d",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/clab-ai-fabric-2tier/2tier-gpu-svr-02",
+        "clab-node-longname": "2tier-gpu-svr-02",
+        "clab-node-name": "2tier-gpu-svr-02",
+        "clab-node-type": "linux",
+        "clab-owner": "root",
+        "clab-topo-file": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/ai-fabric-2tierv2.yaml",
+        "containerlab": "ai-fabric-2tier",
+        "graph-group": "GPU Servers Group1",
+        "graph-groupLabelPos": "bottom-center",
+        "graph-level": "3",
+        "graph-posX": "350",
+        "graph-posY": "520",
+        "topoViewer-group": "GPU Servers Group1",
+        "topoViewer-groupLevel": "3",
+        "topoViewer-role": "gpu"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 11443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 1180,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 80,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 8080,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "2tier-gpu-svr-03": {
+      "index": "2",
+      "shortname": "2tier-gpu-svr-03",
+      "longname": "2tier-gpu-svr-03",
+      "fqdn": "2tier-gpu-svr-03.ai-fabric-2tier.io",
+      "group": "",
+      "labdir": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/clab-ai-fabric-2tier/2tier-gpu-svr-03",
+      "kind": "linux",
+      "image": "ghcr.io/srl-labs/network-multitool",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.16.3.53",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-56edddcc379d",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/clab-ai-fabric-2tier/2tier-gpu-svr-03",
+        "clab-node-longname": "2tier-gpu-svr-03",
+        "clab-node-name": "2tier-gpu-svr-03",
+        "clab-node-type": "linux",
+        "clab-owner": "root",
+        "clab-topo-file": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/ai-fabric-2tierv2.yaml",
+        "containerlab": "ai-fabric-2tier",
+        "graph-group": "GPU Servers Group1",
+        "graph-groupLabelPos": "bottom-center",
+        "graph-level": "3",
+        "graph-posX": "550",
+        "graph-posY": "520",
+        "topoViewer-group": "GPU Servers Group1",
+        "topoViewer-groupLevel": "3",
+        "topoViewer-role": "gpu"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 11443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 1180,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 80,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 8080,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "2tier-gpu-svr-04": {
+      "index": "3",
+      "shortname": "2tier-gpu-svr-04",
+      "longname": "2tier-gpu-svr-04",
+      "fqdn": "2tier-gpu-svr-04.ai-fabric-2tier.io",
+      "group": "",
+      "labdir": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/clab-ai-fabric-2tier/2tier-gpu-svr-04",
+      "kind": "linux",
+      "image": "ghcr.io/srl-labs/network-multitool",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.16.3.54",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-56edddcc379d",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/clab-ai-fabric-2tier/2tier-gpu-svr-04",
+        "clab-node-longname": "2tier-gpu-svr-04",
+        "clab-node-name": "2tier-gpu-svr-04",
+        "clab-node-type": "linux",
+        "clab-owner": "root",
+        "clab-topo-file": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/ai-fabric-2tierv2.yaml",
+        "containerlab": "ai-fabric-2tier",
+        "graph-group": "GPU Servers Group1",
+        "graph-groupLabelPos": "bottom-center",
+        "graph-level": "3",
+        "graph-posX": "750",
+        "graph-posY": "520",
+        "topoViewer-group": "GPU Servers Group1",
+        "topoViewer-groupLevel": "3",
+        "topoViewer-role": "gpu"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 1180,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 80,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 8080,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 11443,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "2tier-gpu-svr-05": {
+      "index": "4",
+      "shortname": "2tier-gpu-svr-05",
+      "longname": "2tier-gpu-svr-05",
+      "fqdn": "2tier-gpu-svr-05.ai-fabric-2tier.io",
+      "group": "",
+      "labdir": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/clab-ai-fabric-2tier/2tier-gpu-svr-05",
+      "kind": "linux",
+      "image": "ghcr.io/srl-labs/network-multitool",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.16.3.55",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-56edddcc379d",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/clab-ai-fabric-2tier/2tier-gpu-svr-05",
+        "clab-node-longname": "2tier-gpu-svr-05",
+        "clab-node-name": "2tier-gpu-svr-05",
+        "clab-node-type": "linux",
+        "clab-owner": "root",
+        "clab-topo-file": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/ai-fabric-2tierv2.yaml",
+        "containerlab": "ai-fabric-2tier",
+        "graph-group": "GPU Servers Group2",
+        "graph-groupLabelPos": "bottom-center",
+        "graph-level": "3",
+        "graph-posX": "150",
+        "graph-posY": "630",
+        "topoViewer-group": "GPU Servers Group2",
+        "topoViewer-groupLevel": "3",
+        "topoViewer-role": "gpu"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 11443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 1180,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 80,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 8080,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "2tier-gpu-svr-06": {
+      "index": "5",
+      "shortname": "2tier-gpu-svr-06",
+      "longname": "2tier-gpu-svr-06",
+      "fqdn": "2tier-gpu-svr-06.ai-fabric-2tier.io",
+      "group": "",
+      "labdir": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/clab-ai-fabric-2tier/2tier-gpu-svr-06",
+      "kind": "linux",
+      "image": "ghcr.io/srl-labs/network-multitool",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.16.3.56",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-56edddcc379d",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/clab-ai-fabric-2tier/2tier-gpu-svr-06",
+        "clab-node-longname": "2tier-gpu-svr-06",
+        "clab-node-name": "2tier-gpu-svr-06",
+        "clab-node-type": "linux",
+        "clab-owner": "root",
+        "clab-topo-file": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/ai-fabric-2tierv2.yaml",
+        "containerlab": "ai-fabric-2tier",
+        "graph-group": "GPU Servers Group2",
+        "graph-groupLabelPos": "bottom-center",
+        "graph-level": "3",
+        "graph-posX": "350",
+        "graph-posY": "630",
+        "topoViewer-group": "GPU Servers Group2",
+        "topoViewer-groupLevel": "3",
+        "topoViewer-role": "gpu"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 80,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 8080,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 11443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 1180,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "2tier-gpu-svr-07": {
+      "index": "6",
+      "shortname": "2tier-gpu-svr-07",
+      "longname": "2tier-gpu-svr-07",
+      "fqdn": "2tier-gpu-svr-07.ai-fabric-2tier.io",
+      "group": "",
+      "labdir": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/clab-ai-fabric-2tier/2tier-gpu-svr-07",
+      "kind": "linux",
+      "image": "ghcr.io/srl-labs/network-multitool",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.16.3.57",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-56edddcc379d",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/clab-ai-fabric-2tier/2tier-gpu-svr-07",
+        "clab-node-longname": "2tier-gpu-svr-07",
+        "clab-node-name": "2tier-gpu-svr-07",
+        "clab-node-type": "linux",
+        "clab-owner": "root",
+        "clab-topo-file": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/ai-fabric-2tierv2.yaml",
+        "containerlab": "ai-fabric-2tier",
+        "graph-group": "GPU Servers Group2",
+        "graph-groupLabelPos": "bottom-center",
+        "graph-level": "3",
+        "graph-posX": "550",
+        "graph-posY": "630",
+        "topoViewer-group": "GPU Servers Group2",
+        "topoViewer-groupLevel": "3",
+        "topoViewer-role": "gpu"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 80,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 8080,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 11443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 1180,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 22,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "2tier-gpu-svr-08": {
+      "index": "7",
+      "shortname": "2tier-gpu-svr-08",
+      "longname": "2tier-gpu-svr-08",
+      "fqdn": "2tier-gpu-svr-08.ai-fabric-2tier.io",
+      "group": "",
+      "labdir": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/clab-ai-fabric-2tier/2tier-gpu-svr-08",
+      "kind": "linux",
+      "image": "ghcr.io/srl-labs/network-multitool",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.16.3.58",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-56edddcc379d",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/clab-ai-fabric-2tier/2tier-gpu-svr-08",
+        "clab-node-longname": "2tier-gpu-svr-08",
+        "clab-node-name": "2tier-gpu-svr-08",
+        "clab-node-type": "linux",
+        "clab-owner": "root",
+        "clab-topo-file": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/ai-fabric-2tierv2.yaml",
+        "containerlab": "ai-fabric-2tier",
+        "graph-group": "GPU Servers Group2",
+        "graph-groupLabelPos": "bottom-center",
+        "graph-level": "3",
+        "graph-posX": "750",
+        "graph-posY": "630",
+        "topoViewer-group": "GPU Servers Group2",
+        "topoViewer-groupLevel": "3",
+        "topoViewer-role": "gpu"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 80,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 8080,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 11443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 1180,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 443,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "2tier-leaf-01": {
+      "index": "8",
+      "shortname": "2tier-leaf-01",
+      "longname": "2tier-leaf-01",
+      "fqdn": "2tier-leaf-01.ai-fabric-2tier.io",
+      "group": "",
+      "labdir": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/clab-ai-fabric-2tier/2tier-leaf-01",
+      "kind": "nokia_srlinux",
+      "image": "ghcr.io/nokia/srlinux:25.10.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.16.3.11",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "1a:76:08:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-56edddcc379d",
+        "clab-node-group": "",
+        "clab-node-kind": "nokia_srlinux",
+        "clab-node-lab-dir": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/clab-ai-fabric-2tier/2tier-leaf-01",
+        "clab-node-longname": "2tier-leaf-01",
+        "clab-node-name": "2tier-leaf-01",
+        "clab-node-type": "ixrh4",
+        "clab-owner": "root",
+        "clab-topo-file": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/ai-fabric-2tierv2.yaml",
+        "containerlab": "ai-fabric-2tier"
+      },
+      "port-bindings": [
+      ]
+    },
+    "2tier-leaf-02": {
+      "index": "9",
+      "shortname": "2tier-leaf-02",
+      "longname": "2tier-leaf-02",
+      "fqdn": "2tier-leaf-02.ai-fabric-2tier.io",
+      "group": "",
+      "labdir": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/clab-ai-fabric-2tier/2tier-leaf-02",
+      "kind": "nokia_srlinux",
+      "image": "ghcr.io/nokia/srlinux:25.10.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.16.3.12",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "1a:4b:09:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-56edddcc379d",
+        "clab-node-group": "",
+        "clab-node-kind": "nokia_srlinux",
+        "clab-node-lab-dir": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/clab-ai-fabric-2tier/2tier-leaf-02",
+        "clab-node-longname": "2tier-leaf-02",
+        "clab-node-name": "2tier-leaf-02",
+        "clab-node-type": "ixrh4",
+        "clab-owner": "root",
+        "clab-topo-file": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/ai-fabric-2tierv2.yaml",
+        "containerlab": "ai-fabric-2tier"
+      },
+      "port-bindings": [
+      ]
+    },
+    "2tier-leaf-03": {
+      "index": "10",
+      "shortname": "2tier-leaf-03",
+      "longname": "2tier-leaf-03",
+      "fqdn": "2tier-leaf-03.ai-fabric-2tier.io",
+      "group": "",
+      "labdir": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/clab-ai-fabric-2tier/2tier-leaf-03",
+      "kind": "nokia_srlinux",
+      "image": "ghcr.io/nokia/srlinux:25.10.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.16.3.13",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "1a:1f:0a:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-56edddcc379d",
+        "clab-node-group": "",
+        "clab-node-kind": "nokia_srlinux",
+        "clab-node-lab-dir": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/clab-ai-fabric-2tier/2tier-leaf-03",
+        "clab-node-longname": "2tier-leaf-03",
+        "clab-node-name": "2tier-leaf-03",
+        "clab-node-type": "ixrh4",
+        "clab-owner": "root",
+        "clab-topo-file": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/ai-fabric-2tierv2.yaml",
+        "containerlab": "ai-fabric-2tier"
+      },
+      "port-bindings": [
+      ]
+    },
+    "2tier-leaf-04": {
+      "index": "11",
+      "shortname": "2tier-leaf-04",
+      "longname": "2tier-leaf-04",
+      "fqdn": "2tier-leaf-04.ai-fabric-2tier.io",
+      "group": "",
+      "labdir": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/clab-ai-fabric-2tier/2tier-leaf-04",
+      "kind": "nokia_srlinux",
+      "image": "ghcr.io/nokia/srlinux:25.10.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.16.3.14",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "1a:02:0b:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-56edddcc379d",
+        "clab-node-group": "",
+        "clab-node-kind": "nokia_srlinux",
+        "clab-node-lab-dir": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/clab-ai-fabric-2tier/2tier-leaf-04",
+        "clab-node-longname": "2tier-leaf-04",
+        "clab-node-name": "2tier-leaf-04",
+        "clab-node-type": "ixrh4",
+        "clab-owner": "root",
+        "clab-topo-file": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/ai-fabric-2tierv2.yaml",
+        "containerlab": "ai-fabric-2tier"
+      },
+      "port-bindings": [
+      ]
+    },
+    "2tier-leaf-05": {
+      "index": "12",
+      "shortname": "2tier-leaf-05",
+      "longname": "2tier-leaf-05",
+      "fqdn": "2tier-leaf-05.ai-fabric-2tier.io",
+      "group": "",
+      "labdir": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/clab-ai-fabric-2tier/2tier-leaf-05",
+      "kind": "nokia_srlinux",
+      "image": "ghcr.io/nokia/srlinux:25.10.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.16.3.15",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "1a:57:0c:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-56edddcc379d",
+        "clab-node-group": "",
+        "clab-node-kind": "nokia_srlinux",
+        "clab-node-lab-dir": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/clab-ai-fabric-2tier/2tier-leaf-05",
+        "clab-node-longname": "2tier-leaf-05",
+        "clab-node-name": "2tier-leaf-05",
+        "clab-node-type": "ixrh4",
+        "clab-owner": "root",
+        "clab-topo-file": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/ai-fabric-2tierv2.yaml",
+        "containerlab": "ai-fabric-2tier"
+      },
+      "port-bindings": [
+      ]
+    },
+    "2tier-leaf-06": {
+      "index": "13",
+      "shortname": "2tier-leaf-06",
+      "longname": "2tier-leaf-06",
+      "fqdn": "2tier-leaf-06.ai-fabric-2tier.io",
+      "group": "",
+      "labdir": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/clab-ai-fabric-2tier/2tier-leaf-06",
+      "kind": "nokia_srlinux",
+      "image": "ghcr.io/nokia/srlinux:25.10.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.16.3.16",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "1a:f5:0d:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-56edddcc379d",
+        "clab-node-group": "",
+        "clab-node-kind": "nokia_srlinux",
+        "clab-node-lab-dir": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/clab-ai-fabric-2tier/2tier-leaf-06",
+        "clab-node-longname": "2tier-leaf-06",
+        "clab-node-name": "2tier-leaf-06",
+        "clab-node-type": "ixrh4",
+        "clab-owner": "root",
+        "clab-topo-file": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/ai-fabric-2tierv2.yaml",
+        "containerlab": "ai-fabric-2tier"
+      },
+      "port-bindings": [
+      ]
+    },
+    "2tier-leaf-07": {
+      "index": "14",
+      "shortname": "2tier-leaf-07",
+      "longname": "2tier-leaf-07",
+      "fqdn": "2tier-leaf-07.ai-fabric-2tier.io",
+      "group": "",
+      "labdir": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/clab-ai-fabric-2tier/2tier-leaf-07",
+      "kind": "nokia_srlinux",
+      "image": "ghcr.io/nokia/srlinux:25.10.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.16.3.17",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "1a:3e:0e:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-56edddcc379d",
+        "clab-node-group": "",
+        "clab-node-kind": "nokia_srlinux",
+        "clab-node-lab-dir": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/clab-ai-fabric-2tier/2tier-leaf-07",
+        "clab-node-longname": "2tier-leaf-07",
+        "clab-node-name": "2tier-leaf-07",
+        "clab-node-type": "ixrh4",
+        "clab-owner": "root",
+        "clab-topo-file": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/ai-fabric-2tierv2.yaml",
+        "containerlab": "ai-fabric-2tier"
+      },
+      "port-bindings": [
+      ]
+    },
+    "2tier-leaf-08": {
+      "index": "15",
+      "shortname": "2tier-leaf-08",
+      "longname": "2tier-leaf-08",
+      "fqdn": "2tier-leaf-08.ai-fabric-2tier.io",
+      "group": "",
+      "labdir": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/clab-ai-fabric-2tier/2tier-leaf-08",
+      "kind": "nokia_srlinux",
+      "image": "ghcr.io/nokia/srlinux:25.10.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.16.3.18",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "1a:95:0f:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-56edddcc379d",
+        "clab-node-group": "",
+        "clab-node-kind": "nokia_srlinux",
+        "clab-node-lab-dir": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/clab-ai-fabric-2tier/2tier-leaf-08",
+        "clab-node-longname": "2tier-leaf-08",
+        "clab-node-name": "2tier-leaf-08",
+        "clab-node-type": "ixrh4",
+        "clab-owner": "root",
+        "clab-topo-file": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/ai-fabric-2tierv2.yaml",
+        "containerlab": "ai-fabric-2tier"
+      },
+      "port-bindings": [
+      ]
+    },
+    "2tier-leaf-09": {
+      "index": "16",
+      "shortname": "2tier-leaf-09",
+      "longname": "2tier-leaf-09",
+      "fqdn": "2tier-leaf-09.ai-fabric-2tier.io",
+      "group": "",
+      "labdir": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/clab-ai-fabric-2tier/2tier-leaf-09",
+      "kind": "nokia_srlinux",
+      "image": "ghcr.io/nokia/srlinux:25.10.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.16.3.19",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "1a:8f:10:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-56edddcc379d",
+        "clab-node-group": "",
+        "clab-node-kind": "nokia_srlinux",
+        "clab-node-lab-dir": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/clab-ai-fabric-2tier/2tier-leaf-09",
+        "clab-node-longname": "2tier-leaf-09",
+        "clab-node-name": "2tier-leaf-09",
+        "clab-node-type": "ixrh4",
+        "clab-owner": "root",
+        "clab-topo-file": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/ai-fabric-2tierv2.yaml",
+        "containerlab": "ai-fabric-2tier"
+      },
+      "port-bindings": [
+      ]
+    },
+    "2tier-leaf-10": {
+      "index": "17",
+      "shortname": "2tier-leaf-10",
+      "longname": "2tier-leaf-10",
+      "fqdn": "2tier-leaf-10.ai-fabric-2tier.io",
+      "group": "",
+      "labdir": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/clab-ai-fabric-2tier/2tier-leaf-10",
+      "kind": "nokia_srlinux",
+      "image": "ghcr.io/nokia/srlinux:25.10.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.16.3.20",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "1a:30:11:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-56edddcc379d",
+        "clab-node-group": "",
+        "clab-node-kind": "nokia_srlinux",
+        "clab-node-lab-dir": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/clab-ai-fabric-2tier/2tier-leaf-10",
+        "clab-node-longname": "2tier-leaf-10",
+        "clab-node-name": "2tier-leaf-10",
+        "clab-node-type": "ixrh4",
+        "clab-owner": "root",
+        "clab-topo-file": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/ai-fabric-2tierv2.yaml",
+        "containerlab": "ai-fabric-2tier"
+      },
+      "port-bindings": [
+      ]
+    },
+    "2tier-leaf-11": {
+      "index": "18",
+      "shortname": "2tier-leaf-11",
+      "longname": "2tier-leaf-11",
+      "fqdn": "2tier-leaf-11.ai-fabric-2tier.io",
+      "group": "",
+      "labdir": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/clab-ai-fabric-2tier/2tier-leaf-11",
+      "kind": "nokia_srlinux",
+      "image": "ghcr.io/nokia/srlinux:25.10.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.16.3.21",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "1a:87:12:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-56edddcc379d",
+        "clab-node-group": "",
+        "clab-node-kind": "nokia_srlinux",
+        "clab-node-lab-dir": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/clab-ai-fabric-2tier/2tier-leaf-11",
+        "clab-node-longname": "2tier-leaf-11",
+        "clab-node-name": "2tier-leaf-11",
+        "clab-node-type": "ixrh4",
+        "clab-owner": "root",
+        "clab-topo-file": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/ai-fabric-2tierv2.yaml",
+        "containerlab": "ai-fabric-2tier"
+      },
+      "port-bindings": [
+      ]
+    },
+    "2tier-leaf-12": {
+      "index": "19",
+      "shortname": "2tier-leaf-12",
+      "longname": "2tier-leaf-12",
+      "fqdn": "2tier-leaf-12.ai-fabric-2tier.io",
+      "group": "",
+      "labdir": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/clab-ai-fabric-2tier/2tier-leaf-12",
+      "kind": "nokia_srlinux",
+      "image": "ghcr.io/nokia/srlinux:25.10.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.16.3.22",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "1a:fc:13:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-56edddcc379d",
+        "clab-node-group": "",
+        "clab-node-kind": "nokia_srlinux",
+        "clab-node-lab-dir": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/clab-ai-fabric-2tier/2tier-leaf-12",
+        "clab-node-longname": "2tier-leaf-12",
+        "clab-node-name": "2tier-leaf-12",
+        "clab-node-type": "ixrh4",
+        "clab-owner": "root",
+        "clab-topo-file": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/ai-fabric-2tierv2.yaml",
+        "containerlab": "ai-fabric-2tier"
+      },
+      "port-bindings": [
+      ]
+    },
+    "2tier-leaf-13": {
+      "index": "20",
+      "shortname": "2tier-leaf-13",
+      "longname": "2tier-leaf-13",
+      "fqdn": "2tier-leaf-13.ai-fabric-2tier.io",
+      "group": "",
+      "labdir": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/clab-ai-fabric-2tier/2tier-leaf-13",
+      "kind": "nokia_srlinux",
+      "image": "ghcr.io/nokia/srlinux:25.10.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.16.3.23",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "1a:28:14:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-56edddcc379d",
+        "clab-node-group": "",
+        "clab-node-kind": "nokia_srlinux",
+        "clab-node-lab-dir": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/clab-ai-fabric-2tier/2tier-leaf-13",
+        "clab-node-longname": "2tier-leaf-13",
+        "clab-node-name": "2tier-leaf-13",
+        "clab-node-type": "ixrh4",
+        "clab-owner": "root",
+        "clab-topo-file": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/ai-fabric-2tierv2.yaml",
+        "containerlab": "ai-fabric-2tier"
+      },
+      "port-bindings": [
+      ]
+    },
+    "2tier-leaf-14": {
+      "index": "21",
+      "shortname": "2tier-leaf-14",
+      "longname": "2tier-leaf-14",
+      "fqdn": "2tier-leaf-14.ai-fabric-2tier.io",
+      "group": "",
+      "labdir": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/clab-ai-fabric-2tier/2tier-leaf-14",
+      "kind": "nokia_srlinux",
+      "image": "ghcr.io/nokia/srlinux:25.10.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.16.3.24",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "1a:aa:15:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-56edddcc379d",
+        "clab-node-group": "",
+        "clab-node-kind": "nokia_srlinux",
+        "clab-node-lab-dir": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/clab-ai-fabric-2tier/2tier-leaf-14",
+        "clab-node-longname": "2tier-leaf-14",
+        "clab-node-name": "2tier-leaf-14",
+        "clab-node-type": "ixrh4",
+        "clab-owner": "root",
+        "clab-topo-file": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/ai-fabric-2tierv2.yaml",
+        "containerlab": "ai-fabric-2tier"
+      },
+      "port-bindings": [
+      ]
+    },
+    "2tier-leaf-15": {
+      "index": "22",
+      "shortname": "2tier-leaf-15",
+      "longname": "2tier-leaf-15",
+      "fqdn": "2tier-leaf-15.ai-fabric-2tier.io",
+      "group": "",
+      "labdir": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/clab-ai-fabric-2tier/2tier-leaf-15",
+      "kind": "nokia_srlinux",
+      "image": "ghcr.io/nokia/srlinux:25.10.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.16.3.25",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "1a:ff:16:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-56edddcc379d",
+        "clab-node-group": "",
+        "clab-node-kind": "nokia_srlinux",
+        "clab-node-lab-dir": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/clab-ai-fabric-2tier/2tier-leaf-15",
+        "clab-node-longname": "2tier-leaf-15",
+        "clab-node-name": "2tier-leaf-15",
+        "clab-node-type": "ixrh4",
+        "clab-owner": "root",
+        "clab-topo-file": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/ai-fabric-2tierv2.yaml",
+        "containerlab": "ai-fabric-2tier"
+      },
+      "port-bindings": [
+      ]
+    },
+    "2tier-leaf-16": {
+      "index": "23",
+      "shortname": "2tier-leaf-16",
+      "longname": "2tier-leaf-16",
+      "fqdn": "2tier-leaf-16.ai-fabric-2tier.io",
+      "group": "",
+      "labdir": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/clab-ai-fabric-2tier/2tier-leaf-16",
+      "kind": "nokia_srlinux",
+      "image": "ghcr.io/nokia/srlinux:25.10.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.16.3.26",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "1a:73:17:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-56edddcc379d",
+        "clab-node-group": "",
+        "clab-node-kind": "nokia_srlinux",
+        "clab-node-lab-dir": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/clab-ai-fabric-2tier/2tier-leaf-16",
+        "clab-node-longname": "2tier-leaf-16",
+        "clab-node-name": "2tier-leaf-16",
+        "clab-node-type": "ixrh4",
+        "clab-owner": "root",
+        "clab-topo-file": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/ai-fabric-2tierv2.yaml",
+        "containerlab": "ai-fabric-2tier"
+      },
+      "port-bindings": [
+      ]
+    },
+    "2tier-spine-01": {
+      "index": "24",
+      "shortname": "2tier-spine-01",
+      "longname": "2tier-spine-01",
+      "fqdn": "2tier-spine-01.ai-fabric-2tier.io",
+      "group": "",
+      "labdir": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/clab-ai-fabric-2tier/2tier-spine-01",
+      "kind": "nokia_srlinux",
+      "image": "ghcr.io/nokia/srlinux:25.10.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.16.3.9",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "1a:b8:18:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-56edddcc379d",
+        "clab-node-group": "",
+        "clab-node-kind": "nokia_srlinux",
+        "clab-node-lab-dir": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/clab-ai-fabric-2tier/2tier-spine-01",
+        "clab-node-longname": "2tier-spine-01",
+        "clab-node-name": "2tier-spine-01",
+        "clab-node-type": "ixrh4",
+        "clab-owner": "root",
+        "clab-topo-file": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/ai-fabric-2tierv2.yaml",
+        "containerlab": "ai-fabric-2tier"
+      },
+      "port-bindings": [
+      ]
+    },
+    "2tier-spine-02": {
+      "index": "25",
+      "shortname": "2tier-spine-02",
+      "longname": "2tier-spine-02",
+      "fqdn": "2tier-spine-02.ai-fabric-2tier.io",
+      "group": "",
+      "labdir": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/clab-ai-fabric-2tier/2tier-spine-02",
+      "kind": "nokia_srlinux",
+      "image": "ghcr.io/nokia/srlinux:25.10.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.16.3.10",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "1a:3c:19:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-56edddcc379d",
+        "clab-node-group": "",
+        "clab-node-kind": "nokia_srlinux",
+        "clab-node-lab-dir": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/clab-ai-fabric-2tier/2tier-spine-02",
+        "clab-node-longname": "2tier-spine-02",
+        "clab-node-name": "2tier-spine-02",
+        "clab-node-type": "ixrh4",
+        "clab-owner": "root",
+        "clab-topo-file": "/root/ai-fabric-kits-EDA_25.12/Large-Kit/ai-fabric-2tierv2.yaml",
+        "containerlab": "ai-fabric-2tier"
+      },
+      "port-bindings": [
+      ]
+    }
+  },
+  "links": [
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-01",
+          "interface": "e1-1",
+          "mac": "aa:c1:ab:3d:3e:43",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-01",
+          "interface": "e1-33",
+          "mac": "aa:c1:ab:09:51:08",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-01",
+          "interface": "e1-2",
+          "mac": "aa:c1:ab:52:05:22",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-01",
+          "interface": "e1-34",
+          "mac": "aa:c1:ab:cf:28:49",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-01",
+          "interface": "e1-3",
+          "mac": "aa:c1:ab:26:c1:42",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-01",
+          "interface": "e1-35",
+          "mac": "aa:c1:ab:37:63:8c",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-01",
+          "interface": "e1-4",
+          "mac": "aa:c1:ab:a4:8a:2b",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-01",
+          "interface": "e1-36",
+          "mac": "aa:c1:ab:b4:6c:ff",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-01",
+          "interface": "e1-5",
+          "mac": "aa:c1:ab:3a:82:f5",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-02",
+          "interface": "e1-33",
+          "mac": "aa:c1:ab:f1:b6:48",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-01",
+          "interface": "e1-6",
+          "mac": "aa:c1:ab:8a:07:d7",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-02",
+          "interface": "e1-34",
+          "mac": "aa:c1:ab:af:4f:42",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-01",
+          "interface": "e1-7",
+          "mac": "aa:c1:ab:f8:eb:0b",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-02",
+          "interface": "e1-35",
+          "mac": "aa:c1:ab:e6:25:35",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-01",
+          "interface": "e1-8",
+          "mac": "aa:c1:ab:67:34:32",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-02",
+          "interface": "e1-36",
+          "mac": "aa:c1:ab:81:f5:c9",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-01",
+          "interface": "e1-9",
+          "mac": "aa:c1:ab:be:ba:40",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-03",
+          "interface": "e1-33",
+          "mac": "aa:c1:ab:03:f6:c3",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-01",
+          "interface": "e1-10",
+          "mac": "aa:c1:ab:03:98:f9",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-03",
+          "interface": "e1-34",
+          "mac": "aa:c1:ab:26:86:fc",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-01",
+          "interface": "e1-11",
+          "mac": "aa:c1:ab:8d:54:b7",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-03",
+          "interface": "e1-35",
+          "mac": "aa:c1:ab:47:60:f2",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-01",
+          "interface": "e1-12",
+          "mac": "aa:c1:ab:8e:e9:29",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-03",
+          "interface": "e1-36",
+          "mac": "aa:c1:ab:58:f8:22",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-01",
+          "interface": "e1-13",
+          "mac": "aa:c1:ab:4c:4f:3d",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-04",
+          "interface": "e1-33",
+          "mac": "aa:c1:ab:ff:62:1f",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-01",
+          "interface": "e1-14",
+          "mac": "aa:c1:ab:1b:c9:79",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-04",
+          "interface": "e1-34",
+          "mac": "aa:c1:ab:65:90:ef",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-01",
+          "interface": "e1-15",
+          "mac": "aa:c1:ab:c2:d8:a5",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-04",
+          "interface": "e1-35",
+          "mac": "aa:c1:ab:41:de:16",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-01",
+          "interface": "e1-16",
+          "mac": "aa:c1:ab:4e:3b:9d",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-04",
+          "interface": "e1-36",
+          "mac": "aa:c1:ab:da:d7:9e",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-01",
+          "interface": "e1-17",
+          "mac": "aa:c1:ab:b3:33:c4",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-05",
+          "interface": "e1-33",
+          "mac": "aa:c1:ab:46:17:f2",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-01",
+          "interface": "e1-18",
+          "mac": "aa:c1:ab:22:3b:22",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-05",
+          "interface": "e1-34",
+          "mac": "aa:c1:ab:60:13:d1",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-01",
+          "interface": "e1-19",
+          "mac": "aa:c1:ab:e5:83:d2",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-05",
+          "interface": "e1-35",
+          "mac": "aa:c1:ab:d5:51:33",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-01",
+          "interface": "e1-20",
+          "mac": "aa:c1:ab:70:9c:2b",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-05",
+          "interface": "e1-36",
+          "mac": "aa:c1:ab:80:48:31",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-01",
+          "interface": "e1-21",
+          "mac": "aa:c1:ab:c4:42:8d",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-06",
+          "interface": "e1-33",
+          "mac": "aa:c1:ab:fe:eb:d1",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-01",
+          "interface": "e1-22",
+          "mac": "aa:c1:ab:1b:e2:89",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-06",
+          "interface": "e1-34",
+          "mac": "aa:c1:ab:d3:03:ef",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-01",
+          "interface": "e1-23",
+          "mac": "aa:c1:ab:5c:ba:fa",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-06",
+          "interface": "e1-35",
+          "mac": "aa:c1:ab:c0:32:b5",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-01",
+          "interface": "e1-24",
+          "mac": "aa:c1:ab:1e:99:67",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-06",
+          "interface": "e1-36",
+          "mac": "aa:c1:ab:c7:6d:e4",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-01",
+          "interface": "e1-25",
+          "mac": "aa:c1:ab:c0:06:2f",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-07",
+          "interface": "e1-33",
+          "mac": "aa:c1:ab:68:01:f7",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-01",
+          "interface": "e1-26",
+          "mac": "aa:c1:ab:a6:cd:42",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-07",
+          "interface": "e1-34",
+          "mac": "aa:c1:ab:e2:73:4c",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-01",
+          "interface": "e1-27",
+          "mac": "aa:c1:ab:60:a4:7e",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-07",
+          "interface": "e1-35",
+          "mac": "aa:c1:ab:af:b2:cc",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-01",
+          "interface": "e1-28",
+          "mac": "aa:c1:ab:c9:85:80",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-07",
+          "interface": "e1-36",
+          "mac": "aa:c1:ab:0a:be:65",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-01",
+          "interface": "e1-29",
+          "mac": "aa:c1:ab:1b:64:1a",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-08",
+          "interface": "e1-33",
+          "mac": "aa:c1:ab:95:f7:04",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-01",
+          "interface": "e1-30",
+          "mac": "aa:c1:ab:46:2e:48",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-08",
+          "interface": "e1-34",
+          "mac": "aa:c1:ab:65:28:01",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-01",
+          "interface": "e1-31",
+          "mac": "aa:c1:ab:28:e3:09",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-08",
+          "interface": "e1-35",
+          "mac": "aa:c1:ab:48:eb:7a",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-01",
+          "interface": "e1-32",
+          "mac": "aa:c1:ab:29:e7:8d",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-08",
+          "interface": "e1-36",
+          "mac": "aa:c1:ab:b8:a6:7e",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-01",
+          "interface": "e1-33",
+          "mac": "aa:c1:ab:3a:96:75",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-09",
+          "interface": "e1-33",
+          "mac": "aa:c1:ab:87:5f:d2",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-01",
+          "interface": "e1-34",
+          "mac": "aa:c1:ab:c6:39:d0",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-09",
+          "interface": "e1-34",
+          "mac": "aa:c1:ab:6a:1b:60",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-01",
+          "interface": "e1-35",
+          "mac": "aa:c1:ab:e0:28:77",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-09",
+          "interface": "e1-35",
+          "mac": "aa:c1:ab:f1:f5:c3",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-01",
+          "interface": "e1-36",
+          "mac": "aa:c1:ab:57:79:14",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-09",
+          "interface": "e1-36",
+          "mac": "aa:c1:ab:a3:ab:a6",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-01",
+          "interface": "e1-37",
+          "mac": "aa:c1:ab:37:26:8f",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-10",
+          "interface": "e1-33",
+          "mac": "aa:c1:ab:7e:38:58",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-01",
+          "interface": "e1-38",
+          "mac": "aa:c1:ab:a5:c2:14",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-10",
+          "interface": "e1-34",
+          "mac": "aa:c1:ab:08:f7:e2",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-01",
+          "interface": "e1-39",
+          "mac": "aa:c1:ab:df:df:f4",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-10",
+          "interface": "e1-35",
+          "mac": "aa:c1:ab:37:e1:0e",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-01",
+          "interface": "e1-40",
+          "mac": "aa:c1:ab:c0:84:de",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-10",
+          "interface": "e1-36",
+          "mac": "aa:c1:ab:37:13:d7",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-01",
+          "interface": "e1-41",
+          "mac": "aa:c1:ab:39:6c:9b",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-11",
+          "interface": "e1-33",
+          "mac": "aa:c1:ab:e8:c4:03",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-01",
+          "interface": "e1-42",
+          "mac": "aa:c1:ab:cc:51:52",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-11",
+          "interface": "e1-34",
+          "mac": "aa:c1:ab:96:d4:22",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-01",
+          "interface": "e1-43",
+          "mac": "aa:c1:ab:90:a4:1e",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-11",
+          "interface": "e1-35",
+          "mac": "aa:c1:ab:d2:c2:23",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-01",
+          "interface": "e1-44",
+          "mac": "aa:c1:ab:d2:1c:b6",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-11",
+          "interface": "e1-36",
+          "mac": "aa:c1:ab:7d:70:56",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-01",
+          "interface": "e1-45",
+          "mac": "aa:c1:ab:c5:23:b8",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-12",
+          "interface": "e1-33",
+          "mac": "aa:c1:ab:ae:5f:97",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-01",
+          "interface": "e1-46",
+          "mac": "aa:c1:ab:51:ae:c6",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-12",
+          "interface": "e1-34",
+          "mac": "aa:c1:ab:5b:68:c0",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-01",
+          "interface": "e1-47",
+          "mac": "aa:c1:ab:a3:1c:b0",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-12",
+          "interface": "e1-35",
+          "mac": "aa:c1:ab:0c:dd:a0",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-01",
+          "interface": "e1-48",
+          "mac": "aa:c1:ab:29:ec:5c",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-12",
+          "interface": "e1-36",
+          "mac": "aa:c1:ab:5a:72:36",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-01",
+          "interface": "e1-49",
+          "mac": "aa:c1:ab:17:a6:b9",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-13",
+          "interface": "e1-33",
+          "mac": "aa:c1:ab:3c:59:8f",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-01",
+          "interface": "e1-50",
+          "mac": "aa:c1:ab:e0:32:ed",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-13",
+          "interface": "e1-34",
+          "mac": "aa:c1:ab:fc:c9:0d",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-01",
+          "interface": "e1-51",
+          "mac": "aa:c1:ab:5e:09:a1",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-13",
+          "interface": "e1-35",
+          "mac": "aa:c1:ab:6f:80:0c",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-01",
+          "interface": "e1-52",
+          "mac": "aa:c1:ab:ef:b2:b6",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-13",
+          "interface": "e1-36",
+          "mac": "aa:c1:ab:e6:9a:dc",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-01",
+          "interface": "e1-53",
+          "mac": "aa:c1:ab:84:16:32",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-14",
+          "interface": "e1-33",
+          "mac": "aa:c1:ab:34:0a:65",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-01",
+          "interface": "e1-54",
+          "mac": "aa:c1:ab:f0:cf:a6",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-14",
+          "interface": "e1-34",
+          "mac": "aa:c1:ab:a6:81:cc",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-01",
+          "interface": "e1-55",
+          "mac": "aa:c1:ab:dd:1f:ac",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-14",
+          "interface": "e1-35",
+          "mac": "aa:c1:ab:2a:3e:7d",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-01",
+          "interface": "e1-56",
+          "mac": "aa:c1:ab:db:0d:76",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-14",
+          "interface": "e1-36",
+          "mac": "aa:c1:ab:ed:6a:7b",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-01",
+          "interface": "e1-57",
+          "mac": "aa:c1:ab:a2:33:ef",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-15",
+          "interface": "e1-33",
+          "mac": "aa:c1:ab:c9:7a:3f",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-01",
+          "interface": "e1-58",
+          "mac": "aa:c1:ab:51:57:cc",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-15",
+          "interface": "e1-34",
+          "mac": "aa:c1:ab:60:5c:25",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-01",
+          "interface": "e1-59",
+          "mac": "aa:c1:ab:18:7b:b5",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-15",
+          "interface": "e1-35",
+          "mac": "aa:c1:ab:72:5b:f5",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-01",
+          "interface": "e1-60",
+          "mac": "aa:c1:ab:be:68:9e",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-15",
+          "interface": "e1-36",
+          "mac": "aa:c1:ab:3e:13:98",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-01",
+          "interface": "e1-61",
+          "mac": "aa:c1:ab:b7:e0:fe",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-16",
+          "interface": "e1-33",
+          "mac": "aa:c1:ab:ae:32:01",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-01",
+          "interface": "e1-62",
+          "mac": "aa:c1:ab:89:e6:0a",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-16",
+          "interface": "e1-34",
+          "mac": "aa:c1:ab:90:e9:57",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-01",
+          "interface": "e1-63",
+          "mac": "aa:c1:ab:b3:76:1c",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-16",
+          "interface": "e1-35",
+          "mac": "aa:c1:ab:54:fd:0f",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-01",
+          "interface": "e1-64",
+          "mac": "aa:c1:ab:0b:dc:2f",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-16",
+          "interface": "e1-36",
+          "mac": "aa:c1:ab:1d:a8:d0",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-02",
+          "interface": "e1-1",
+          "mac": "aa:c1:ab:fa:70:0e",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-01",
+          "interface": "e1-41",
+          "mac": "aa:c1:ab:04:02:27",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-02",
+          "interface": "e1-2",
+          "mac": "aa:c1:ab:a6:c8:52",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-01",
+          "interface": "e1-42",
+          "mac": "aa:c1:ab:80:09:61",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-02",
+          "interface": "e1-3",
+          "mac": "aa:c1:ab:c0:e4:62",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-01",
+          "interface": "e1-43",
+          "mac": "aa:c1:ab:a8:d5:0e",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-02",
+          "interface": "e1-4",
+          "mac": "aa:c1:ab:37:07:15",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-01",
+          "interface": "e1-44",
+          "mac": "aa:c1:ab:4a:16:61",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-02",
+          "interface": "e1-5",
+          "mac": "aa:c1:ab:2d:82:3c",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-02",
+          "interface": "e1-41",
+          "mac": "aa:c1:ab:fd:57:2e",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-02",
+          "interface": "e1-6",
+          "mac": "aa:c1:ab:1d:bb:d6",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-02",
+          "interface": "e1-42",
+          "mac": "aa:c1:ab:8d:d1:ae",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-02",
+          "interface": "e1-7",
+          "mac": "aa:c1:ab:bc:91:d3",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-02",
+          "interface": "e1-43",
+          "mac": "aa:c1:ab:18:c1:38",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-02",
+          "interface": "e1-8",
+          "mac": "aa:c1:ab:fb:47:0e",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-02",
+          "interface": "e1-44",
+          "mac": "aa:c1:ab:ef:44:df",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-02",
+          "interface": "e1-9",
+          "mac": "aa:c1:ab:1b:89:e4",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-03",
+          "interface": "e1-41",
+          "mac": "aa:c1:ab:98:50:3f",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-02",
+          "interface": "e1-10",
+          "mac": "aa:c1:ab:aa:47:09",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-03",
+          "interface": "e1-42",
+          "mac": "aa:c1:ab:da:a5:17",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-02",
+          "interface": "e1-11",
+          "mac": "aa:c1:ab:c2:df:61",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-03",
+          "interface": "e1-43",
+          "mac": "aa:c1:ab:d4:94:f5",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-02",
+          "interface": "e1-12",
+          "mac": "aa:c1:ab:45:d1:fb",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-03",
+          "interface": "e1-44",
+          "mac": "aa:c1:ab:a5:24:fb",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-02",
+          "interface": "e1-13",
+          "mac": "aa:c1:ab:9c:e3:33",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-04",
+          "interface": "e1-41",
+          "mac": "aa:c1:ab:38:fe:9d",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-02",
+          "interface": "e1-14",
+          "mac": "aa:c1:ab:bd:2e:c4",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-04",
+          "interface": "e1-42",
+          "mac": "aa:c1:ab:7c:c8:2b",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-02",
+          "interface": "e1-15",
+          "mac": "aa:c1:ab:b2:0d:7d",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-04",
+          "interface": "e1-43",
+          "mac": "aa:c1:ab:33:8a:e8",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-02",
+          "interface": "e1-16",
+          "mac": "aa:c1:ab:f9:ae:63",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-04",
+          "interface": "e1-44",
+          "mac": "aa:c1:ab:2a:d8:98",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-02",
+          "interface": "e1-17",
+          "mac": "aa:c1:ab:75:6e:e9",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-05",
+          "interface": "e1-41",
+          "mac": "aa:c1:ab:77:ae:86",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-02",
+          "interface": "e1-18",
+          "mac": "aa:c1:ab:c4:1a:14",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-05",
+          "interface": "e1-42",
+          "mac": "aa:c1:ab:52:17:74",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-02",
+          "interface": "e1-19",
+          "mac": "aa:c1:ab:88:02:12",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-05",
+          "interface": "e1-43",
+          "mac": "aa:c1:ab:fc:6d:f7",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-02",
+          "interface": "e1-20",
+          "mac": "aa:c1:ab:0c:65:5b",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-05",
+          "interface": "e1-44",
+          "mac": "aa:c1:ab:40:0f:73",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-02",
+          "interface": "e1-21",
+          "mac": "aa:c1:ab:12:c5:7b",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-06",
+          "interface": "e1-41",
+          "mac": "aa:c1:ab:6f:10:0a",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-02",
+          "interface": "e1-22",
+          "mac": "aa:c1:ab:1d:43:45",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-06",
+          "interface": "e1-42",
+          "mac": "aa:c1:ab:f4:0f:c4",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-02",
+          "interface": "e1-23",
+          "mac": "aa:c1:ab:76:f0:02",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-06",
+          "interface": "e1-43",
+          "mac": "aa:c1:ab:d1:ff:55",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-02",
+          "interface": "e1-24",
+          "mac": "aa:c1:ab:73:7a:43",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-06",
+          "interface": "e1-44",
+          "mac": "aa:c1:ab:9c:38:f6",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-02",
+          "interface": "e1-25",
+          "mac": "aa:c1:ab:bd:69:40",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-07",
+          "interface": "e1-41",
+          "mac": "aa:c1:ab:23:c1:15",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-02",
+          "interface": "e1-26",
+          "mac": "aa:c1:ab:c2:03:6a",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-07",
+          "interface": "e1-42",
+          "mac": "aa:c1:ab:86:19:87",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-02",
+          "interface": "e1-27",
+          "mac": "aa:c1:ab:46:bc:d5",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-07",
+          "interface": "e1-43",
+          "mac": "aa:c1:ab:ac:1e:22",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-02",
+          "interface": "e1-28",
+          "mac": "aa:c1:ab:ca:da:9c",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-07",
+          "interface": "e1-44",
+          "mac": "aa:c1:ab:ae:92:a2",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-02",
+          "interface": "e1-29",
+          "mac": "aa:c1:ab:2b:0e:58",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-08",
+          "interface": "e1-41",
+          "mac": "aa:c1:ab:f5:ea:fb",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-02",
+          "interface": "e1-30",
+          "mac": "aa:c1:ab:41:29:71",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-08",
+          "interface": "e1-42",
+          "mac": "aa:c1:ab:64:a1:38",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-02",
+          "interface": "e1-31",
+          "mac": "aa:c1:ab:d1:a9:04",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-08",
+          "interface": "e1-43",
+          "mac": "aa:c1:ab:bf:2b:73",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-02",
+          "interface": "e1-32",
+          "mac": "aa:c1:ab:c6:cb:c6",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-08",
+          "interface": "e1-44",
+          "mac": "aa:c1:ab:ba:5c:32",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-02",
+          "interface": "e1-33",
+          "mac": "aa:c1:ab:a9:04:43",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-09",
+          "interface": "e1-41",
+          "mac": "aa:c1:ab:87:4c:dc",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-02",
+          "interface": "e1-34",
+          "mac": "aa:c1:ab:20:63:ad",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-09",
+          "interface": "e1-42",
+          "mac": "aa:c1:ab:f0:88:68",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-02",
+          "interface": "e1-35",
+          "mac": "aa:c1:ab:00:63:ef",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-09",
+          "interface": "e1-43",
+          "mac": "aa:c1:ab:10:dd:bb",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-02",
+          "interface": "e1-36",
+          "mac": "aa:c1:ab:c9:4f:76",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-09",
+          "interface": "e1-44",
+          "mac": "aa:c1:ab:a6:bd:bc",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-02",
+          "interface": "e1-37",
+          "mac": "aa:c1:ab:8e:b0:9c",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-10",
+          "interface": "e1-41",
+          "mac": "aa:c1:ab:48:4f:d7",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-02",
+          "interface": "e1-38",
+          "mac": "aa:c1:ab:73:34:12",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-10",
+          "interface": "e1-42",
+          "mac": "aa:c1:ab:d3:b8:64",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-02",
+          "interface": "e1-39",
+          "mac": "aa:c1:ab:7a:82:49",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-10",
+          "interface": "e1-43",
+          "mac": "aa:c1:ab:58:5c:ee",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-02",
+          "interface": "e1-40",
+          "mac": "aa:c1:ab:98:59:a9",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-10",
+          "interface": "e1-44",
+          "mac": "aa:c1:ab:ee:d4:bb",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-02",
+          "interface": "e1-41",
+          "mac": "aa:c1:ab:21:a6:45",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-11",
+          "interface": "e1-41",
+          "mac": "aa:c1:ab:45:fe:d7",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-02",
+          "interface": "e1-42",
+          "mac": "aa:c1:ab:09:3b:fd",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-11",
+          "interface": "e1-42",
+          "mac": "aa:c1:ab:f5:ca:0c",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-02",
+          "interface": "e1-43",
+          "mac": "aa:c1:ab:0e:00:9f",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-11",
+          "interface": "e1-43",
+          "mac": "aa:c1:ab:8c:55:e3",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-02",
+          "interface": "e1-44",
+          "mac": "aa:c1:ab:5e:3e:a8",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-11",
+          "interface": "e1-44",
+          "mac": "aa:c1:ab:68:98:e8",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-02",
+          "interface": "e1-45",
+          "mac": "aa:c1:ab:9f:f3:37",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-12",
+          "interface": "e1-41",
+          "mac": "aa:c1:ab:12:8e:96",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-02",
+          "interface": "e1-46",
+          "mac": "aa:c1:ab:b1:15:f2",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-12",
+          "interface": "e1-42",
+          "mac": "aa:c1:ab:2c:20:9c",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-02",
+          "interface": "e1-47",
+          "mac": "aa:c1:ab:b4:33:4a",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-12",
+          "interface": "e1-43",
+          "mac": "aa:c1:ab:27:84:e7",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-02",
+          "interface": "e1-48",
+          "mac": "aa:c1:ab:a7:d7:52",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-12",
+          "interface": "e1-44",
+          "mac": "aa:c1:ab:f5:31:9a",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-02",
+          "interface": "e1-49",
+          "mac": "aa:c1:ab:f8:b7:1a",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-13",
+          "interface": "e1-41",
+          "mac": "aa:c1:ab:3a:57:9e",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-02",
+          "interface": "e1-50",
+          "mac": "aa:c1:ab:a9:2a:a7",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-13",
+          "interface": "e1-42",
+          "mac": "aa:c1:ab:a5:c2:60",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-02",
+          "interface": "e1-51",
+          "mac": "aa:c1:ab:78:60:5b",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-13",
+          "interface": "e1-43",
+          "mac": "aa:c1:ab:55:c3:2b",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-02",
+          "interface": "e1-52",
+          "mac": "aa:c1:ab:e6:2d:2a",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-13",
+          "interface": "e1-44",
+          "mac": "aa:c1:ab:64:34:30",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-02",
+          "interface": "e1-53",
+          "mac": "aa:c1:ab:08:ac:48",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-14",
+          "interface": "e1-41",
+          "mac": "aa:c1:ab:25:b1:a0",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-02",
+          "interface": "e1-54",
+          "mac": "aa:c1:ab:a3:9c:f2",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-14",
+          "interface": "e1-42",
+          "mac": "aa:c1:ab:f4:98:4b",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-02",
+          "interface": "e1-55",
+          "mac": "aa:c1:ab:ef:84:b4",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-14",
+          "interface": "e1-43",
+          "mac": "aa:c1:ab:b7:28:57",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-02",
+          "interface": "e1-56",
+          "mac": "aa:c1:ab:8d:c9:a4",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-14",
+          "interface": "e1-44",
+          "mac": "aa:c1:ab:24:92:10",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-02",
+          "interface": "e1-57",
+          "mac": "aa:c1:ab:66:b3:91",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-15",
+          "interface": "e1-41",
+          "mac": "aa:c1:ab:05:49:f5",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-02",
+          "interface": "e1-58",
+          "mac": "aa:c1:ab:6a:6d:7a",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-15",
+          "interface": "e1-42",
+          "mac": "aa:c1:ab:b0:ff:16",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-02",
+          "interface": "e1-59",
+          "mac": "aa:c1:ab:b9:69:23",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-15",
+          "interface": "e1-43",
+          "mac": "aa:c1:ab:1e:ed:b3",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-02",
+          "interface": "e1-60",
+          "mac": "aa:c1:ab:bc:11:c9",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-15",
+          "interface": "e1-44",
+          "mac": "aa:c1:ab:65:96:88",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-02",
+          "interface": "e1-61",
+          "mac": "aa:c1:ab:07:c3:ab",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-16",
+          "interface": "e1-41",
+          "mac": "aa:c1:ab:79:9e:45",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-02",
+          "interface": "e1-62",
+          "mac": "aa:c1:ab:82:3a:54",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-16",
+          "interface": "e1-42",
+          "mac": "aa:c1:ab:6b:f3:df",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-02",
+          "interface": "e1-63",
+          "mac": "aa:c1:ab:8b:99:38",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-16",
+          "interface": "e1-43",
+          "mac": "aa:c1:ab:03:9b:97",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-spine-02",
+          "interface": "e1-64",
+          "mac": "aa:c1:ab:fc:a5:d0",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-leaf-16",
+          "interface": "e1-44",
+          "mac": "aa:c1:ab:59:62:fb",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-leaf-01",
+          "interface": "e1-1",
+          "mac": "aa:c1:ab:3a:09:f4",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-gpu-svr-01",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:0f:d0:93",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-leaf-02",
+          "interface": "e1-1",
+          "mac": "aa:c1:ab:d2:46:ea",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-gpu-svr-01",
+          "interface": "eth2",
+          "mac": "aa:c1:ab:99:aa:00",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-leaf-03",
+          "interface": "e1-1",
+          "mac": "aa:c1:ab:32:4f:89",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-gpu-svr-01",
+          "interface": "eth3",
+          "mac": "aa:c1:ab:ad:fa:b1",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-leaf-04",
+          "interface": "e1-1",
+          "mac": "aa:c1:ab:4a:00:f2",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-gpu-svr-01",
+          "interface": "eth4",
+          "mac": "aa:c1:ab:b0:8f:b2",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-leaf-05",
+          "interface": "e1-1",
+          "mac": "aa:c1:ab:58:6a:d8",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-gpu-svr-01",
+          "interface": "eth5",
+          "mac": "aa:c1:ab:ce:08:d8",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-leaf-06",
+          "interface": "e1-1",
+          "mac": "aa:c1:ab:0b:6a:d7",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-gpu-svr-01",
+          "interface": "eth6",
+          "mac": "aa:c1:ab:69:1f:ab",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-leaf-07",
+          "interface": "e1-1",
+          "mac": "aa:c1:ab:4f:46:f0",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-gpu-svr-01",
+          "interface": "eth7",
+          "mac": "aa:c1:ab:97:e5:c5",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-leaf-08",
+          "interface": "e1-1",
+          "mac": "aa:c1:ab:cd:38:1f",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-gpu-svr-01",
+          "interface": "eth8",
+          "mac": "aa:c1:ab:e3:fe:89",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-leaf-01",
+          "interface": "e1-2",
+          "mac": "aa:c1:ab:dc:60:e5",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-gpu-svr-02",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:b0:90:a0",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-leaf-02",
+          "interface": "e1-2",
+          "mac": "aa:c1:ab:0c:95:37",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-gpu-svr-02",
+          "interface": "eth2",
+          "mac": "aa:c1:ab:b6:7b:73",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-leaf-03",
+          "interface": "e1-2",
+          "mac": "aa:c1:ab:ba:e9:31",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-gpu-svr-02",
+          "interface": "eth3",
+          "mac": "aa:c1:ab:f9:14:0c",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-leaf-04",
+          "interface": "e1-2",
+          "mac": "aa:c1:ab:35:04:8d",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-gpu-svr-02",
+          "interface": "eth4",
+          "mac": "aa:c1:ab:33:d1:ec",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-leaf-05",
+          "interface": "e1-2",
+          "mac": "aa:c1:ab:4c:8c:88",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-gpu-svr-02",
+          "interface": "eth5",
+          "mac": "aa:c1:ab:d1:83:35",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-leaf-06",
+          "interface": "e1-2",
+          "mac": "aa:c1:ab:a5:e8:a3",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-gpu-svr-02",
+          "interface": "eth6",
+          "mac": "aa:c1:ab:1c:7c:6b",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-leaf-07",
+          "interface": "e1-2",
+          "mac": "aa:c1:ab:c2:df:45",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-gpu-svr-02",
+          "interface": "eth7",
+          "mac": "aa:c1:ab:83:04:ff",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-leaf-08",
+          "interface": "e1-2",
+          "mac": "aa:c1:ab:55:2c:37",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-gpu-svr-02",
+          "interface": "eth8",
+          "mac": "aa:c1:ab:1f:d9:24",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-leaf-01",
+          "interface": "e1-3",
+          "mac": "aa:c1:ab:35:9e:f7",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-gpu-svr-03",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:a7:42:41",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-leaf-02",
+          "interface": "e1-3",
+          "mac": "aa:c1:ab:3f:a5:42",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-gpu-svr-03",
+          "interface": "eth2",
+          "mac": "aa:c1:ab:c8:77:26",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-leaf-03",
+          "interface": "e1-3",
+          "mac": "aa:c1:ab:9b:cc:78",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-gpu-svr-03",
+          "interface": "eth3",
+          "mac": "aa:c1:ab:27:05:d4",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-leaf-04",
+          "interface": "e1-3",
+          "mac": "aa:c1:ab:97:b1:7a",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-gpu-svr-03",
+          "interface": "eth4",
+          "mac": "aa:c1:ab:cd:ae:47",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-leaf-05",
+          "interface": "e1-3",
+          "mac": "aa:c1:ab:c5:2a:25",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-gpu-svr-03",
+          "interface": "eth5",
+          "mac": "aa:c1:ab:6c:3b:43",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-leaf-06",
+          "interface": "e1-3",
+          "mac": "aa:c1:ab:e8:5d:f2",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-gpu-svr-03",
+          "interface": "eth6",
+          "mac": "aa:c1:ab:0b:12:35",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-leaf-07",
+          "interface": "e1-3",
+          "mac": "aa:c1:ab:ec:85:e9",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-gpu-svr-03",
+          "interface": "eth7",
+          "mac": "aa:c1:ab:09:bd:a6",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-leaf-08",
+          "interface": "e1-3",
+          "mac": "aa:c1:ab:61:b4:03",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-gpu-svr-03",
+          "interface": "eth8",
+          "mac": "aa:c1:ab:af:44:62",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-leaf-01",
+          "interface": "e1-4",
+          "mac": "aa:c1:ab:17:5d:9d",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-gpu-svr-04",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:ce:3e:cf",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-leaf-02",
+          "interface": "e1-4",
+          "mac": "aa:c1:ab:76:5e:a5",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-gpu-svr-04",
+          "interface": "eth2",
+          "mac": "aa:c1:ab:4c:77:e2",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-leaf-03",
+          "interface": "e1-4",
+          "mac": "aa:c1:ab:99:09:c7",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-gpu-svr-04",
+          "interface": "eth3",
+          "mac": "aa:c1:ab:db:4b:b6",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-leaf-04",
+          "interface": "e1-4",
+          "mac": "aa:c1:ab:6d:cb:78",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-gpu-svr-04",
+          "interface": "eth4",
+          "mac": "aa:c1:ab:62:72:d2",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-leaf-05",
+          "interface": "e1-4",
+          "mac": "aa:c1:ab:bc:46:15",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-gpu-svr-04",
+          "interface": "eth5",
+          "mac": "aa:c1:ab:68:da:6b",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-leaf-06",
+          "interface": "e1-4",
+          "mac": "aa:c1:ab:9d:ad:05",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-gpu-svr-04",
+          "interface": "eth6",
+          "mac": "aa:c1:ab:79:8c:29",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-leaf-07",
+          "interface": "e1-4",
+          "mac": "aa:c1:ab:e1:f7:b5",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-gpu-svr-04",
+          "interface": "eth7",
+          "mac": "aa:c1:ab:45:68:79",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-leaf-08",
+          "interface": "e1-4",
+          "mac": "aa:c1:ab:e6:20:4b",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-gpu-svr-04",
+          "interface": "eth8",
+          "mac": "aa:c1:ab:da:a3:e1",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-leaf-09",
+          "interface": "e1-1",
+          "mac": "aa:c1:ab:21:a6:74",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-gpu-svr-05",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:90:d0:6d",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-leaf-10",
+          "interface": "e1-1",
+          "mac": "aa:c1:ab:f8:b2:22",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-gpu-svr-05",
+          "interface": "eth2",
+          "mac": "aa:c1:ab:49:5c:26",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-leaf-11",
+          "interface": "e1-1",
+          "mac": "aa:c1:ab:9e:94:bd",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-gpu-svr-05",
+          "interface": "eth3",
+          "mac": "aa:c1:ab:64:4d:03",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-leaf-12",
+          "interface": "e1-1",
+          "mac": "aa:c1:ab:0e:cc:c3",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-gpu-svr-05",
+          "interface": "eth4",
+          "mac": "aa:c1:ab:57:a5:25",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-leaf-13",
+          "interface": "e1-1",
+          "mac": "aa:c1:ab:5b:19:30",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-gpu-svr-05",
+          "interface": "eth5",
+          "mac": "aa:c1:ab:2d:e4:12",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-leaf-14",
+          "interface": "e1-1",
+          "mac": "aa:c1:ab:14:f0:d9",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-gpu-svr-05",
+          "interface": "eth6",
+          "mac": "aa:c1:ab:6a:6a:b2",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-leaf-15",
+          "interface": "e1-1",
+          "mac": "aa:c1:ab:53:90:76",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-gpu-svr-05",
+          "interface": "eth7",
+          "mac": "aa:c1:ab:c9:b5:5c",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-leaf-16",
+          "interface": "e1-1",
+          "mac": "aa:c1:ab:0e:08:79",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-gpu-svr-05",
+          "interface": "eth8",
+          "mac": "aa:c1:ab:9c:d4:26",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-leaf-09",
+          "interface": "e1-2",
+          "mac": "aa:c1:ab:51:58:a4",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-gpu-svr-06",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:d7:a9:f3",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-leaf-10",
+          "interface": "e1-2",
+          "mac": "aa:c1:ab:26:23:f3",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-gpu-svr-06",
+          "interface": "eth2",
+          "mac": "aa:c1:ab:87:5f:63",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-leaf-11",
+          "interface": "e1-2",
+          "mac": "aa:c1:ab:a5:d7:09",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-gpu-svr-06",
+          "interface": "eth3",
+          "mac": "aa:c1:ab:de:4d:b7",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-leaf-12",
+          "interface": "e1-2",
+          "mac": "aa:c1:ab:5c:88:16",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-gpu-svr-06",
+          "interface": "eth4",
+          "mac": "aa:c1:ab:80:cf:1d",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-leaf-13",
+          "interface": "e1-2",
+          "mac": "aa:c1:ab:e9:b1:f4",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-gpu-svr-06",
+          "interface": "eth5",
+          "mac": "aa:c1:ab:0e:12:3f",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-leaf-14",
+          "interface": "e1-2",
+          "mac": "aa:c1:ab:ba:0c:84",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-gpu-svr-06",
+          "interface": "eth6",
+          "mac": "aa:c1:ab:e2:9c:be",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-leaf-15",
+          "interface": "e1-2",
+          "mac": "aa:c1:ab:9f:25:7c",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-gpu-svr-06",
+          "interface": "eth7",
+          "mac": "aa:c1:ab:75:9b:ef",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-leaf-16",
+          "interface": "e1-2",
+          "mac": "aa:c1:ab:b1:44:7b",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-gpu-svr-06",
+          "interface": "eth8",
+          "mac": "aa:c1:ab:7d:e4:19",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-leaf-09",
+          "interface": "e1-3",
+          "mac": "aa:c1:ab:fd:ff:5a",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-gpu-svr-07",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:14:0c:99",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-leaf-10",
+          "interface": "e1-3",
+          "mac": "aa:c1:ab:da:e8:f8",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-gpu-svr-07",
+          "interface": "eth2",
+          "mac": "aa:c1:ab:5f:27:59",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-leaf-11",
+          "interface": "e1-3",
+          "mac": "aa:c1:ab:6d:41:74",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-gpu-svr-07",
+          "interface": "eth3",
+          "mac": "aa:c1:ab:4a:37:e5",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-leaf-12",
+          "interface": "e1-3",
+          "mac": "aa:c1:ab:c5:4a:a6",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-gpu-svr-07",
+          "interface": "eth4",
+          "mac": "aa:c1:ab:b9:01:df",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-leaf-13",
+          "interface": "e1-3",
+          "mac": "aa:c1:ab:1d:66:11",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-gpu-svr-07",
+          "interface": "eth5",
+          "mac": "aa:c1:ab:0e:98:ad",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-leaf-14",
+          "interface": "e1-3",
+          "mac": "aa:c1:ab:aa:aa:a6",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-gpu-svr-07",
+          "interface": "eth6",
+          "mac": "aa:c1:ab:c4:75:9f",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-leaf-15",
+          "interface": "e1-3",
+          "mac": "aa:c1:ab:44:da:f6",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-gpu-svr-07",
+          "interface": "eth7",
+          "mac": "aa:c1:ab:9f:6d:68",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-leaf-16",
+          "interface": "e1-3",
+          "mac": "aa:c1:ab:3f:3d:f3",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-gpu-svr-07",
+          "interface": "eth8",
+          "mac": "aa:c1:ab:b2:d3:c8",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-leaf-09",
+          "interface": "e1-4",
+          "mac": "aa:c1:ab:73:ff:7f",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-gpu-svr-08",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:ac:43:04",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-leaf-10",
+          "interface": "e1-4",
+          "mac": "aa:c1:ab:61:a2:33",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-gpu-svr-08",
+          "interface": "eth2",
+          "mac": "aa:c1:ab:7a:08:dc",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-leaf-11",
+          "interface": "e1-4",
+          "mac": "aa:c1:ab:d5:e4:a0",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-gpu-svr-08",
+          "interface": "eth3",
+          "mac": "aa:c1:ab:d4:93:0d",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-leaf-12",
+          "interface": "e1-4",
+          "mac": "aa:c1:ab:f3:72:86",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-gpu-svr-08",
+          "interface": "eth4",
+          "mac": "aa:c1:ab:36:e4:e0",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-leaf-13",
+          "interface": "e1-4",
+          "mac": "aa:c1:ab:d7:3d:08",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-gpu-svr-08",
+          "interface": "eth5",
+          "mac": "aa:c1:ab:80:9b:a2",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-leaf-14",
+          "interface": "e1-4",
+          "mac": "aa:c1:ab:2e:89:7a",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-gpu-svr-08",
+          "interface": "eth6",
+          "mac": "aa:c1:ab:d4:e5:fb",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-leaf-15",
+          "interface": "e1-4",
+          "mac": "aa:c1:ab:21:d1:6f",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-gpu-svr-08",
+          "interface": "eth7",
+          "mac": "aa:c1:ab:8f:4f:12",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "2tier-leaf-16",
+          "interface": "e1-4",
+          "mac": "aa:c1:ab:97:60:41",
+          "peer": "z"
+        },
+        "z": {
+          "node": "2tier-gpu-svr-08",
+          "interface": "eth8",
+          "mac": "aa:c1:ab:dc:a3:c1",
+          "peer": "a"
+        }
+      }
+    }
+  ]
+}

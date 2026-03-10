@@ -1,0 +1,127 @@
+{
+  "freeTextAnnotations": [],
+  "groupStyleAnnotations": [],
+  "cloudNodeAnnotations": [],
+  "nodeAnnotations": [
+    {
+      "id": "1tier-leaf-01",
+      "position": {
+        "x": -35,
+        "y": 385
+      },
+      "icon": "leaf",
+      "geoCoordinates": {
+        "lat": 48.71608961571487,
+        "lng": 9.125374223765638
+      },
+      "groupLabelPos": "top-center",
+      "group": "Data Center Stripe-01",
+      "level": "2"
+    },
+    {
+      "id": "1tier-leaf-02",
+      "position": {
+        "x": 7,
+        "y": 385
+      },
+      "icon": "leaf",
+      "geoCoordinates": {
+        "lat": 49.05906577750438,
+        "lng": 9.423082488945356
+      },
+      "groupLabelPos": "top-center",
+      "group": "Data Center Stripe-01",
+      "level": "2"
+    },
+    {
+      "id": "1tier-leaf-03",
+      "position": {
+        "x": -126,
+        "y": 605
+      },
+      "icon": "leaf",
+      "geoCoordinates": {
+        "lat": 49.530993014224904,
+        "lng": 9.57929991059186
+      },
+      "groupLabelPos": "top-center",
+      "group": "Data Center Storage-01",
+      "level": "2"
+    },
+    {
+      "id": "1tier-leaf-04",
+      "position": {
+        "x": -84,
+        "y": 605
+      },
+      "icon": "leaf",
+      "geoCoordinates": {
+        "lat": 48.75420654360301,
+        "lng": 9.316742414095826
+      },
+      "groupLabelPos": "top-center",
+      "group": "Data Center Storage-01",
+      "level": "2"
+    },
+    {
+      "id": "1tier-leaf-05",
+      "position": {
+        "x": 63,
+        "y": 605
+      },
+      "icon": "leaf",
+      "geoCoordinates": {
+        "lat": 49.40258457587218,
+        "lng": 9.444453007234971
+      },
+      "groupLabelPos": "top-center",
+      "group": "Data Center Frontend-01",
+      "level": "2"
+    },
+    {
+      "id": "1tier-leaf-06",
+      "position": {
+        "x": 119,
+        "y": 605
+      },
+      "icon": "leaf",
+      "geoCoordinates": {
+        "lat": 49.3281924890683,
+        "lng": 9.800236795626814
+      },
+      "groupLabelPos": "top-center",
+      "group": "Data Center Frontend-01",
+      "level": "2"
+    },
+    {
+      "id": "1tier-gpu-svr-01",
+      "position": {
+        "x": -77,
+        "y": 493
+      },
+      "icon": "gpu",
+      "geoCoordinates": {
+        "lat": 49.13290268886933,
+        "lng": 9.663533075455167
+      },
+      "groupLabelPos": "bottom-center",
+      "group": "GPU Servers",
+      "level": "4"
+    },
+    {
+      "id": "1tier-gpu-svr-02",
+      "position": {
+        "x": 35,
+        "y": 493
+      },
+      "icon": "gpu",
+      "geoCoordinates": {
+        "lat": 49.25338646992562,
+        "lng": 9.494281333555024
+      },
+      "groupLabelPos": "bottom-center",
+      "group": "GPU Servers",
+      "level": "4"
+    }
+  ]
+}

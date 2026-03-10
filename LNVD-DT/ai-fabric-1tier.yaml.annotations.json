@@ -1,0 +1,198 @@
+{
+  "freeTextAnnotations": [],
+  "groupStyleAnnotations": [
+    {
+      "id": "Data Center Stripe01:2",
+      "backgroundColor": "#000dc2",
+      "backgroundOpacity": 15,
+      "borderColor": "#000dc2",
+      "borderWidth": 1,
+      "borderStyle": "dotted",
+      "borderRadius": 15,
+      "color": "#ebecf0"
+    },
+    {
+      "id": "GPU Servers:4",
+      "backgroundColor": "#000dc2",
+      "backgroundOpacity": 15,
+      "borderColor": "#000dc2",
+      "borderWidth": 1,
+      "borderStyle": "dotted",
+      "borderRadius": 15,
+      "color": "#ebecf0"
+    },
+    {
+      "id": "Data Center Frontend-01:2",
+      "backgroundColor": "#d9d9d9",
+      "backgroundOpacity": 20,
+      "borderColor": "#dddddd",
+      "borderWidth": 0.5,
+      "borderStyle": "solid",
+      "borderRadius": 0,
+      "color": "#ebecf0"
+    },
+    {
+      "id": "Data Center Storage-01:2",
+      "backgroundColor": "#d9d9d9",
+      "backgroundOpacity": 20,
+      "borderColor": "#dddddd",
+      "borderWidth": 0.5,
+      "borderStyle": "solid",
+      "borderRadius": 0,
+      "color": "#ebecf0"
+    }
+  ],
+  "cloudNodeAnnotations": [],
+  "nodeAnnotations": [
+    {
+      "id": "1tier-leaf-01",
+      "position": {
+        "x": 126,
+        "y": 338
+      },
+      "icon": "leaf",
+      "geoCoordinates": {
+        "lat": 49.29618204222845,
+        "lng": 9.469433705372461
+      },
+      "groupLabelPos": "top-center",
+      "group": "Data Center Stripe01",
+      "level": "2"
+    },
+    {
+      "id": "1tier-leaf-02",
+      "position": {
+        "x": 252,
+        "y": 338
+      },
+      "icon": "leaf",
+      "geoCoordinates": {
+        "lat": 48.86317663352668,
+        "lng": 9.34090890624746
+      },
+      "groupLabelPos": "top-center",
+      "group": "Data Center Stripe01",
+      "level": "2"
+    },
+    {
+      "id": "1tier-leaf-03",
+      "position": {
+        "x": 287,
+        "y": 623
+      },
+      "icon": "leaf",
+      "geoCoordinates": {
+        "lat": 49.904469083593554,
+        "lng": 9.76653878702713
+      },
+      "groupLabelPos": "bottom-center",
+      "group": "Data Center Storage-01",
+      "level": "2"
+    },
+    {
+      "id": "1tier-leaf-04",
+      "position": {
+        "x": 329,
+        "y": 623
+      },
+      "icon": "leaf",
+      "geoCoordinates": {
+        "lat": 49.69526454168281,
+        "lng": 10.37601486842008
+      },
+      "groupLabelPos": "bottom-center",
+      "group": "Data Center Storage-01",
+      "level": "2"
+    },
+    {
+      "id": "1tier-leaf-05",
+      "position": {
+        "x": 91,
+        "y": 623
+      },
+      "icon": "leaf",
+      "geoCoordinates": {
+        "lat": 50.34417117862591,
+        "lng": 10.501533102169514
+      },
+      "groupLabelPos": "bottom-center",
+      "group": "Data Center Frontend-01",
+      "level": "2"
+    },
+    {
+      "id": "1tier-leaf-06",
+      "position": {
+        "x": 147,
+        "y": 623
+      },
+      "icon": "leaf",
+      "geoCoordinates": {
+        "lat": 49.903285047376485,
+        "lng": 10.25821897611052
+      },
+      "groupLabelPos": "bottom-center",
+      "group": "Data Center Frontend-01",
+      "level": "2"
+    },
+    {
+      "id": "1tier-gpu-svr-01",
+      "position": {
+        "x": 98,
+        "y": 464
+      },
+      "icon": "gpu",
+      "geoCoordinates": {
+        "lat": 49.181866265002995,
+        "lng": 9.669231339016028
+      },
+      "groupLabelPos": "bottom-center",
+      "group": "GPU Servers",
+      "level": "4"
+    },
+    {
+      "id": "1tier-gpu-svr-02",
+      "position": {
+        "x": 168,
+        "y": 464
+      },
+      "icon": "gpu",
+      "geoCoordinates": {
+        "lat": 49.38283890865998,
+        "lng": 9.778985354570427
+      },
+      "groupLabelPos": "bottom-center",
+      "group": "GPU Servers",
+      "level": "4"
+    },
+    {
+      "id": "1tier-gpu-svr-03",
+      "position": {
+        "x": 238,
+        "y": 464
+      },
+      "icon": "gpu",
+      "geoCoordinates": {
+        "lat": 49.71142032828086,
+        "lng": 9.722379533517696
+      },
+      "groupLabelPos": "bottom-center",
+      "group": "GPU Servers",
+      "level": "4"
+    },
+    {
+      "id": "1tier-gpu-svr-04",
+      "position": {
+        "x": 308,
+        "y": 464
+      },
+      "icon": "gpu",
+      "geoCoordinates": {
+        "lat": 49.620097094674364,
+        "lng": 9.816373628031197
+      },
+      "groupLabelPos": "bottom-center",
+      "group": "GPU Servers",
+      "level": "4"
+    }
+  ]
+}

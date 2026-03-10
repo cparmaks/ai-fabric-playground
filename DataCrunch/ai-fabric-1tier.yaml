@@ -1,0 +1,181 @@
+name: ai-fabric-1tier
+prefix: ""
+
+mgmt:
+  network: mgmt-net
+  ipv4-subnet: 192.168.100.0/24
+
+topology:
+  kinds:
+    nokia_srlinux:
+      image: ghcr.io/nokia/srlinux:25.3.1
+      type: ixrh4
+    linux:
+      image: ghcr.io/srl-labs/network-multitool
+      type: linux
+      binds:
+        - gpu-base-configs:/config
+
+  nodes:
+
+    # 2xIXR H4 switches are members of AI Backend Fabric
+    1tier-leaf-01:
+      kind: nokia_srlinux
+      mgmt-ipv4: 192.168.100.11
+      labels:
+        topoViewer-role: leaf
+        topoViewer-group: "Data Center Stripe-01"
+        topoViewer-groupLevel: 2
+        graph-posX: "100"
+        graph-posY: "250"
+        graph-group: Data Center Stripe-01
+        graph-level: "2"
+        graph-groupLabelPos: top-center
+      image: ghcr.io/nokia/srlinux:25.3.1
+      type: ixrh4
+
+    1tier-leaf-02:
+      kind: nokia_srlinux
+      mgmt-ipv4: 192.168.100.12
+      labels:
+        topoViewer-role: leaf
+        topoViewer-group: "Data Center Stripe-01"
+        topoViewer-groupLevel: 2
+        graph-posX: "150"
+        graph-posY: "250"
+        graph-group: Data Center Stripe-01
+        graph-level: "2"
+        graph-groupLabelPos: top-center
+      image: ghcr.io/nokia/srlinux:25.3.1
+      type: ixrh4
+
+    # 2xIXR D5 switches are members of AI Storage Fabric
+    1tier-leaf-03:
+      kind: nokia_srlinux
+      mgmt-ipv4: 192.168.100.13
+      labels:
+        topoViewer-role: leaf
+        topoViewer-group: "Data Center Storage-01"
+        topoViewer-groupLevel: 2
+        graph-posX: "200"
+        graph-posY: "350"
+        graph-group: Data Center Storage-01
+        graph-level: "2"
+        graph-groupLabelPos: top-center
+      image: ghcr.io/nokia/srlinux:25.3.1
+      type: ixrd5
+
+    1tier-leaf-04:
+      kind: nokia_srlinux
+      mgmt-ipv4: 192.168.100.14
+      labels:
+        topoViewer-role: leaf
+        topoViewer-group: "Data Center Storage-01"
+        topoViewer-groupLevel: 2
+        graph-posX: "250"
+        graph-posY: "350"
+        graph-group: Data Center Storage-01
+        graph-level: "2"
+        graph-groupLabelPos: top-center
+      image: ghcr.io/nokia/srlinux:25.3.1
+      type: ixrd5
+
+    # 2xIXR D3L switches are members of AI Frontend Fabric
+    1tier-leaf-05:
+      kind: nokia_srlinux
+      mgmt-ipv4: 192.168.100.15
+      labels:
+        topoViewer-role: leaf
+        topoViewer-group: "Data Center Frontend-01"
+        topoViewer-groupLevel: 2
+        graph-posX: "300"
+        graph-posY: "450"
+        graph-group: Data Center Frontend-01
+        graph-level: "2"
+        graph-groupLabelPos: top-center
+      image: ghcr.io/nokia/srlinux:25.3.1
+      type: ixrd3l
+
+    1tier-leaf-06:
+      kind: nokia_srlinux
+      mgmt-ipv4: 192.168.100.16
+      labels:
+        topoViewer-role: leaf
+        topoViewer-group: "Data Center Frontend-01"
+        topoViewer-groupLevel: 2
+        graph-posX: "350"
+        graph-posY: "450"
+        graph-group: Data Center Frontend-01
+        graph-level: "2"
+        graph-groupLabelPos: top-center
+      image: ghcr.io/nokia/srlinux:25.3.1
+      type: ixrd3l
+
+    # GPU Servers
+    1tier-gpu-svr-01:
+      kind: linux
+      mgmt-ipv4: 192.168.100.21
+      group: AI GPU Server01
+      exec:
+        - bash /config/gpu-svr-01.sh
+      labels:
+        topoViewer-role: gpu
+        topoViewer-group: "GPU Servers"
+        topoViewer-groupLevel: 4
+        graph-posX: "-100"
+        graph-posY: "500"
+        graph-group: GPU Servers
+        graph-level: "4"
+        graph-groupLabelPos: bottom-center
+      image: ghcr.io/srl-labs/network-multitool
+    1tier-gpu-svr-02:
+      kind: linux
+      mgmt-ipv4: 192.168.100.22
+      group: AI GPU Server02
+      exec:
+        - bash /config/gpu-svr-02.sh
+      labels:
+        topoViewer-role: gpu
+        topoViewer-group: "GPU Servers"
+        topoViewer-groupLevel: 4
+        graph-posX: "0"
+        graph-posY: "500"
+        graph-group: GPU Servers
+        graph-level: "4"
+        graph-groupLabelPos: bottom-center
+      image: ghcr.io/srl-labs/network-multitool
+
+  links:
+    # Leaf 01 to GPU Servers
+    - endpoints: [ 1tier-leaf-01:e1-1, 1tier-gpu-svr-01:eth1 ]
+    - endpoints: [ 1tier-leaf-01:e1-2, 1tier-gpu-svr-01:eth2 ]
+    - endpoints: [ 1tier-leaf-01:e1-3, 1tier-gpu-svr-01:eth3 ]
+    - endpoints: [ 1tier-leaf-01:e1-4, 1tier-gpu-svr-01:eth4 ]
+
+    - endpoints: [ 1tier-leaf-01:e1-5, 1tier-gpu-svr-02:eth1 ]
+    - endpoints: [ 1tier-leaf-01:e1-6, 1tier-gpu-svr-02:eth2 ]
+    - endpoints: [ 1tier-leaf-01:e1-7, 1tier-gpu-svr-02:eth3 ]
+    - endpoints: [ 1tier-leaf-01:e1-8, 1tier-gpu-svr-02:eth4 ]
+
+    # Leaf 02
+    - endpoints: [ 1tier-leaf-02:e1-1, 1tier-gpu-svr-01:eth5 ]
+    - endpoints: [ 1tier-leaf-02:e1-2, 1tier-gpu-svr-01:eth6 ]
+    - endpoints: [ 1tier-leaf-02:e1-3, 1tier-gpu-svr-01:eth7 ]
+    - endpoints: [ 1tier-leaf-02:e1-4, 1tier-gpu-svr-01:eth8 ]
+
+    - endpoints: [ 1tier-leaf-02:e1-5, 1tier-gpu-svr-02:eth5 ]
+    - endpoints: [ 1tier-leaf-02:e1-6, 1tier-gpu-svr-02:eth6 ]
+    - endpoints: [ 1tier-leaf-02:e1-7, 1tier-gpu-svr-02:eth7 ]
+    - endpoints: [ 1tier-leaf-02:e1-8, 1tier-gpu-svr-02:eth8 ]
+
+    # D5 01-02 to GPU Servers
+    - endpoints: [ 1tier-leaf-03:e1-1, 1tier-gpu-svr-01:eth9 ]
+    - endpoints: [ 1tier-leaf-04:e1-1, 1tier-gpu-svr-01:eth10 ]
+    - endpoints: [ 1tier-leaf-03:e1-2, 1tier-gpu-svr-02:eth9 ]
+    - endpoints: [ 1tier-leaf-04:e1-2, 1tier-gpu-svr-02:eth10 ]
+
+    # D3L 01-02 to GPU Servers
+    - endpoints: [ 1tier-leaf-05:e1-1, 1tier-gpu-svr-01:eth11 ]
+    - endpoints: [ 1tier-leaf-06:e1-1, 1tier-gpu-svr-01:eth12 ]
+    - endpoints: [ 1tier-leaf-05:e1-2, 1tier-gpu-svr-02:eth11 ]
+    - endpoints: [ 1tier-leaf-06:e1-2, 1tier-gpu-svr-02:eth12 ]

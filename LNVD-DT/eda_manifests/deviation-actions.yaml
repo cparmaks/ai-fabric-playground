@@ -1,0 +1,28 @@
+apiVersion: core.eda.nokia.com/v1
+kind: DeviationAction
+metadata:
+  name: 'accept-all-deviations-on-leaf-01'
+  namespace: ai-fabric-1tier
+  labels: {}
+  annotations: {}
+spec:
+  nodeEndpoint: 1tier-leaf-01
+  actions:
+    - path: '.'
+      action: setAccept
+      recurse: true
+
+---
+apiVersion: core.eda.nokia.com/v1
+kind: DeviationAction
+metadata:
+  name: 'accept-all-deviations-on-leaf-02'
+  namespace: ai-fabric-1tier
+  labels: {}
+  annotations: {}
+spec:
+  nodeEndpoint: 1tier-leaf-02
+  actions:
+    - path: "."
+      action: setAccept
+      recurse: true

@@ -1,0 +1,2909 @@
+{
+  "_preamble": {
+    "header": {
+      "generated-by": "SRLINUX",
+      "name": "",
+      "comment": "",
+      "created": "2026-02-26T22:22:09.825Z",
+      "release": "v25.10.1",
+      "enabled-yang-features": ["srl_nokia-features:aaa-fqdn-for-tacacs-server-address", "srl_nokia-features:aaa-remote-superuser", "srl_nokia-features:aaa-server-timeout", "srl_nokia-features:aaa-servers-health-check", "srl_nokia-features:aaa-servers-tacacs-vsa", "srl_nokia-features:aaa-spiffe-id", "srl_nokia-features:aaa-superuser", "srl_nokia-features:acl-cpm-filter-type-mac", "srl_nokia-features:acl-filter-allowed-on-irb-interfaces", "srl_nokia-features:acl-filter-allowed-on-l2-interfaces", "srl_nokia-features:acl-filter-ip-allowed-on-l2-interfaces", "srl_nokia-features:acl-if-output-shared-mac-tcam-entries", "srl_nokia-features:acl-if-output-shared-tcam-entries", "srl_nokia-features:acl-ip-prefix-list", "srl_nokia-features:acl-logging", "srl_nokia-features:acl-policer", "srl_nokia-features:acl-policer-for-mac-filters", "srl_nokia-features:acl-subinterface-entry-statistics", "srl_nokia-features:admin-user-roles", "srl_nokia-features:anycast-gw", "srl_nokia-features:arp-nd-datapath-programming", "srl_nokia-features:backplane-facing-capacity", "srl_nokia-features:bfd", "srl_nokia-features:bgp-add-paths", "srl_nokia-features:bgp-add-paths-evpn", "srl_nokia-features:bgp-add-paths-policy-control", "srl_nokia-features:bgp-afi-safi-default-policy-action", "srl_nokia-features:bgp-afi-safi-policy", "srl_nokia-features:bgp-auth-password", "srl_nokia-features:bgp-cfg-afi-safi-list", "srl_nokia-features:bgp-graceful-restart-gaps", "srl_nokia-features:bgp-graceful-restart-state-additions", "srl_nokia-features:bgp-import-export-policy-leaflist", "srl_nokia-features:bgp-ipv6-next-hop-tunnel-resolution", "srl_nokia-features:bgp-local-as-container-iso-list", "srl_nokia-features:bgp-max-ecmp-hash-buckets", "srl_nokia-features:bgp-mtu-discovery", "srl_nokia-features:bgp-multipath-maximum-paths-limit-128", "srl_nokia-features:bgp-peertype-maximum-paths", "srl_nokia-features:bgp-prefix-limit", "srl_nokia-features:bgp-prefix-limit-forever", "srl_nokia-features:bgp-prefix-limit-last-exceeded", "srl_nokia-features:bgp-prefix-limit-post-policy", "srl_nokia-features:bgp-prefix-limit-received", "srl_nokia-features:bgp-restart-max-wait", "srl_nokia-features:bgp-rib-afi-safi-list", "srl_nokia-features:bgp-rib-afi-safi-list-for-evpn", "srl_nokia-features:bgp-rib-afi-safi-route", "srl_nokia-features:bgp-route-flap-damping", "srl_nokia-features:bgp-rr-for-rtc", "srl_nokia-features:bgp-send-community-leaflist", "srl_nokia-features:bgp-single-hop-connected-check", "srl_nokia-features:bgp-unnumbered-peers", "srl_nokia-features:bgp-weighted-ecmp", "srl_nokia-features:breakout-ports-2", "srl_nokia-features:breakout-ports-4", "srl_nokia-features:breakout-speed-100G", "srl_nokia-features:breakout-speed-10G", "srl_nokia-features:breakout-speed-200G", "srl_nokia-features:breakout-speed-25G", "srl_nokia-features:bridged", "srl_nokia-features:bt-split-horizon-groups", "srl_nokia-features:chassis-vertical-orientation", "srl_nokia-features:cli-modeled-environment", "srl_nokia-features:cli-plugin-authorization", "srl_nokia-features:combined-bgp-ecmp", "srl_nokia-features:config-l2-mtu-default", "srl_nokia-features:cpm-datapath-resources", "srl_nokia-features:dac-link-training", "srl_nokia-features:dhcp-relay-fqdn", "srl_nokia-features:dhcp-svr-boot-compute", "srl_nokia-features:dhcp-svr-option-121", "srl_nokia-features:dhcp-svr-option-26", "srl_nokia-features:dot1x-tunnel", "srl_nokia-features:dot1x-tunnel-system-stats", "srl_nokia-features:dynamic-load-balancing", "srl_nokia-features:event-handler", "srl_nokia-features:factory-reset", "srl_nokia-features:fan-avg-speed-show-report", "srl_nokia-features:fib-ilm-programming", "srl_nokia-features:fib-programming-progress", "srl_nokia-features:fib-tunnel-programming", "srl_nokia-features:fixed", "srl_nokia-features:forward-error-correction-ethernet", "srl_nokia-features:gnmi-extensions", "srl_nokia-features:gnmi-services", "srl_nokia-features:gnoi-bgp", "srl_nokia-features:gnoi-bootconfig", "srl_nokia-features:gnoi-containerz", "srl_nokia-features:gnoi-export-protos", "srl_nokia-features:gnoi-healthz", "srl_nokia-features:gnoi-healthz-forwarding-complex", "srl_nokia-features:gnsi-accounting", "srl_nokia-features:gnsi-authz", "srl_nokia-features:gnsi-certz", "srl_nokia-features:gnsi-credentialz", "srl_nokia-features:gnsi-pathz", "srl_nokia-features:grpc-server", "srl_nokia-features:grpc-server-max-concurrent-streams", "srl_nokia-features:grub-password", "srl_nokia-features:icmp-rate-control", "srl_nokia-features:inter-as-nhsrr-ipvpn", "srl_nokia-features:interface-evpn-internal-tags", "srl_nokia-features:interface-references", "srl_nokia-features:internal-tags", "srl_nokia-features:intf-eth-in-undersize-frames", "srl_nokia-features:ip-qos-multifield-on-bridged-subifs", "srl_nokia-features:ipv4-unnumbered", "srl_nokia-features:isis-level-passive", "srl_nokia-features:isis-lsdb", "srl_nokia-features:isis-lsdb-te-extensions", "srl_nokia-features:isis-mi", "srl_nokia-features:isis-mt", "srl_nokia-features:isis-nsf", "srl_nokia-features:isis-topology-state", "srl_nokia-features:keychain", "srl_nokia-features:l2cp-transparency", "srl_nokia-features:l2cp-transparency-stats", "srl_nokia-features:l2cp-transparency-xstp", "srl_nokia-features:l3-proxy-arp", "srl_nokia-features:l3-proxy-arp-irb", "srl_nokia-features:l3-proxy-nd", "srl_nokia-features:l3-proxy-nd-irb", "srl_nokia-features:lacp-fallback", "srl_nokia-features:lag", "srl_nokia-features:license", "srl_nokia-features:load-balancing", "srl_nokia-features:location-coordinates", "srl_nokia-features:log-filter-for-negation", "srl_nokia-features:log-tls", "srl_nokia-features:longest-prefix-match", "srl_nokia-features:maintenance-mode-improvements", "srl_nokia-features:mcast-route-policy", "srl_nokia-features:named-queues-and-named-fcs", "srl_nokia-features:ndk-admin-state", "srl_nokia-features:ndk-auto-telemetry-state", "srl_nokia-features:ndk-disable-caching", "srl_nokia-features:netconf", "srl_nokia-features:netconf-unix-socket", "srl_nokia-features:network-instance-leaked-route-readvertisement", "srl_nokia-features:nhsrr-evpn", "srl_nokia-features:num-physical-channels", "srl_nokia-features:openconfig", "srl_nokia-features:packet-tracer", "srl_nokia-features:password-complexity-sequence", "srl_nokia-features:platform-7220-h4", "srl_nokia-features:port-breakout", "srl_nokia-features:port-fec-clause74", "srl_nokia-features:port-speed-100G", "srl_nokia-features:port-speed-10G", "srl_nokia-features:port-speed-1G", "srl_nokia-features:port-speed-200G", "srl_nokia-features:port-speed-400G", "srl_nokia-features:port-speed-40G", "srl_nokia-features:qos", "srl_nokia-features:qos-dcbx", "srl_nokia-features:qos-dot1p-classifier-policy", "srl_nokia-features:qos-drop-probability", "srl_nokia-features:qos-dscp-classifier-policy", "srl_nokia-features:qos-dscp-rewrite-policy", "srl_nokia-features:qos-ecn", "srl_nokia-features:qos-forwarding-complexes", "srl_nokia-features:qos-irb-subinterface", "srl_nokia-features:qos-management-protocols-dscp", "srl_nokia-features:qos-multicast-queue", "srl_nokia-features:qos-pfc", "srl_nokia-features:qos-pfc-headroom-buffer", "srl_nokia-features:qos-pfc-received-traffic-mapping", "srl_nokia-features:qos-pfc-xgs", "srl_nokia-features:qos-queue-committed-burst-size", "srl_nokia-features:qos-queue-depth-sampling", "srl_nokia-features:qos-queue-management-profile", "srl_nokia-features:qos-rewrite-dot1p", "srl_nokia-features:qos-scheduler-policies", "srl_nokia-features:qos-unicast-queue", "srl_nokia-features:qos-wred-traffic-type-tcp", "srl_nokia-features:radius-source-address", "srl_nokia-features:route-leaking", "srl_nokia-features:route-table-show-report-improvements", "srl_nokia-features:router-advertisement-rdnss-option", "srl_nokia-features:routing-policy-bgp-disable-fib", "srl_nokia-features:routing-policy-bgp-med", "srl_nokia-features:routing-policy-bgp-next-hop-self-action", "srl_nokia-features:routing-policy-bgp-next-hop-set-action", "srl_nokia-features:routing-policy-community-match-set-options", "srl_nokia-features:routing-policy-enhanced-as-path-set", "srl_nokia-features:routing-policy-extended-community-actions", "srl_nokia-features:routing-policy-extended-community-sets", "srl_nokia-features:routing-policy-isis-actions", "srl_nokia-features:routing-policy-match-protocol-redefine", "srl_nokia-features:routing-policy-named-statements", "srl_nokia-features:routing-policy-next-policy", "srl_nokia-features:routing-policy-next-statement", "srl_nokia-features:routing-policy-ospf-actions", "srl_nokia-features:routing-policy-preference-action", "srl_nokia-features:routing-policy-prefix-set-match-options-any", "srl_nokia-features:routing-policy-standard-community-actions", "srl_nokia-features:routing-policy-standard-community-sets", "srl_nokia-features:routing-policy-subroutines", "srl_nokia-features:routing-policy-table-connections", "srl_nokia-features:routing-policy-tag-set-match-options", "srl_nokia-features:segment-routing-adjacency-sid", "srl_nokia-features:segment-routing-shared-sid", "srl_nokia-features:sflow", "srl_nokia-features:sflow-collector-dscp", "srl_nokia-features:sflow-interface-sampling", "srl_nokia-features:show-acl-aclfilter", "srl_nokia-features:snmp-counters", "srl_nokia-features:snmp-over-tcp", "srl_nokia-features:snmp-tools-trap", "srl_nokia-features:snmp-traps", "srl_nokia-features:snmp-v3", "srl_nokia-features:static-next-hop-group-backup", "srl_nokia-features:static-next-hop-unnumbered-interface", "srl_nokia-features:static-next-hop-unnumbered-mpls", "srl_nokia-features:static-route-tag-set", "srl_nokia-features:static-route-tag-value", "srl_nokia-features:subif-acl-policer", "srl_nokia-features:system-hash-seed-from-mac", "srl_nokia-features:system-resource-utilization", "srl_nokia-features:tacacs-source-address", "srl_nokia-features:tftp", "srl_nokia-features:tls-cert-expiry", "srl_nokia-features:tomahawk4", "srl_nokia-features:transceiver-link-length-info", "srl_nokia-features:virtual-ip-discovery", "srl_nokia-features:vlan-tpid"],
+      "checksum": "26614a87fd411cf8$868b59bfd1d4dde358ea291ea6a250ba77e00d6d"
+    },
+    "build": {
+      "git-branch": "SRL_25_10_B1",
+      "git-tag": "v25.10.1-399-g90c1dbe35ef",
+      "git-sha": "90c1dbe35ef7618e84fe0269cb460a3a76db9032"
+    },
+    "application": [
+      {
+        "name": "ethcfm_mgr",
+        "path": "/opt/srlinux/bin/sr_ethcfm_mgr",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "time_mgr",
+        "path": "/opt/srlinux/bin/sr_time_mgr",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "twamp_mgr",
+        "path": "/opt/srlinux/bin/sr_twamp_mgr",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "oc_mgmt_server",
+        "path": "/opt/srlinux/bin/sr_oc_mgmt_server",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "oc_common",
+        "path": "n/a",
+        "version": "n/a"
+      },
+      {
+        "name": "macsec_mgr",
+        "path": "/opt/srlinux/bin/sr_macsec_mgr",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "index_res_mgr",
+        "path": "/opt/srlinux/bin/sr_index_res_mgr",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "pw_mgr",
+        "path": "/opt/srlinux/bin/sr_pw_mgr",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "pinger",
+        "path": "/opt/srlinux/bin/sr_pinger",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "plcy_mgr",
+        "path": "/opt/srlinux/bin/sr_plcy_mgr",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "maint_mode_mgr",
+        "path": "n/a",
+        "version": "n/a"
+      },
+      {
+        "name": "dot1x_mgr",
+        "path": "n/a",
+        "version": "n/a"
+      },
+      {
+        "name": "netconf_mgr",
+        "path": "/opt/srlinux/bin/sr_netconf_mgr",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "dev_mgr",
+        "path": "/opt/srlinux/bin/sr_device_mgr",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "json_rpc",
+        "path": "/opt/srlinux/bin/sr_json_rpc",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "mplsoam_mgr",
+        "path": "/opt/srlinux/bin/sr_mplsoam_mgr",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "mpls_mgr",
+        "path": "/opt/srlinux/bin/sr_mpls_mgr",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "l2_proxy_arp_nd_mgr",
+        "path": "/opt/srlinux/bin/sr_l2_proxy_arp_nd_mgr",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "igmp_mgr",
+        "path": "/opt/srlinux/bin/sr_igmp_mgr",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "vrrp_mgr",
+        "path": "/opt/srlinux/bin/sr_vrrp_mgr",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "event_mgr",
+        "path": "/opt/srlinux/bin/sr_event_mgr",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "gretunnel_mgr",
+        "path": "/opt/srlinux/bin/sr_gretunnel_mgr",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "linux_mgr",
+        "path": "/opt/srlinux/bin/sr_linux_mgr",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "dnsmasq",
+        "path": "/usr/sbin/dnsmasq",
+        "version": "2024-08-28T16:52:09.000Z"
+      },
+      {
+        "name": "sshd",
+        "path": "/usr/",
+        "version": "2025-10-10T15:32:01.000Z"
+      },
+      {
+        "name": "ntpd",
+        "path": "/usr/sbin/chronyd",
+        "version": "2023-05-08T20:05:00.000Z"
+      },
+      {
+        "name": "vsftpd",
+        "path": "/usr/sbin/vsftpd",
+        "version": "2022-10-16T11:05:42.000Z"
+      },
+      {
+        "name": "snmp_server",
+        "path": "/opt/srlinux/bin/sr_snmp_server",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "timesrv",
+        "path": "/usr/sbin/chronyd",
+        "version": "2023-05-08T20:05:00.000Z"
+      },
+      {
+        "name": "dockerd",
+        "path": "/usr/bin/dockerd",
+        "version": "n/a"
+      },
+      {
+        "name": "msdp_mgr",
+        "path": "/opt/srlinux/bin/sr_msdp_mgr",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "gnpsi_mgr",
+        "path": "/opt/srlinux/bin/sr_gnpsi_mgr",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "timing_stack",
+        "path": "/opt/srlinux/bin/sr_timing_stack",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "arp_nd_mgr",
+        "path": "/opt/srlinux/bin/sr_arp_nd_mgr",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "bgp_mgr",
+        "path": "/opt/srlinux/bin/sr_bgp_mgr",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "l2_mac_learn_mgr",
+        "path": "/opt/srlinux/bin/sr_l2_mac_learn_mgr",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "idb_server",
+        "path": "/opt/srlinux/bin/sr_idb_server",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "xdp_cpm",
+        "path": "/opt/srlinux/bin/sr_xdp_cpm",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "evpn_mgr",
+        "path": "/opt/srlinux/bin/sr_evpn_mgr",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "chassis_mgr",
+        "path": "/opt/srlinux/bin/sr_chassis_mgr",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "grpc_server",
+        "path": "/opt/srlinux/bin/sr_grpc_server",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "tftp_mgr",
+        "path": "/opt/srlinux/bin/sr_tftp_mgr",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "mirror_mgr",
+        "path": "/opt/srlinux/bin/sr_mirror_mgr",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "static_route_mgr",
+        "path": "/opt/srlinux/bin/sr_static_route_mgr",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "supportd",
+        "path": "/opt/srlinux/bin/sr_supportd",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "dhcp_server_mgr",
+        "path": "/opt/srlinux/bin/sr_dhcp_server_mgr",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "qos_mgr",
+        "path": "/opt/srlinux/bin/sr_qos_mgr",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "lag_mgr",
+        "path": "/opt/srlinux/bin/sr_lag_mgr",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "label_mgr",
+        "path": "/opt/srlinux/bin/sr_label_mgr",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "pcc_mgr",
+        "path": "/opt/srlinux/bin/sr_pcc_mgr",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "net_inst_mgr",
+        "path": "/opt/srlinux/bin/sr_net_inst_mgr",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "mfib_mgr",
+        "path": "/opt/srlinux/bin/sr_mfib_mgr",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "fib_mgr",
+        "path": "/opt/srlinux/bin/sr_fib_mgr",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "ldp_mgr",
+        "path": "/opt/srlinux/bin/sr_ldp_mgr",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "oam_mgr",
+        "path": "/opt/srlinux/bin/sr_oam_mgr",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "mcid_mgr",
+        "path": "/opt/srlinux/bin/sr_mcid_mgr",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "lldp_mgr",
+        "path": "/opt/srlinux/bin/sr_lldp_mgr",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "radius_mgr",
+        "path": "/opt/srlinux/bin/sr_radius_mgr",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "fhs_mgr",
+        "path": "/opt/srlinux/bin/sr_fhs_mgr",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "app_mgr",
+        "path": "/opt/srlinux/bin/sr_app_mgr",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "cflowd_mgr",
+        "path": "/opt/srlinux/bin/sr_cflowd_mgr",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "dhcp_relay_mgr",
+        "path": "/opt/srlinux/bin/sr_dhcp_relay_mgr",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "ospf_mgr",
+        "path": "/opt/srlinux/bin/sr_ospf_mgr",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "tepolicy_mgr",
+        "path": "/opt/srlinux/bin/sr_tepolicy_mgr",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "xdp_lc",
+        "path": "/opt/srlinux/bin/sr_xdp_lc",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "l2_mac_mgr",
+        "path": "/opt/srlinux/bin/sr_l2_mac_mgr",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "segrt_mgr",
+        "path": "/opt/srlinux/bin/sr_segrt_mgr",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "vxlan_mgr",
+        "path": "/opt/srlinux/bin/sr_vxlan_mgr",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "sflow_sample_mgr",
+        "path": "/opt/srlinux/bin/sr_sflow_sample_mgr",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "log_mgr",
+        "path": "/opt/srlinux/bin/sr_log_mgr",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "isis_mgr",
+        "path": "/opt/srlinux/bin/sr_isis_mgr",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "stp_mgr",
+        "path": "/opt/srlinux/bin/sr_stp_mgr",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "srv6_mgr",
+        "path": "/opt/srlinux/bin/sr_srv6_mgr",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "stat_id_mgr",
+        "path": "/opt/srlinux/bin/sr_stat_id_mgr",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "aaa_mgr",
+        "path": "/opt/srlinux/bin/sr_aaa_mgr",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "l2_static_mac_mgr",
+        "path": "/opt/srlinux/bin/sr_l2_static_mac_mgr",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "mgmt_server",
+        "path": "/opt/srlinux/bin/sr_mgmt_server",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "common",
+        "path": "n/a",
+        "version": "n/a"
+      },
+      {
+        "name": "sath_mgr",
+        "path": "/opt/srlinux/bin/sr_sath_mgr",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "bfd_mgr",
+        "path": "/opt/srlinux/bin/sr_bfd_mgr",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "sdk_mgr",
+        "path": "/opt/srlinux/bin/sr_sdk_mgr",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "te_mgr",
+        "path": "/opt/srlinux/bin/sr_te_mgr",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "license_mgr",
+        "path": "/opt/srlinux/bin/sr_license_mgr",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "acl_mgr",
+        "path": "/opt/srlinux/bin/sr_acl_mgr",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "pim_mgr",
+        "path": "/opt/srlinux/bin/sr_pim_mgr",
+        "version": "2025-10-31T20:36:56.000Z"
+      },
+      {
+        "name": "dhcp_client_mgr",
+        "path": "/opt/srlinux/bin/sr_dhcp_client_mgr",
+        "version": "2025-10-31T20:36:56.000Z"
+      }
+    ],
+    "yang-module": [
+      {
+        "name": "ietf-netconf-monitoring",
+        "revision": "2010-10-04"
+      },
+      {
+        "name": "ietf-yang-library",
+        "revision": "2019-01-04"
+      },
+      {
+        "name": "srl_nokia-aaa",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-aaa-password",
+        "revision": "2025-07-31"
+      },
+      {
+        "name": "srl_nokia-aaa-types",
+        "revision": "2023-03-31"
+      },
+      {
+        "name": "srl_nokia-acl",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-acl-gbp",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-acl-policers",
+        "revision": "2025-03-31"
+      },
+      {
+        "name": "srl_nokia-acl-qos",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-aft",
+        "revision": "2025-07-31"
+      },
+      {
+        "name": "srl_nokia-aggregate-routes",
+        "revision": "2024-07-31"
+      },
+      {
+        "name": "srl_nokia-app-mgmt",
+        "revision": "2025-07-31"
+      },
+      {
+        "name": "srl_nokia-bfd",
+        "revision": "2025-07-31"
+      },
+      {
+        "name": "srl_nokia-bgp",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-bgp-evpn",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-bgp-evpn-bgp-instance-mpls-bridge-table-multicast-destinations",
+        "revision": "2023-10-31"
+      },
+      {
+        "name": "srl_nokia-bgp-evpn-bgp-instance-mpls-bridge-table-statistics",
+        "revision": "2022-03-31"
+      },
+      {
+        "name": "srl_nokia-bgp-evpn-bgp-instance-mpls-bridge-table-unicast-destinations",
+        "revision": "2025-07-31"
+      },
+      {
+        "name": "srl_nokia-bgp-ipvpn",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-bgp-vpn",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-boot",
+        "revision": "2025-07-31"
+      },
+      {
+        "name": "srl_nokia-bridge-table",
+        "revision": "2024-07-31"
+      },
+      {
+        "name": "srl_nokia-bridge-table-mac-duplication",
+        "revision": "2021-03-31"
+      },
+      {
+        "name": "srl_nokia-bridge-table-mac-duplication-entries",
+        "revision": "2021-03-31"
+      },
+      {
+        "name": "srl_nokia-bridge-table-mac-learning",
+        "revision": "2020-06-30"
+      },
+      {
+        "name": "srl_nokia-bridge-table-mac-learning-entries",
+        "revision": "2021-03-31"
+      },
+      {
+        "name": "srl_nokia-bridge-table-mac-limit",
+        "revision": "2024-03-31"
+      },
+      {
+        "name": "srl_nokia-bridge-table-mac-table",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-bridge-table-reserved-macs",
+        "revision": "2021-11-30"
+      },
+      {
+        "name": "srl_nokia-bridge-table-shg",
+        "revision": "2024-10-31"
+      },
+      {
+        "name": "srl_nokia-bridge-table-static-mac",
+        "revision": "2024-10-31"
+      },
+      {
+        "name": "srl_nokia-common",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-configuration",
+        "revision": "2025-03-31"
+      },
+      {
+        "name": "srl_nokia-configuration-role",
+        "revision": "2021-03-31"
+      },
+      {
+        "name": "srl_nokia-connection-point-bridge-table-mac-duplication-entries",
+        "revision": "2024-03-31"
+      },
+      {
+        "name": "srl_nokia-connection-point-bridge-table-mac-learning-entries",
+        "revision": "2024-03-31"
+      },
+      {
+        "name": "srl_nokia-connection-point-bridge-table-mac-table",
+        "revision": "2024-03-31"
+      },
+      {
+        "name": "srl_nokia-connection-point-bridge-table-statistics",
+        "revision": "2024-03-31"
+      },
+      {
+        "name": "srl_nokia-connection-point-pseudowires",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-dhcp-server",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-dhcp-server-guard",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-dns",
+        "revision": "2025-03-31"
+      },
+      {
+        "name": "srl_nokia-dot1x",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-dot1x-authenticator",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-dot1x-tunneling",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-ethcfm",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-event-handler",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-extensions",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-features",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-first-hop-security-ip-mac-binding",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-flexible-algorithms",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-flexible-algorithms-isis",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-flexible-algorithms-segment-routing",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-ftp",
+        "revision": "2024-07-31"
+      },
+      {
+        "name": "srl_nokia-gnsi-authz",
+        "revision": "2024-10-31"
+      },
+      {
+        "name": "srl_nokia-gnsi-certz",
+        "revision": "2024-03-31"
+      },
+      {
+        "name": "srl_nokia-gnsi-credentialz",
+        "revision": "2024-03-31"
+      },
+      {
+        "name": "srl_nokia-gnsi-pathz",
+        "revision": "2024-10-31"
+      },
+      {
+        "name": "srl_nokia-gribi",
+        "revision": "2024-10-31"
+      },
+      {
+        "name": "srl_nokia-group-based-policy",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-grpc",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-icmp",
+        "revision": "2025-07-31"
+      },
+      {
+        "name": "srl_nokia-if-ip",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-if-mpls",
+        "revision": "2024-07-31"
+      },
+      {
+        "name": "srl_nokia-igmp",
+        "revision": "2023-07-31"
+      },
+      {
+        "name": "srl_nokia-igmp-snooping",
+        "revision": "2025-07-31"
+      },
+      {
+        "name": "srl_nokia-igmp-types",
+        "revision": "2023-03-31"
+      },
+      {
+        "name": "srl_nokia-interfaces",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-interfaces-bridge-table",
+        "revision": "2021-06-30"
+      },
+      {
+        "name": "srl_nokia-interfaces-bridge-table-dhcp-snoop",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-interfaces-bridge-table-mac-duplication-entries",
+        "revision": "2021-03-31"
+      },
+      {
+        "name": "srl_nokia-interfaces-bridge-table-mac-learning-entries",
+        "revision": "2020-06-30"
+      },
+      {
+        "name": "srl_nokia-interfaces-bridge-table-mac-table",
+        "revision": "2024-10-31"
+      },
+      {
+        "name": "srl_nokia-interfaces-bridge-table-statistics",
+        "revision": "2020-06-30"
+      },
+      {
+        "name": "srl_nokia-interfaces-dco",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-interfaces-ip-dhcp",
+        "revision": "2022-03-31"
+      },
+      {
+        "name": "srl_nokia-interfaces-ip-dhcp-relay",
+        "revision": "2024-03-31"
+      },
+      {
+        "name": "srl_nokia-interfaces-ip-dhcp-server",
+        "revision": "2022-03-31"
+      },
+      {
+        "name": "srl_nokia-interfaces-ip-vrrp",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-interfaces-l2cp",
+        "revision": "2025-03-31"
+      },
+      {
+        "name": "srl_nokia-interfaces-lag",
+        "revision": "2025-07-31"
+      },
+      {
+        "name": "srl_nokia-interfaces-local-mirror-destination",
+        "revision": "2024-03-31"
+      },
+      {
+        "name": "srl_nokia-interfaces-nbr",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-interfaces-nbr-virtual-ip-discovery",
+        "revision": "2023-03-31"
+      },
+      {
+        "name": "srl_nokia-interfaces-p4rt",
+        "revision": "2022-06-30"
+      },
+      {
+        "name": "srl_nokia-interfaces-router-adv",
+        "revision": "2025-07-31"
+      },
+      {
+        "name": "srl_nokia-interfaces-vlans",
+        "revision": "2025-03-31"
+      },
+      {
+        "name": "srl_nokia-interfaces-vxdp",
+        "revision": "2022-11-30"
+      },
+      {
+        "name": "srl_nokia-ip-route-tables",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-ipfix",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-ippm-source-udp-pool",
+        "revision": "2024-07-31"
+      },
+      {
+        "name": "srl_nokia-isis",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-isis-lsdb",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-isis-lsdb-types",
+        "revision": "2025-07-31"
+      },
+      {
+        "name": "srl_nokia-json-rpc",
+        "revision": "2024-10-31"
+      },
+      {
+        "name": "srl_nokia-keychains",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-lacp",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-ldp",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-license",
+        "revision": "2024-03-31"
+      },
+      {
+        "name": "srl_nokia-link-measurement",
+        "revision": "2025-03-31"
+      },
+      {
+        "name": "srl_nokia-linux",
+        "revision": "2019-11-30"
+      },
+      {
+        "name": "srl_nokia-lldp",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-lldp-types",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-load-balancing",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-logging",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-macsec",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-maintenance-mode",
+        "revision": "2024-10-31"
+      },
+      {
+        "name": "srl_nokia-micro-bfd",
+        "revision": "2025-07-31"
+      },
+      {
+        "name": "srl_nokia-mirroring",
+        "revision": "2025-07-31"
+      },
+      {
+        "name": "srl_nokia-mld",
+        "revision": "2023-07-31"
+      },
+      {
+        "name": "srl_nokia-mld-snooping",
+        "revision": "2025-07-31"
+      },
+      {
+        "name": "srl_nokia-mpls",
+        "revision": "2021-11-30"
+      },
+      {
+        "name": "srl_nokia-mpls-label-management",
+        "revision": "2024-03-31"
+      },
+      {
+        "name": "srl_nokia-mpls-route-tables",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-mpls-services-network-instance-label-management",
+        "revision": "2024-03-31"
+      },
+      {
+        "name": "srl_nokia-msdp",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-mtu",
+        "revision": "2025-07-31"
+      },
+      {
+        "name": "srl_nokia-mvpn-l3",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-ndk",
+        "revision": "2025-03-31"
+      },
+      {
+        "name": "srl_nokia-netconf-server",
+        "revision": "2025-03-31"
+      },
+      {
+        "name": "srl_nokia-network-instance",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-network-instance-leaking",
+        "revision": "2025-03-31"
+      },
+      {
+        "name": "srl_nokia-network-instance-mtu",
+        "revision": "2024-10-31"
+      },
+      {
+        "name": "srl_nokia-next-hop-groups",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-ni-gre",
+        "revision": "2024-07-31"
+      },
+      {
+        "name": "srl_nokia-ntp",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-oam",
+        "revision": "2024-03-31"
+      },
+      {
+        "name": "srl_nokia-oam-pm-ethcfm",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-oam-pm-ip",
+        "revision": "2025-03-31"
+      },
+      {
+        "name": "srl_nokia-openconfig",
+        "revision": "2022-06-30"
+      },
+      {
+        "name": "srl_nokia-ospf",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-packet-link-qual",
+        "revision": "2024-03-31"
+      },
+      {
+        "name": "srl_nokia-packet-match-types",
+        "revision": "2024-07-31"
+      },
+      {
+        "name": "srl_nokia-pcep",
+        "revision": "2025-07-31"
+      },
+      {
+        "name": "srl_nokia-pim",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-platform",
+        "revision": "2024-03-31"
+      },
+      {
+        "name": "srl_nokia-platform-acl",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-platform-cgroup",
+        "revision": "2024-03-31"
+      },
+      {
+        "name": "srl_nokia-platform-chassis",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-platform-control",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-platform-control-fp",
+        "revision": "2024-10-31"
+      },
+      {
+        "name": "srl_nokia-platform-cpu",
+        "revision": "2025-07-31"
+      },
+      {
+        "name": "srl_nokia-platform-datapath-resources",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-platform-disk",
+        "revision": "2025-03-31"
+      },
+      {
+        "name": "srl_nokia-platform-fabric",
+        "revision": "2023-03-31"
+      },
+      {
+        "name": "srl_nokia-platform-fan",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-platform-first-hop-security-res-mgmt",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-platform-healthz",
+        "revision": "2025-07-31"
+      },
+      {
+        "name": "srl_nokia-platform-icm",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-platform-lc",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-platform-linecard-fib",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-platform-memory",
+        "revision": "2019-11-30"
+      },
+      {
+        "name": "srl_nokia-platform-mtu",
+        "revision": "2024-10-31"
+      },
+      {
+        "name": "srl_nokia-platform-oam",
+        "revision": "2025-07-31"
+      },
+      {
+        "name": "srl_nokia-platform-p4rt",
+        "revision": "2022-06-30"
+      },
+      {
+        "name": "srl_nokia-platform-pipeline-counters",
+        "revision": "2024-10-31"
+      },
+      {
+        "name": "srl_nokia-platform-poe",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-platform-psu",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-platform-qos",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-platform-redundancy",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-platform-resource-mgmt",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-platform-resource-monitoring",
+        "revision": "2019-11-30"
+      },
+      {
+        "name": "srl_nokia-platform-secure-boot",
+        "revision": "2024-07-31"
+      },
+      {
+        "name": "srl_nokia-platform-tcam",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-platform-tpm",
+        "revision": "2024-07-31"
+      },
+      {
+        "name": "srl_nokia-platform-vxdp",
+        "revision": "2022-11-30"
+      },
+      {
+        "name": "srl_nokia-policy-forwarding",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-qos",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-qos-policers",
+        "revision": "2025-07-31"
+      },
+      {
+        "name": "srl_nokia-ra_guard",
+        "revision": "2025-07-31"
+      },
+      {
+        "name": "srl_nokia-rib-bgp",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-routing-policy",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-seamless-bfd",
+        "revision": "2025-03-31"
+      },
+      {
+        "name": "srl_nokia-segment-routing",
+        "revision": "2024-10-31"
+      },
+      {
+        "name": "srl_nokia-service-activation-testhead",
+        "revision": "2025-07-31"
+      },
+      {
+        "name": "srl_nokia-sflow",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-srv6",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-srv6-instance",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-srv6-isis",
+        "revision": "2025-07-31"
+      },
+      {
+        "name": "srl_nokia-ssh",
+        "revision": "2025-03-31"
+      },
+      {
+        "name": "srl_nokia-stamp",
+        "revision": "2024-10-31"
+      },
+      {
+        "name": "srl_nokia-static-routes",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-system",
+        "revision": "2025-07-31"
+      },
+      {
+        "name": "srl_nokia-system-banner",
+        "revision": "2019-11-30"
+      },
+      {
+        "name": "srl_nokia-system-bridge-table",
+        "revision": "2020-06-30"
+      },
+      {
+        "name": "srl_nokia-system-bridge-table-evpn",
+        "revision": "2024-07-31"
+      },
+      {
+        "name": "srl_nokia-system-bridge-table-evpn-mpls-multicast-tep",
+        "revision": "2024-07-31"
+      },
+      {
+        "name": "srl_nokia-system-cli",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-system-coordinates",
+        "revision": "2025-07-31"
+      },
+      {
+        "name": "srl_nokia-system-datapath",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-system-info",
+        "revision": "2024-03-31"
+      },
+      {
+        "name": "srl_nokia-system-multicast",
+        "revision": "2025-03-31"
+      },
+      {
+        "name": "srl_nokia-system-name",
+        "revision": "2019-11-30"
+      },
+      {
+        "name": "srl_nokia-system-network-instance",
+        "revision": "2024-07-31"
+      },
+      {
+        "name": "srl_nokia-system-network-instance-bgp-evpn-multicast",
+        "revision": "2024-03-31"
+      },
+      {
+        "name": "srl_nokia-system-network-instance-bgp-vpn",
+        "revision": "2024-10-31"
+      },
+      {
+        "name": "srl_nokia-system-protocols",
+        "revision": "2025-03-31"
+      },
+      {
+        "name": "srl_nokia-system-snmp",
+        "revision": "2025-07-31"
+      },
+      {
+        "name": "srl_nokia-system-utilization",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-table-connections",
+        "revision": "2025-03-31"
+      },
+      {
+        "name": "srl_nokia-tcp-udp",
+        "revision": "2019-11-30"
+      },
+      {
+        "name": "srl_nokia-terminal-device",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-tftp",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-timezone",
+        "revision": "2020-06-30"
+      },
+      {
+        "name": "srl_nokia-tls",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-traffic-engineering",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-transport-security",
+        "revision": "2023-03-31"
+      },
+      {
+        "name": "srl_nokia-tunnel",
+        "revision": "2024-07-31"
+      },
+      {
+        "name": "srl_nokia-tunnel-interfaces-vxlan-interface-bridge-table",
+        "revision": "2021-06-30"
+      },
+      {
+        "name": "srl_nokia-tunnel-interfaces-vxlan-interface-bridge-table-multicast-destinations",
+        "revision": "2025-07-31"
+      },
+      {
+        "name": "srl_nokia-tunnel-interfaces-vxlan-interface-bridge-table-unicast-destinations",
+        "revision": "2024-10-31"
+      },
+      {
+        "name": "srl_nokia-tunnel-tables",
+        "revision": "2025-10-31"
+      },
+      {
+        "name": "srl_nokia-twamp",
+        "revision": "2024-07-31"
+      },
+      {
+        "name": "yang",
+        "revision": "2017-02-20"
+      }
+    ]
+  },
+  "_annotate": "ACL rules allowing incoming tcp/57411 for the eda-discovery grpc server",
+  "srl_nokia-routing-policy:routing-policy": {
+    "prefix-set": [
+      {
+        "name": "prefixset-routeleak-export-group-pmodpt-ai-backend-fabric",
+        "_annotate": "EDA Source CRs: aifabrics.eda.nokia.com/v1alpha1/Backend/ai-backend-fabric",
+        "prefix": [
+          {
+            "ip-prefix": "fd00:1:2:1:0:1::/96",
+            "mask-length-range": "96..96"
+          },
+          {
+            "ip-prefix": "fd00:1:2:1:0:2::/96",
+            "mask-length-range": "96..96"
+          },
+          {
+            "ip-prefix": "fd00:1:2:1:0:3::/96",
+            "mask-length-range": "96..96"
+          },
+          {
+            "ip-prefix": "fd00:1:2:1:0:4::/96",
+            "mask-length-range": "96..96"
+          },
+          {
+            "ip-prefix": "fd00:1:2:1:0:5::/96",
+            "mask-length-range": "96..96"
+          },
+          {
+            "ip-prefix": "fd00:1:2:1:0:6::/96",
+            "mask-length-range": "96..96"
+          },
+          {
+            "ip-prefix": "fd00:1:2:1:0:7::/96",
+            "mask-length-range": "96..96"
+          },
+          {
+            "ip-prefix": "fd00:1:2:1:0:8::/96",
+            "mask-length-range": "96..96"
+          }
+        ]
+      },
+      {
+        "name": "prefixset-routeleak-import-group-pmodpt-ai-backend-fabric",
+        "_annotate": "EDA Source CRs: aifabrics.eda.nokia.com/v1alpha1/Backend/ai-backend-fabric",
+        "prefix": [
+          {
+            "ip-prefix": "fd00:1:2:1::/92",
+            "mask-length-range": "92..92"
+          }
+        ]
+      }
+    ],
+    "policy": [
+      {
+        "name": "export-routeleak-group-pmodpt-ai-backend-fabric",
+        "_annotate": "EDA Source CRs: aifabrics.eda.nokia.com/v1alpha1/Backend/ai-backend-fabric",
+        "default-action": {
+          "policy-result": "reject"
+        },
+        "statement": [
+          {
+            "name": "10",
+            "match": {
+              "protocol": "srl_nokia-common:local",
+              "prefix": {
+                "prefix-set": "prefixset-routeleak-export-group-pmodpt-ai-backend-fabric"
+              }
+            },
+            "action": {
+              "policy-result": "accept"
+            }
+          },
+          {
+            "name": "222",
+            "match": {
+              "protocol": "srl_nokia-common:arp-nd"
+            },
+            "action": {
+              "policy-result": "accept"
+            }
+          }
+        ]
+      },
+      {
+        "name": "import-routeleak-group-pmodpt-ai-backend-fabric",
+        "_annotate": "EDA Source CRs: aifabrics.eda.nokia.com/v1alpha1/Backend/ai-backend-fabric",
+        "default-action": {
+          "policy-result": "reject"
+        },
+        "statement": [
+          {
+            "name": "10",
+            "match": {
+              "protocol": "srl_nokia-common:bgp",
+              "prefix": {
+                "prefix-set": "prefixset-routeleak-import-group-pmodpt-ai-backend-fabric"
+              }
+            },
+            "action": {
+              "policy-result": "accept"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "srl_nokia-interfaces:interface": [
+    {
+      "name": "ethernet-1/1",
+      "_annotate": "EDA Source CRs: interfaces.eda.nokia.com/v1alpha1/Interface/1tier-leaf-02-ethernet-1-1",
+      "description": "edge link to 1tier-gpu-svr-01",
+      "admin-state": "enable",
+      "srl_nokia-interfaces-vlans:vlan-tagging": true,
+      "ethernet": {
+        "flow-control": {
+          "_annotate": "EDA Source CRs: aifabrics.eda.nokia.com/v1alpha1/Backend/ai-backend-fabric",
+          "receive": false
+        }
+      },
+      "subinterface": [
+        {
+          "index": 1,
+          "_annotate": "EDA Source CRs: aifabrics.eda.nokia.com/v1alpha1/Backend/ai-backend-fabric",
+          "type": "srl_nokia-interfaces:routed",
+          "description": "Backend: ai-backend-fabric Stripe: stripe01",
+          "admin-state": "enable",
+          "ip-mtu": 4136,
+          "ipv6": {
+            "admin-state": "enable",
+            "address": [
+              {
+                "ip-prefix": "fd00:1:2:1:0:1:0:1/96",
+                "primary": [null]
+              }
+            ],
+            "srl_nokia-interfaces-nbr:neighbor-discovery": {
+              "learn-unsolicited": "both",
+              "host-route": {
+                "populate": [
+                  {
+                    "route-type": "dynamic",
+                    "datapath-programming": true
+                  }
+                ]
+              }
+            },
+            "srl_nokia-interfaces-router-adv:router-advertisement": {
+              "router-role": {
+                "admin-state": "enable",
+                "current-hop-limit": 64,
+                "managed-configuration-flag": false,
+                "other-configuration-flag": false,
+                "max-advertisement-interval": 600,
+                "min-advertisement-interval": 200,
+                "reachable-time": 0,
+                "retransmit-time": 0,
+                "router-lifetime": 1800
+              }
+            }
+          },
+          "srl_nokia-interfaces-vlans:vlan": {
+            "encap": {
+              "single-tagged": {
+                "vlan-id": 1
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "ethernet-1/2",
+      "_annotate": "EDA Source CRs: interfaces.eda.nokia.com/v1alpha1/Interface/1tier-leaf-02-ethernet-1-2",
+      "description": "edge link to 1tier-gpu-svr-01",
+      "admin-state": "enable",
+      "srl_nokia-interfaces-vlans:vlan-tagging": true,
+      "ethernet": {
+        "flow-control": {
+          "_annotate": "EDA Source CRs: aifabrics.eda.nokia.com/v1alpha1/Backend/ai-backend-fabric",
+          "receive": false
+        }
+      },
+      "subinterface": [
+        {
+          "index": 1,
+          "_annotate": "EDA Source CRs: aifabrics.eda.nokia.com/v1alpha1/Backend/ai-backend-fabric",
+          "type": "srl_nokia-interfaces:routed",
+          "description": "Backend: ai-backend-fabric Stripe: stripe01",
+          "admin-state": "enable",
+          "ip-mtu": 4136,
+          "ipv6": {
+            "admin-state": "enable",
+            "address": [
+              {
+                "ip-prefix": "fd00:1:2:1:0:2:0:1/96",
+                "primary": [null]
+              }
+            ],
+            "srl_nokia-interfaces-nbr:neighbor-discovery": {
+              "learn-unsolicited": "both",
+              "host-route": {
+                "populate": [
+                  {
+                    "route-type": "dynamic",
+                    "datapath-programming": true
+                  }
+                ]
+              }
+            },
+            "srl_nokia-interfaces-router-adv:router-advertisement": {
+              "router-role": {
+                "admin-state": "enable",
+                "current-hop-limit": 64,
+                "managed-configuration-flag": false,
+                "other-configuration-flag": false,
+                "max-advertisement-interval": 600,
+                "min-advertisement-interval": 200,
+                "reachable-time": 0,
+                "retransmit-time": 0,
+                "router-lifetime": 1800
+              }
+            }
+          },
+          "srl_nokia-interfaces-vlans:vlan": {
+            "encap": {
+              "single-tagged": {
+                "vlan-id": 1
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "ethernet-1/3",
+      "_annotate": "EDA Source CRs: interfaces.eda.nokia.com/v1alpha1/Interface/1tier-leaf-02-ethernet-1-3",
+      "description": "edge link to 1tier-gpu-svr-01",
+      "admin-state": "enable",
+      "srl_nokia-interfaces-vlans:vlan-tagging": true,
+      "ethernet": {
+        "flow-control": {
+          "_annotate": "EDA Source CRs: aifabrics.eda.nokia.com/v1alpha1/Backend/ai-backend-fabric",
+          "receive": false
+        }
+      },
+      "subinterface": [
+        {
+          "index": 1,
+          "_annotate": "EDA Source CRs: aifabrics.eda.nokia.com/v1alpha1/Backend/ai-backend-fabric",
+          "type": "srl_nokia-interfaces:routed",
+          "description": "Backend: ai-backend-fabric Stripe: stripe01",
+          "admin-state": "enable",
+          "ip-mtu": 4136,
+          "ipv6": {
+            "admin-state": "enable",
+            "address": [
+              {
+                "ip-prefix": "fd00:1:2:1:0:3:0:1/96",
+                "primary": [null]
+              }
+            ],
+            "srl_nokia-interfaces-nbr:neighbor-discovery": {
+              "learn-unsolicited": "both",
+              "host-route": {
+                "populate": [
+                  {
+                    "route-type": "dynamic",
+                    "datapath-programming": true
+                  }
+                ]
+              }
+            },
+            "srl_nokia-interfaces-router-adv:router-advertisement": {
+              "router-role": {
+                "admin-state": "enable",
+                "current-hop-limit": 64,
+                "managed-configuration-flag": false,
+                "other-configuration-flag": false,
+                "max-advertisement-interval": 600,
+                "min-advertisement-interval": 200,
+                "reachable-time": 0,
+                "retransmit-time": 0,
+                "router-lifetime": 1800
+              }
+            }
+          },
+          "srl_nokia-interfaces-vlans:vlan": {
+            "encap": {
+              "single-tagged": {
+                "vlan-id": 1
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "ethernet-1/4",
+      "_annotate": "EDA Source CRs: interfaces.eda.nokia.com/v1alpha1/Interface/1tier-leaf-02-ethernet-1-4",
+      "description": "edge link to 1tier-gpu-svr-01",
+      "admin-state": "enable",
+      "srl_nokia-interfaces-vlans:vlan-tagging": true,
+      "ethernet": {
+        "flow-control": {
+          "_annotate": "EDA Source CRs: aifabrics.eda.nokia.com/v1alpha1/Backend/ai-backend-fabric",
+          "receive": false
+        }
+      },
+      "subinterface": [
+        {
+          "index": 1,
+          "_annotate": "EDA Source CRs: aifabrics.eda.nokia.com/v1alpha1/Backend/ai-backend-fabric",
+          "type": "srl_nokia-interfaces:routed",
+          "description": "Backend: ai-backend-fabric Stripe: stripe01",
+          "admin-state": "enable",
+          "ip-mtu": 4136,
+          "ipv6": {
+            "admin-state": "enable",
+            "address": [
+              {
+                "ip-prefix": "fd00:1:2:1:0:4:0:1/96",
+                "primary": [null]
+              }
+            ],
+            "srl_nokia-interfaces-nbr:neighbor-discovery": {
+              "learn-unsolicited": "both",
+              "host-route": {
+                "populate": [
+                  {
+                    "route-type": "dynamic",
+                    "datapath-programming": true
+                  }
+                ]
+              }
+            },
+            "srl_nokia-interfaces-router-adv:router-advertisement": {
+              "router-role": {
+                "admin-state": "enable",
+                "current-hop-limit": 64,
+                "managed-configuration-flag": false,
+                "other-configuration-flag": false,
+                "max-advertisement-interval": 600,
+                "min-advertisement-interval": 200,
+                "reachable-time": 0,
+                "retransmit-time": 0,
+                "router-lifetime": 1800
+              }
+            }
+          },
+          "srl_nokia-interfaces-vlans:vlan": {
+            "encap": {
+              "single-tagged": {
+                "vlan-id": 1
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "ethernet-1/5",
+      "_annotate": "EDA Source CRs: interfaces.eda.nokia.com/v1alpha1/Interface/1tier-leaf-02-ethernet-1-5",
+      "description": "edge link to 1tier-gpu-svr-02",
+      "admin-state": "enable",
+      "srl_nokia-interfaces-vlans:vlan-tagging": true,
+      "ethernet": {
+        "flow-control": {
+          "_annotate": "EDA Source CRs: aifabrics.eda.nokia.com/v1alpha1/Backend/ai-backend-fabric",
+          "receive": false
+        }
+      },
+      "subinterface": [
+        {
+          "index": 1,
+          "_annotate": "EDA Source CRs: aifabrics.eda.nokia.com/v1alpha1/Backend/ai-backend-fabric",
+          "type": "srl_nokia-interfaces:routed",
+          "description": "Backend: ai-backend-fabric Stripe: stripe01",
+          "admin-state": "enable",
+          "ip-mtu": 4136,
+          "ipv6": {
+            "admin-state": "enable",
+            "address": [
+              {
+                "ip-prefix": "fd00:1:2:1:0:5:0:1/96",
+                "primary": [null]
+              }
+            ],
+            "srl_nokia-interfaces-nbr:neighbor-discovery": {
+              "learn-unsolicited": "both",
+              "host-route": {
+                "populate": [
+                  {
+                    "route-type": "dynamic",
+                    "datapath-programming": true
+                  }
+                ]
+              }
+            },
+            "srl_nokia-interfaces-router-adv:router-advertisement": {
+              "router-role": {
+                "admin-state": "enable",
+                "current-hop-limit": 64,
+                "managed-configuration-flag": false,
+                "other-configuration-flag": false,
+                "max-advertisement-interval": 600,
+                "min-advertisement-interval": 200,
+                "reachable-time": 0,
+                "retransmit-time": 0,
+                "router-lifetime": 1800
+              }
+            }
+          },
+          "srl_nokia-interfaces-vlans:vlan": {
+            "encap": {
+              "single-tagged": {
+                "vlan-id": 1
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "ethernet-1/6",
+      "_annotate": "EDA Source CRs: interfaces.eda.nokia.com/v1alpha1/Interface/1tier-leaf-02-ethernet-1-6",
+      "description": "edge link to 1tier-gpu-svr-02",
+      "admin-state": "enable",
+      "srl_nokia-interfaces-vlans:vlan-tagging": true,
+      "ethernet": {
+        "flow-control": {
+          "_annotate": "EDA Source CRs: aifabrics.eda.nokia.com/v1alpha1/Backend/ai-backend-fabric",
+          "receive": false
+        }
+      },
+      "subinterface": [
+        {
+          "index": 1,
+          "_annotate": "EDA Source CRs: aifabrics.eda.nokia.com/v1alpha1/Backend/ai-backend-fabric",
+          "type": "srl_nokia-interfaces:routed",
+          "description": "Backend: ai-backend-fabric Stripe: stripe01",
+          "admin-state": "enable",
+          "ip-mtu": 4136,
+          "ipv6": {
+            "admin-state": "enable",
+            "address": [
+              {
+                "ip-prefix": "fd00:1:2:1:0:6:0:1/96",
+                "primary": [null]
+              }
+            ],
+            "srl_nokia-interfaces-nbr:neighbor-discovery": {
+              "learn-unsolicited": "both",
+              "host-route": {
+                "populate": [
+                  {
+                    "route-type": "dynamic",
+                    "datapath-programming": true
+                  }
+                ]
+              }
+            },
+            "srl_nokia-interfaces-router-adv:router-advertisement": {
+              "router-role": {
+                "admin-state": "enable",
+                "current-hop-limit": 64,
+                "managed-configuration-flag": false,
+                "other-configuration-flag": false,
+                "max-advertisement-interval": 600,
+                "min-advertisement-interval": 200,
+                "reachable-time": 0,
+                "retransmit-time": 0,
+                "router-lifetime": 1800
+              }
+            }
+          },
+          "srl_nokia-interfaces-vlans:vlan": {
+            "encap": {
+              "single-tagged": {
+                "vlan-id": 1
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "ethernet-1/7",
+      "_annotate": "EDA Source CRs: interfaces.eda.nokia.com/v1alpha1/Interface/1tier-leaf-02-ethernet-1-7",
+      "description": "edge link to 1tier-gpu-svr-02",
+      "admin-state": "enable",
+      "srl_nokia-interfaces-vlans:vlan-tagging": true,
+      "ethernet": {
+        "flow-control": {
+          "_annotate": "EDA Source CRs: aifabrics.eda.nokia.com/v1alpha1/Backend/ai-backend-fabric",
+          "receive": false
+        }
+      },
+      "subinterface": [
+        {
+          "index": 1,
+          "_annotate": "EDA Source CRs: aifabrics.eda.nokia.com/v1alpha1/Backend/ai-backend-fabric",
+          "type": "srl_nokia-interfaces:routed",
+          "description": "Backend: ai-backend-fabric Stripe: stripe01",
+          "admin-state": "enable",
+          "ip-mtu": 4136,
+          "ipv6": {
+            "admin-state": "enable",
+            "address": [
+              {
+                "ip-prefix": "fd00:1:2:1:0:7:0:1/96",
+                "primary": [null]
+              }
+            ],
+            "srl_nokia-interfaces-nbr:neighbor-discovery": {
+              "learn-unsolicited": "both",
+              "host-route": {
+                "populate": [
+                  {
+                    "route-type": "dynamic",
+                    "datapath-programming": true
+                  }
+                ]
+              }
+            },
+            "srl_nokia-interfaces-router-adv:router-advertisement": {
+              "router-role": {
+                "admin-state": "enable",
+                "current-hop-limit": 64,
+                "managed-configuration-flag": false,
+                "other-configuration-flag": false,
+                "max-advertisement-interval": 600,
+                "min-advertisement-interval": 200,
+                "reachable-time": 0,
+                "retransmit-time": 0,
+                "router-lifetime": 1800
+              }
+            }
+          },
+          "srl_nokia-interfaces-vlans:vlan": {
+            "encap": {
+              "single-tagged": {
+                "vlan-id": 1
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "ethernet-1/8",
+      "_annotate": "EDA Source CRs: interfaces.eda.nokia.com/v1alpha1/Interface/1tier-leaf-02-ethernet-1-8",
+      "description": "edge link to 1tier-gpu-svr-02",
+      "admin-state": "enable",
+      "srl_nokia-interfaces-vlans:vlan-tagging": true,
+      "ethernet": {
+        "flow-control": {
+          "_annotate": "EDA Source CRs: aifabrics.eda.nokia.com/v1alpha1/Backend/ai-backend-fabric",
+          "receive": false
+        }
+      },
+      "subinterface": [
+        {
+          "index": 1,
+          "_annotate": "EDA Source CRs: aifabrics.eda.nokia.com/v1alpha1/Backend/ai-backend-fabric",
+          "type": "srl_nokia-interfaces:routed",
+          "description": "Backend: ai-backend-fabric Stripe: stripe01",
+          "admin-state": "enable",
+          "ip-mtu": 4136,
+          "ipv6": {
+            "admin-state": "enable",
+            "address": [
+              {
+                "ip-prefix": "fd00:1:2:1:0:8:0:1/96",
+                "primary": [null]
+              }
+            ],
+            "srl_nokia-interfaces-nbr:neighbor-discovery": {
+              "learn-unsolicited": "both",
+              "host-route": {
+                "populate": [
+                  {
+                    "route-type": "dynamic",
+                    "datapath-programming": true
+                  }
+                ]
+              }
+            },
+            "srl_nokia-interfaces-router-adv:router-advertisement": {
+              "router-role": {
+                "admin-state": "enable",
+                "current-hop-limit": 64,
+                "managed-configuration-flag": false,
+                "other-configuration-flag": false,
+                "max-advertisement-interval": 600,
+                "min-advertisement-interval": 200,
+                "reachable-time": 0,
+                "retransmit-time": 0,
+                "router-lifetime": 1800
+              }
+            }
+          },
+          "srl_nokia-interfaces-vlans:vlan": {
+            "encap": {
+              "single-tagged": {
+                "vlan-id": 1
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "ethernet-1/9",
+      "_annotate": "EDA Source CRs: interfaces.eda.nokia.com/v1alpha1/Interface/1tier-leaf-02-ethernet-1-9",
+      "description": "edge link to 1tier-gpu-svr-03",
+      "admin-state": "enable",
+      "srl_nokia-interfaces-vlans:vlan-tagging": true
+    },
+    {
+      "name": "ethernet-1/10",
+      "_annotate": "EDA Source CRs: interfaces.eda.nokia.com/v1alpha1/Interface/1tier-leaf-02-ethernet-1-10",
+      "description": "edge link to 1tier-gpu-svr-03",
+      "admin-state": "enable",
+      "srl_nokia-interfaces-vlans:vlan-tagging": true
+    },
+    {
+      "name": "ethernet-1/11",
+      "_annotate": "EDA Source CRs: interfaces.eda.nokia.com/v1alpha1/Interface/1tier-leaf-02-ethernet-1-11",
+      "description": "edge link to 1tier-gpu-svr-03",
+      "admin-state": "enable",
+      "srl_nokia-interfaces-vlans:vlan-tagging": true
+    },
+    {
+      "name": "ethernet-1/12",
+      "_annotate": "EDA Source CRs: interfaces.eda.nokia.com/v1alpha1/Interface/1tier-leaf-02-ethernet-1-12",
+      "description": "edge link to 1tier-gpu-svr-03",
+      "admin-state": "enable",
+      "srl_nokia-interfaces-vlans:vlan-tagging": true
+    },
+    {
+      "name": "ethernet-1/13",
+      "_annotate": "EDA Source CRs: interfaces.eda.nokia.com/v1alpha1/Interface/1tier-leaf-02-ethernet-1-13",
+      "description": "edge link to 1tier-gpu-svr-04",
+      "admin-state": "enable",
+      "srl_nokia-interfaces-vlans:vlan-tagging": true
+    },
+    {
+      "name": "ethernet-1/14",
+      "_annotate": "EDA Source CRs: interfaces.eda.nokia.com/v1alpha1/Interface/1tier-leaf-02-ethernet-1-14",
+      "description": "edge link to 1tier-gpu-svr-04",
+      "admin-state": "enable",
+      "srl_nokia-interfaces-vlans:vlan-tagging": true
+    },
+    {
+      "name": "ethernet-1/15",
+      "_annotate": "EDA Source CRs: interfaces.eda.nokia.com/v1alpha1/Interface/1tier-leaf-02-ethernet-1-15",
+      "description": "edge link to 1tier-gpu-svr-04",
+      "admin-state": "enable",
+      "srl_nokia-interfaces-vlans:vlan-tagging": true
+    },
+    {
+      "name": "ethernet-1/16",
+      "_annotate": "EDA Source CRs: interfaces.eda.nokia.com/v1alpha1/Interface/1tier-leaf-02-ethernet-1-16",
+      "description": "edge link to 1tier-gpu-svr-04",
+      "admin-state": "enable",
+      "srl_nokia-interfaces-vlans:vlan-tagging": true
+    },
+    {
+      "name": "mgmt0",
+      "_annotate": "EDA Source CRs: bootstrap.eda.nokia.com/v1alpha1/Init/init-base",
+      "admin-state": "enable",
+      "subinterface": [
+        {
+          "index": 0,
+          "admin-state": "enable",
+          "ipv4": {
+            "admin-state": "enable",
+            "srl_nokia-interfaces-ip-dhcp:dhcp-client": {
+              "trace-options": {
+                "trace": [
+                  "messages"
+                ]
+              }
+            }
+          },
+          "ipv6": {
+            "admin-state": "enable",
+            "srl_nokia-interfaces-ip-dhcp:dhcp-client": {
+              "trace-options": {
+                "trace": [
+                  "messages"
+                ]
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "system0",
+      "_annotate": "EDA Source CRs: aifabrics.eda.nokia.com/v1alpha1/Backend/ai-backend-fabric",
+      "subinterface": [
+        {
+          "index": 0,
+          "admin-state": "enable",
+          "ipv4": {
+            "admin-state": "enable",
+            "address": [
+              {
+                "ip-prefix": "192.0.2.1/32"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "srl_nokia-qos:qos": {
+    "explicit-congestion-notification": {
+      "_annotate": "EDA Source CRs: aifabrics.eda.nokia.com/v1alpha1/Backend/ai-backend-fabric"
+    },
+    "queues": {
+      "queue": [
+        {
+          "name": "unicast-0",
+          "_annotate": "EDA Source CRs: aifabrics.eda.nokia.com/v1alpha1/Backend/ai-backend-fabric",
+          "queue-index": 0
+        },
+        {
+          "name": "unicast-3",
+          "_annotate": "EDA Source CRs: aifabrics.eda.nokia.com/v1alpha1/Backend/ai-backend-fabric",
+          "queue-index": 3
+        },
+        {
+          "name": "unicast-6",
+          "_annotate": "EDA Source CRs: aifabrics.eda.nokia.com/v1alpha1/Backend/ai-backend-fabric",
+          "queue-index": 6
+        }
+      ],
+      "pfc-queue": [
+        {
+          "pfc-queue-name": "pfc-3",
+          "_annotate": "EDA Source CRs: aifabrics.eda.nokia.com/v1alpha1/Backend/ai-backend-fabric",
+          "queue-index": 3
+        }
+      ]
+    },
+    "forwarding-classes": {
+      "forwarding-class": [
+        {
+          "name": "fc0",
+          "_annotate": "EDA Source CRs: aifabrics.eda.nokia.com/v1alpha1/Backend/ai-backend-fabric",
+          "output": {
+            "unicast-queue": "unicast-0"
+          }
+        },
+        {
+          "name": "fc3",
+          "_annotate": "EDA Source CRs: aifabrics.eda.nokia.com/v1alpha1/Backend/ai-backend-fabric",
+          "output": {
+            "unicast-queue": "unicast-3"
+          }
+        },
+        {
+          "name": "fc6",
+          "_annotate": "EDA Source CRs: aifabrics.eda.nokia.com/v1alpha1/Backend/ai-backend-fabric",
+          "output": {
+            "unicast-queue": "unicast-6"
+          }
+        }
+      ]
+    },
+    "pfc-mapping-profile": [
+      {
+        "name": "edgeinterface-ai-backend-fabric",
+        "_annotate": "EDA Source CRs: aifabrics.eda.nokia.com/v1alpha1/Backend/ai-backend-fabric",
+        "pfc-priority": [
+          {
+            "index": 3,
+            "pfc-enable": true
+          }
+        ],
+        "received-traffic": {
+          "unicast-mapping": {
+            "pfc-queue": [
+              {
+                "pfc-queue-name": "pfc-3",
+                "dot1p": 3,
+                "pfc-pause-frame-priority": 3
+              }
+            ]
+          }
+        },
+        "received-pfc-pause-frames": {
+          "deadlock": {
+            "enable": true,
+            "detection-timer": 750,
+            "recovery-timer": 750
+          },
+          "queue": [
+            {
+              "queue-name": "unicast-3",
+              "pfc-pause-frame-priority": 3
+            }
+          ]
+        }
+      }
+    ],
+    "classifiers": {
+      "dscp-policy": [
+        {
+          "name": "edgesubinterface-ingress-ai-backend-fabric",
+          "_annotate": "EDA Source CRs: aifabrics.eda.nokia.com/v1alpha1/Backend/ai-backend-fabric",
+          "dscp": [
+            {
+              "value": 0,
+              "forwarding-class": "fc0",
+              "drop-probability": "low"
+            },
+            {
+              "value": 26,
+              "forwarding-class": "fc3",
+              "drop-probability": "low"
+            },
+            {
+              "value": 48,
+              "forwarding-class": "fc6",
+              "drop-probability": "low"
+            }
+          ]
+        }
+      ],
+      "dot1p-policy": [
+        {
+          "name": "edgeinterface-ingress-ai-backend-fabric",
+          "_annotate": "EDA Source CRs: aifabrics.eda.nokia.com/v1alpha1/Backend/ai-backend-fabric",
+          "dot1p": [
+            {
+              "value": 3,
+              "forwarding-class": "fc3",
+              "drop-probability": "low"
+            }
+          ]
+        }
+      ]
+    },
+    "scheduler-policies": {
+      "scheduler-policy": [
+        {
+          "name": "egress-backend-ai-backend-fabric",
+          "_annotate": "EDA Source CRs: aifabrics.eda.nokia.com/v1alpha1/Backend/ai-backend-fabric",
+          "scheduler": [
+            {
+              "sequence": 0,
+              "priority": "strict",
+              "input": [
+                {
+                  "id": "unicast-6",
+                  "queue-name": "unicast-6",
+                  "peak-rate-percent": 10
+                }
+              ]
+            },
+            {
+              "sequence": 1,
+              "input": [
+                {
+                  "id": "unicast-0",
+                  "queue-name": "unicast-0",
+                  "weight": 1
+                },
+                {
+                  "id": "unicast-3",
+                  "queue-name": "unicast-3",
+                  "peak-rate-percent": 100,
+                  "weight": 50
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "interfaces": {
+      "_annotate": "EDA Source CRs: aifabrics.eda.nokia.com/v1alpha1/Backend/ai-backend-fabric",
+      "interface": [
+        {
+          "interface-id": "ethernet-1/1",
+          "_annotate": "EDA Source CRs: aifabrics.eda.nokia.com/v1alpha1/Backend/ai-backend-fabric",
+          "interface-ref": {
+            "interface": "ethernet-1/1"
+          },
+          "pfc": {
+            "pfc-mapping-profile": "edgeinterface-ai-backend-fabric",
+            "pfc-enable": true
+          },
+          "input": {
+            "pfc-buffer-allocation-profile": "edgeinterface-ingress-ai-backend-fabric"
+          },
+          "output": {
+            "buffer-allocation-profile": "egress-backend-ai-backend-fabric",
+            "queues": {
+              "queue": [
+                {
+                  "queue-name": "unicast-3",
+                  "queue-management-profile": "egress-backend-ai-backend-fabric-2"
+                }
+              ]
+            },
+            "scheduler": {
+              "scheduler-policy": "egress-backend-ai-backend-fabric"
+            }
+          }
+        },
+        {
+          "interface-id": "ethernet-1/1.1",
+          "interface-ref": {
+            "interface": "ethernet-1/1",
+            "subinterface": 1
+          },
+          "input": {
+            "classifiers": {
+              "dscp-policy": "edgesubinterface-ingress-ai-backend-fabric"
+            }
+          }
+        },
+        {
+          "interface-id": "ethernet-1/2",
+          "_annotate": "EDA Source CRs: aifabrics.eda.nokia.com/v1alpha1/Backend/ai-backend-fabric",
+          "interface-ref": {
+            "interface": "ethernet-1/2"
+          },
+          "pfc": {
+            "pfc-mapping-profile": "edgeinterface-ai-backend-fabric",
+            "pfc-enable": true
+          },
+          "input": {
+            "pfc-buffer-allocation-profile": "edgeinterface-ingress-ai-backend-fabric"
+          },
+          "output": {
+            "buffer-allocation-profile": "egress-backend-ai-backend-fabric",
+            "queues": {
+              "queue": [
+                {
+                  "queue-name": "unicast-3",
+                  "queue-management-profile": "egress-backend-ai-backend-fabric-2"
+                }
+              ]
+            },
+            "scheduler": {
+              "scheduler-policy": "egress-backend-ai-backend-fabric"
+            }
+          }
+        },
+        {
+          "interface-id": "ethernet-1/2.1",
+          "interface-ref": {
+            "interface": "ethernet-1/2",
+            "subinterface": 1
+          },
+          "input": {
+            "classifiers": {
+              "dscp-policy": "edgesubinterface-ingress-ai-backend-fabric"
+            }
+          }
+        },
+        {
+          "interface-id": "ethernet-1/3",
+          "_annotate": "EDA Source CRs: aifabrics.eda.nokia.com/v1alpha1/Backend/ai-backend-fabric",
+          "interface-ref": {
+            "interface": "ethernet-1/3"
+          },
+          "pfc": {
+            "pfc-mapping-profile": "edgeinterface-ai-backend-fabric",
+            "pfc-enable": true
+          },
+          "input": {
+            "pfc-buffer-allocation-profile": "edgeinterface-ingress-ai-backend-fabric"
+          },
+          "output": {
+            "buffer-allocation-profile": "egress-backend-ai-backend-fabric",
+            "queues": {
+              "queue": [
+                {
+                  "queue-name": "unicast-3",
+                  "queue-management-profile": "egress-backend-ai-backend-fabric-2"
+                }
+              ]
+            },
+            "scheduler": {
+              "scheduler-policy": "egress-backend-ai-backend-fabric"
+            }
+          }
+        },
+        {
+          "interface-id": "ethernet-1/3.1",
+          "interface-ref": {
+            "interface": "ethernet-1/3",
+            "subinterface": 1
+          },
+          "input": {
+            "classifiers": {
+              "dscp-policy": "edgesubinterface-ingress-ai-backend-fabric"
+            }
+          }
+        },
+        {
+          "interface-id": "ethernet-1/4",
+          "_annotate": "EDA Source CRs: aifabrics.eda.nokia.com/v1alpha1/Backend/ai-backend-fabric",
+          "interface-ref": {
+            "interface": "ethernet-1/4"
+          },
+          "pfc": {
+            "pfc-mapping-profile": "edgeinterface-ai-backend-fabric",
+            "pfc-enable": true
+          },
+          "input": {
+            "pfc-buffer-allocation-profile": "edgeinterface-ingress-ai-backend-fabric"
+          },
+          "output": {
+            "buffer-allocation-profile": "egress-backend-ai-backend-fabric",
+            "queues": {
+              "queue": [
+                {
+                  "queue-name": "unicast-3",
+                  "queue-management-profile": "egress-backend-ai-backend-fabric-2"
+                }
+              ]
+            },
+            "scheduler": {
+              "scheduler-policy": "egress-backend-ai-backend-fabric"
+            }
+          }
+        },
+        {
+          "interface-id": "ethernet-1/4.1",
+          "interface-ref": {
+            "interface": "ethernet-1/4",
+            "subinterface": 1
+          },
+          "input": {
+            "classifiers": {
+              "dscp-policy": "edgesubinterface-ingress-ai-backend-fabric"
+            }
+          }
+        },
+        {
+          "interface-id": "ethernet-1/5",
+          "_annotate": "EDA Source CRs: aifabrics.eda.nokia.com/v1alpha1/Backend/ai-backend-fabric",
+          "interface-ref": {
+            "interface": "ethernet-1/5"
+          },
+          "pfc": {
+            "pfc-mapping-profile": "edgeinterface-ai-backend-fabric",
+            "pfc-enable": true
+          },
+          "input": {
+            "pfc-buffer-allocation-profile": "edgeinterface-ingress-ai-backend-fabric"
+          },
+          "output": {
+            "buffer-allocation-profile": "egress-backend-ai-backend-fabric",
+            "queues": {
+              "queue": [
+                {
+                  "queue-name": "unicast-3",
+                  "queue-management-profile": "egress-backend-ai-backend-fabric-2"
+                }
+              ]
+            },
+            "scheduler": {
+              "scheduler-policy": "egress-backend-ai-backend-fabric"
+            }
+          }
+        },
+        {
+          "interface-id": "ethernet-1/5.1",
+          "interface-ref": {
+            "interface": "ethernet-1/5",
+            "subinterface": 1
+          },
+          "input": {
+            "classifiers": {
+              "dscp-policy": "edgesubinterface-ingress-ai-backend-fabric"
+            }
+          }
+        },
+        {
+          "interface-id": "ethernet-1/6",
+          "_annotate": "EDA Source CRs: aifabrics.eda.nokia.com/v1alpha1/Backend/ai-backend-fabric",
+          "interface-ref": {
+            "interface": "ethernet-1/6"
+          },
+          "pfc": {
+            "pfc-mapping-profile": "edgeinterface-ai-backend-fabric",
+            "pfc-enable": true
+          },
+          "input": {
+            "pfc-buffer-allocation-profile": "edgeinterface-ingress-ai-backend-fabric"
+          },
+          "output": {
+            "buffer-allocation-profile": "egress-backend-ai-backend-fabric",
+            "queues": {
+              "queue": [
+                {
+                  "queue-name": "unicast-3",
+                  "queue-management-profile": "egress-backend-ai-backend-fabric-2"
+                }
+              ]
+            },
+            "scheduler": {
+              "scheduler-policy": "egress-backend-ai-backend-fabric"
+            }
+          }
+        },
+        {
+          "interface-id": "ethernet-1/6.1",
+          "interface-ref": {
+            "interface": "ethernet-1/6",
+            "subinterface": 1
+          },
+          "input": {
+            "classifiers": {
+              "dscp-policy": "edgesubinterface-ingress-ai-backend-fabric"
+            }
+          }
+        },
+        {
+          "interface-id": "ethernet-1/7",
+          "_annotate": "EDA Source CRs: aifabrics.eda.nokia.com/v1alpha1/Backend/ai-backend-fabric",
+          "interface-ref": {
+            "interface": "ethernet-1/7"
+          },
+          "pfc": {
+            "pfc-mapping-profile": "edgeinterface-ai-backend-fabric",
+            "pfc-enable": true
+          },
+          "input": {
+            "pfc-buffer-allocation-profile": "edgeinterface-ingress-ai-backend-fabric"
+          },
+          "output": {
+            "buffer-allocation-profile": "egress-backend-ai-backend-fabric",
+            "queues": {
+              "queue": [
+                {
+                  "queue-name": "unicast-3",
+                  "queue-management-profile": "egress-backend-ai-backend-fabric-2"
+                }
+              ]
+            },
+            "scheduler": {
+              "scheduler-policy": "egress-backend-ai-backend-fabric"
+            }
+          }
+        },
+        {
+          "interface-id": "ethernet-1/7.1",
+          "interface-ref": {
+            "interface": "ethernet-1/7",
+            "subinterface": 1
+          },
+          "input": {
+            "classifiers": {
+              "dscp-policy": "edgesubinterface-ingress-ai-backend-fabric"
+            }
+          }
+        },
+        {
+          "interface-id": "ethernet-1/8",
+          "_annotate": "EDA Source CRs: aifabrics.eda.nokia.com/v1alpha1/Backend/ai-backend-fabric",
+          "interface-ref": {
+            "interface": "ethernet-1/8"
+          },
+          "pfc": {
+            "pfc-mapping-profile": "edgeinterface-ai-backend-fabric",
+            "pfc-enable": true
+          },
+          "input": {
+            "pfc-buffer-allocation-profile": "edgeinterface-ingress-ai-backend-fabric"
+          },
+          "output": {
+            "buffer-allocation-profile": "egress-backend-ai-backend-fabric",
+            "queues": {
+              "queue": [
+                {
+                  "queue-name": "unicast-3",
+                  "queue-management-profile": "egress-backend-ai-backend-fabric-2"
+                }
+              ]
+            },
+            "scheduler": {
+              "scheduler-policy": "egress-backend-ai-backend-fabric"
+            }
+          }
+        },
+        {
+          "interface-id": "ethernet-1/8.1",
+          "interface-ref": {
+            "interface": "ethernet-1/8",
+            "subinterface": 1
+          },
+          "input": {
+            "classifiers": {
+              "dscp-policy": "edgesubinterface-ingress-ai-backend-fabric"
+            }
+          }
+        }
+      ]
+    },
+    "buffer-management": {
+      "queue-management-profile": [
+        {
+          "name": "egress-backend-ai-backend-fabric-2",
+          "_annotate": "EDA Source CRs: aifabrics.eda.nokia.com/v1alpha1/Backend/ai-backend-fabric",
+          "weight-factor": 0,
+          "wred": {
+            "wred-slope": [
+              {
+                "traffic-type": "all",
+                "drop-probability": "all",
+                "enable-ecn": true,
+                "min-threshold-percent": 5,
+                "max-threshold-percent": 80,
+                "slope-enabled": true,
+                "max-drop-probability-percent": 100
+              }
+            ]
+          }
+        }
+      ],
+      "buffer-allocation-profile": [
+        {
+          "name": "edgeinterface-ingress-ai-backend-fabric",
+          "_annotate": "EDA Source CRs: aifabrics.eda.nokia.com/v1alpha1/Backend/ai-backend-fabric",
+          "queues": {
+            "pfc-queue": [
+              {
+                "pfc-queue-name": "pfc-3",
+                "maximum-burst-size": 1024000
+              }
+            ]
+          }
+        },
+        {
+          "name": "egress-backend-ai-backend-fabric",
+          "_annotate": "EDA Source CRs: aifabrics.eda.nokia.com/v1alpha1/Backend/ai-backend-fabric",
+          "queues": {
+            "queue": [
+              {
+                "queue-name": "unicast-0",
+                "maximum-burst-size": 1024000
+              },
+              {
+                "queue-name": "unicast-3",
+                "maximum-burst-size": 52110640
+              },
+              {
+                "queue-name": "unicast-6",
+                "maximum-burst-size": 1024000
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "linecard": [
+      {
+        "slot": 1,
+        "_annotate": "EDA Source CRs: aifabrics.eda.nokia.com/v1alpha1/Backend/ai-backend-fabric",
+        "forwarding-complex": [
+          {
+            "name": "0",
+            "input": {
+              "pfc-buffer-reservation": 10
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "srl_nokia-network-instance:network-instance": [
+    {
+      "name": "default",
+      "_annotate": "EDA Source CRs: aifabrics.eda.nokia.com/v1alpha1/Backend/ai-backend-fabric",
+      "type": "srl_nokia-network-instance:default",
+      "admin-state": "enable",
+      "description": "fabric: stripe01 role: leaf",
+      "router-id": "192.0.2.1",
+      "ip-forwarding": {
+        "receive-ipv4-check": false
+      },
+      "interface": [
+        {
+          "name": "system0.0",
+          "_annotate": "EDA Source CRs: aifabrics.eda.nokia.com/v1alpha1/Backend/ai-backend-fabric"
+        }
+      ],
+      "protocols": {
+        "srl_nokia-bgp:bgp": {
+          "admin-state": "enable",
+          "autonomous-system": 65500,
+          "router-id": "192.0.2.1",
+          "ebgp-default-policy": {
+            "import-reject-all": true,
+            "export-reject-all": true
+          },
+          "afi-safi": [
+            {
+              "afi-safi-name": "srl_nokia-common:evpn",
+              "admin-state": "disable"
+            },
+            {
+              "afi-safi-name": "srl_nokia-common:ipv4-unicast",
+              "admin-state": "enable",
+              "multipath": {
+                "allow-multiple-as": true,
+                "ebgp": {
+                  "maximum-paths": 32
+                },
+                "ibgp": {
+                  "maximum-paths": 32
+                }
+              },
+              "ipv4-unicast": {
+                "advertise-ipv6-next-hops": true,
+                "receive-ipv6-next-hops": true
+              }
+            },
+            {
+              "afi-safi-name": "srl_nokia-common:ipv6-unicast",
+              "admin-state": "enable",
+              "multipath": {
+                "allow-multiple-as": true,
+                "ebgp": {
+                  "maximum-paths": 32
+                },
+                "ibgp": {
+                  "maximum-paths": 32
+                }
+              }
+            }
+          ],
+          "preference": {
+            "ebgp": 170,
+            "ibgp": 170
+          },
+          "route-advertisement": {
+            "rapid-withdrawal": true,
+            "wait-for-fib-install": false
+          }
+        }
+      },
+      "srl_nokia-aggregate-routes:aggregate-routes": {
+        "_annotate": "EDA Source CRs: aifabrics.eda.nokia.com/v1alpha1/Backend/ai-backend-fabric",
+        "route": [
+          {
+            "prefix": "fd00:1:2:1::/92",
+            "admin-state": "enable",
+            "summary-only": true,
+            "aggregator": {
+              "address": "192.0.2.1"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "group-pmodpt",
+      "_annotate": "EDA Source CRs: aifabrics.eda.nokia.com/v1alpha1/Backend/ai-backend-fabric",
+      "type": "srl_nokia-network-instance:ip-vrf",
+      "admin-state": "enable",
+      "description": "Backend: ai-backend-fabric",
+      "router-id": "192.0.2.1",
+      "interface": [
+        {
+          "name": "ethernet-1/1.1",
+          "_annotate": "EDA Source CRs: aifabrics.eda.nokia.com/v1alpha1/Backend/ai-backend-fabric"
+        },
+        {
+          "name": "ethernet-1/2.1",
+          "_annotate": "EDA Source CRs: aifabrics.eda.nokia.com/v1alpha1/Backend/ai-backend-fabric"
+        },
+        {
+          "name": "ethernet-1/3.1",
+          "_annotate": "EDA Source CRs: aifabrics.eda.nokia.com/v1alpha1/Backend/ai-backend-fabric"
+        },
+        {
+          "name": "ethernet-1/4.1",
+          "_annotate": "EDA Source CRs: aifabrics.eda.nokia.com/v1alpha1/Backend/ai-backend-fabric"
+        },
+        {
+          "name": "ethernet-1/5.1",
+          "_annotate": "EDA Source CRs: aifabrics.eda.nokia.com/v1alpha1/Backend/ai-backend-fabric"
+        },
+        {
+          "name": "ethernet-1/6.1",
+          "_annotate": "EDA Source CRs: aifabrics.eda.nokia.com/v1alpha1/Backend/ai-backend-fabric"
+        },
+        {
+          "name": "ethernet-1/7.1",
+          "_annotate": "EDA Source CRs: aifabrics.eda.nokia.com/v1alpha1/Backend/ai-backend-fabric"
+        },
+        {
+          "name": "ethernet-1/8.1",
+          "_annotate": "EDA Source CRs: aifabrics.eda.nokia.com/v1alpha1/Backend/ai-backend-fabric"
+        }
+      ],
+      "srl_nokia-network-instance-leaking:inter-instance-policies": {
+        "apply-policy": {
+          "import-policy": "import-routeleak-group-pmodpt-ai-backend-fabric",
+          "export-policy": "export-routeleak-group-pmodpt-ai-backend-fabric"
+        }
+      }
+    },
+    {
+      "name": "mgmt",
+      "_annotate": "EDA Source CRs: bootstrap.eda.nokia.com/v1alpha1/Init/init-base",
+      "type": "srl_nokia-network-instance:ip-vrf",
+      "admin-state": "enable",
+      "description": "Management network instance",
+      "interface": [
+        {
+          "name": "mgmt0.0"
+        }
+      ],
+      "protocols": {
+        "srl_nokia-linux:linux": {
+          "import-routes": true,
+          "export-routes": true
+        }
+      }
+    }
+  ],
+  "srl_nokia-system:system": {
+    "_annotate": "EDA Source CRs: bootstrap.eda.nokia.com/v1alpha1/Init/init-base",
+    "srl_nokia-configuration:configuration": {
+      "_annotate": "EDA Source CRs: core.eda.nokia.com/v1/Manifest/aaa.eda.nokia.com",
+      "srl_nokia-configuration-role:role": [
+        {
+          "name": "sudo"
+        }
+      ]
+    },
+    "srl_nokia-system-protocols:protocols": {
+      "srl_nokia-bgp:bgp": {
+        "_annotate": "EDA Source CRs: aifabrics.eda.nokia.com/v1alpha1/Backend/ai-backend-fabric",
+        "restart-max-wait": 0
+      }
+    },
+    "srl_nokia-aaa:aaa": {
+      "authentication": {
+        "authentication-method": [
+          "local"
+        ],
+        "admin-user": {
+          "_annotate": "EDA Source CRs: core.eda.nokia.com/v1/Manifest/aaa.eda.nokia.com",
+          "password": "$y$j9T$345e75994ccccf37$u87WlnRGvxTpZXt4imiDNwc0fvPif.hUG3DLrg0KRW2"
+        }
+      },
+      "authorization": {
+        "role": [
+          {
+            "rolename": "sudo",
+            "_annotate": "EDA Source CRs: core.eda.nokia.com/v1/Manifest/aaa.eda.nokia.com",
+            "superuser": true,
+            "services": [
+              "cli",
+              "gnmi",
+              "gnoi",
+              "gnsi",
+              "netconf"
+            ]
+          }
+        ]
+      },
+      "server-group": [
+        {
+          "name": "local",
+          "type": "srl_nokia-aaa-types:local"
+        }
+      ]
+    },
+    "srl_nokia-ssh:ssh-server": [
+      {
+        "name": "mgmt",
+        "admin-state": "enable",
+        "network-instance": "mgmt"
+      }
+    ],
+    "srl_nokia-boot:boot": {
+      "autoboot": {
+        "admin-state": "disable"
+      }
+    },
+    "srl_nokia-lldp:lldp": {
+      "interface": [
+        {
+          "name": "ethernet-1/1",
+          "_annotate": "EDA Source CRs: interfaces.eda.nokia.com/v1alpha1/Interface/1tier-leaf-02-ethernet-1-1",
+          "admin-state": "enable"
+        },
+        {
+          "name": "ethernet-1/2",
+          "_annotate": "EDA Source CRs: interfaces.eda.nokia.com/v1alpha1/Interface/1tier-leaf-02-ethernet-1-2",
+          "admin-state": "enable"
+        },
+        {
+          "name": "ethernet-1/3",
+          "_annotate": "EDA Source CRs: interfaces.eda.nokia.com/v1alpha1/Interface/1tier-leaf-02-ethernet-1-3",
+          "admin-state": "enable"
+        },
+        {
+          "name": "ethernet-1/4",
+          "_annotate": "EDA Source CRs: interfaces.eda.nokia.com/v1alpha1/Interface/1tier-leaf-02-ethernet-1-4",
+          "admin-state": "enable"
+        },
+        {
+          "name": "ethernet-1/5",
+          "_annotate": "EDA Source CRs: interfaces.eda.nokia.com/v1alpha1/Interface/1tier-leaf-02-ethernet-1-5",
+          "admin-state": "enable"
+        },
+        {
+          "name": "ethernet-1/6",
+          "_annotate": "EDA Source CRs: interfaces.eda.nokia.com/v1alpha1/Interface/1tier-leaf-02-ethernet-1-6",
+          "admin-state": "enable"
+        },
+        {
+          "name": "ethernet-1/7",
+          "_annotate": "EDA Source CRs: interfaces.eda.nokia.com/v1alpha1/Interface/1tier-leaf-02-ethernet-1-7",
+          "admin-state": "enable"
+        },
+        {
+          "name": "ethernet-1/8",
+          "_annotate": "EDA Source CRs: interfaces.eda.nokia.com/v1alpha1/Interface/1tier-leaf-02-ethernet-1-8",
+          "admin-state": "enable"
+        },
+        {
+          "name": "ethernet-1/9",
+          "_annotate": "EDA Source CRs: interfaces.eda.nokia.com/v1alpha1/Interface/1tier-leaf-02-ethernet-1-9",
+          "admin-state": "enable"
+        },
+        {
+          "name": "ethernet-1/10",
+          "_annotate": "EDA Source CRs: interfaces.eda.nokia.com/v1alpha1/Interface/1tier-leaf-02-ethernet-1-10",
+          "admin-state": "enable"
+        },
+        {
+          "name": "ethernet-1/11",
+          "_annotate": "EDA Source CRs: interfaces.eda.nokia.com/v1alpha1/Interface/1tier-leaf-02-ethernet-1-11",
+          "admin-state": "enable"
+        },
+        {
+          "name": "ethernet-1/12",
+          "_annotate": "EDA Source CRs: interfaces.eda.nokia.com/v1alpha1/Interface/1tier-leaf-02-ethernet-1-12",
+          "admin-state": "enable"
+        },
+        {
+          "name": "ethernet-1/13",
+          "_annotate": "EDA Source CRs: interfaces.eda.nokia.com/v1alpha1/Interface/1tier-leaf-02-ethernet-1-13",
+          "admin-state": "enable"
+        },
+        {
+          "name": "ethernet-1/14",
+          "_annotate": "EDA Source CRs: interfaces.eda.nokia.com/v1alpha1/Interface/1tier-leaf-02-ethernet-1-14",
+          "admin-state": "enable"
+        },
+        {
+          "name": "ethernet-1/15",
+          "_annotate": "EDA Source CRs: interfaces.eda.nokia.com/v1alpha1/Interface/1tier-leaf-02-ethernet-1-15",
+          "admin-state": "enable"
+        },
+        {
+          "name": "ethernet-1/16",
+          "_annotate": "EDA Source CRs: interfaces.eda.nokia.com/v1alpha1/Interface/1tier-leaf-02-ethernet-1-16",
+          "admin-state": "enable"
+        }
+      ]
+    },
+    "srl_nokia-system-name:name": {
+      "host-name": "1tier-leaf-02"
+    },
+    "srl_nokia-grpc:grpc-server": [
+      {
+        "name": "mgmt",
+        "admin-state": "enable",
+        "rate-limit": 65535,
+        "session-limit": 1024,
+        "metadata-authentication": true,
+        "tls-profile": "EDA",
+        "network-instance": "mgmt",
+        "port": 57410,
+        "services": [
+          "srl_nokia-grpc:gnmi",
+          "srl_nokia-grpc:gnoi",
+          "srl_nokia-grpc:gnsi"
+        ],
+        "gnmi": {
+          "commit-save": true
+        }
+      }
+    ]
+  }
+}

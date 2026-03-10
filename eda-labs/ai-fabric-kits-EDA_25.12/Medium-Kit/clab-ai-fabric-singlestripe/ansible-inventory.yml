@@ -1,0 +1,50 @@
+all:
+  vars:
+    # The generated inventory is assumed to be used from the clab host.
+    # Hence no http proxy should be used. Therefore we make sure the http
+    # module does not attempt using any global http proxy.
+    ansible_httpapi_use_proxy: false
+  children:
+    linux:
+      hosts:
+        singlestripe-gpu-svr-01:
+          ansible_host: 172.16.2.21
+        singlestripe-gpu-svr-02:
+          ansible_host: 172.16.2.22
+        singlestripe-gpu-svr-03:
+          ansible_host: 172.16.2.23
+        singlestripe-gpu-svr-04:
+          ansible_host: 172.16.2.24
+        singlestripe-gpu-svr-05:
+          ansible_host: 172.16.2.25
+        singlestripe-gpu-svr-06:
+          ansible_host: 172.16.2.26
+        singlestripe-gpu-svr-07:
+          ansible_host: 172.16.2.27
+        singlestripe-gpu-svr-08:
+          ansible_host: 172.16.2.28
+    nokia_srlinux:
+      vars:
+        ansible_network_os: nokia.srlinux.srlinux
+        # default connection type for nodes of this kind
+        # feel free to override this in your inventory
+        ansible_connection: ansible.netcommon.httpapi
+        ansible_user: admin
+        ansible_password: NokiaSrl1!
+      hosts:
+        singlestripe-leaf-01:
+          ansible_host: 172.16.2.11
+        singlestripe-leaf-02:
+          ansible_host: 172.16.2.12
+        singlestripe-leaf-03:
+          ansible_host: 172.16.2.13
+        singlestripe-leaf-04:
+          ansible_host: 172.16.2.14
+        singlestripe-leaf-05:
+          ansible_host: 172.16.2.15
+        singlestripe-leaf-06:
+          ansible_host: 172.16.2.16
+        singlestripe-leaf-07:
+          ansible_host: 172.16.2.17
+        singlestripe-leaf-08:
+          ansible_host: 172.16.2.18

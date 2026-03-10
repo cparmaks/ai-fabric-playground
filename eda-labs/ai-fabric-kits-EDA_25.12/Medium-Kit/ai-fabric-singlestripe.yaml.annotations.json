@@ -1,0 +1,179 @@
+{
+  "freeTextAnnotations": [],
+  "freeShapeAnnotations": [],
+  "groupStyleAnnotations": [],
+  "networkNodeAnnotations": [],
+  "nodeAnnotations": [
+    {
+      "id": "singlestripe-leaf-01",
+      "position": {
+        "x": -100,
+        "y": 258
+      },
+      "group": "Data Center Stripe01",
+      "level": "2",
+      "groupLabelPos": "top-center",
+      "interfacePattern": "e1-{n}"
+    },
+    {
+      "id": "singlestripe-leaf-02",
+      "position": {
+        "x": 0,
+        "y": 258
+      },
+      "group": "Data Center Stripe01",
+      "level": "2",
+      "groupLabelPos": "top-center",
+      "interfacePattern": "e1-{n}"
+    },
+    {
+      "id": "singlestripe-leaf-03",
+      "position": {
+        "x": 100,
+        "y": 258
+      },
+      "group": "Data Center Stripe01",
+      "level": "2",
+      "groupLabelPos": "top-center",
+      "interfacePattern": "e1-{n}"
+    },
+    {
+      "id": "singlestripe-leaf-04",
+      "position": {
+        "x": 200,
+        "y": 258
+      },
+      "group": "Data Center Stripe01",
+      "level": "2",
+      "groupLabelPos": "top-center",
+      "interfacePattern": "e1-{n}"
+    },
+    {
+      "id": "singlestripe-leaf-05",
+      "position": {
+        "x": 300,
+        "y": 258
+      },
+      "group": "Data Center Stripe01",
+      "level": "2",
+      "groupLabelPos": "top-center",
+      "interfacePattern": "e1-{n}"
+    },
+    {
+      "id": "singlestripe-leaf-06",
+      "position": {
+        "x": 400,
+        "y": 258
+      },
+      "group": "Data Center Stripe01",
+      "level": "2",
+      "groupLabelPos": "top-center",
+      "interfacePattern": "e1-{n}"
+    },
+    {
+      "id": "singlestripe-leaf-07",
+      "position": {
+        "x": 500,
+        "y": 258
+      },
+      "group": "Data Center Stripe01",
+      "level": "2",
+      "groupLabelPos": "top-center",
+      "interfacePattern": "e1-{n}"
+    },
+    {
+      "id": "singlestripe-leaf-08",
+      "position": {
+        "x": 600,
+        "y": 258
+      },
+      "group": "Data Center Stripe01",
+      "level": "2",
+      "groupLabelPos": "top-center",
+      "interfacePattern": "e1-{n}"
+    },
+    {
+      "id": "singlestripe-gpu-svr-01",
+      "position": {
+        "x": -100,
+        "y": 500
+      },
+      "group": "GPU Servers",
+      "level": "4",
+      "groupLabelPos": "bottom-center"
+    },
+    {
+      "id": "singlestripe-gpu-svr-02",
+      "position": {
+        "x": 0,
+        "y": 500
+      },
+      "group": "GPU Servers",
+      "level": "4",
+      "groupLabelPos": "bottom-center"
+    },
+    {
+      "id": "singlestripe-gpu-svr-03",
+      "position": {
+        "x": 100,
+        "y": 500
+      },
+      "group": "GPU Servers",
+      "level": "4",
+      "groupLabelPos": "bottom-center"
+    },
+    {
+      "id": "singlestripe-gpu-svr-04",
+      "position": {
+        "x": 200,
+        "y": 500
+      },
+      "group": "GPU Servers",
+      "level": "4",
+      "groupLabelPos": "bottom-center"
+    },
+    {
+      "id": "singlestripe-gpu-svr-05",
+      "position": {
+        "x": 300,
+        "y": 500
+      },
+      "group": "GPU Servers",
+      "level": "4",
+      "groupLabelPos": "bottom-center"
+    },
+    {
+      "id": "singlestripe-gpu-svr-06",
+      "position": {
+        "x": 400,
+        "y": 500
+      },
+      "group": "GPU Servers",
+      "level": "4",
+      "groupLabelPos": "bottom-center"
+    },
+    {
+      "id": "singlestripe-gpu-svr-07",
+      "position": {
+        "x": 500,
+        "y": 500
+      },
+      "group": "GPU Servers",
+      "level": "4",
+      "groupLabelPos": "bottom-center"
+    },
+    {
+      "id": "singlestripe-gpu-svr-08",
+      "position": {
+        "x": 600,
+        "y": 500
+      },
+      "group": "GPU Servers",
+      "level": "4",
+      "groupLabelPos": "bottom-center"
+    }
+  ],
+  "edgeAnnotations": [],
+  "aliasEndpointAnnotations": [],
+  "viewerSettings": {}
+}

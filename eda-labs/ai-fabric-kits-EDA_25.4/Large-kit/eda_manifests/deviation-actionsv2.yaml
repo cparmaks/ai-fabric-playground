@@ -1,0 +1,191 @@
+apiVersion: core.eda.nokia.com/v1
+kind: DeviationAction
+metadata:
+  name: 'accept-all-deviations-on-rail-01'
+  namespace: clab-ai-fabric-2tier
+spec:
+  nodeEndpoint: 2tier-rail-01
+  actions:
+    - path: "."
+      action: setAccept
+      recurse: true
+---
+apiVersion: core.eda.nokia.com/v1
+kind: DeviationAction
+metadata:
+  name: 'accept-all-deviations-on-rail-02'
+  namespace: clab-ai-fabric-2tier
+spec:
+  nodeEndpoint: 2tier-rail-02
+  actions:
+    - path: "."
+      action: setAccept
+      recurse: true
+---
+apiVersion: core.eda.nokia.com/v1
+kind: DeviationAction
+metadata:
+  name: 'accept-all-deviations-on-rail-03'
+  namespace: clab-ai-fabric-2tier
+spec:
+  nodeEndpoint: 2tier-rail-03
+  actions:
+    - path: "."
+      action: setAccept
+      recurse: true
+---
+apiVersion: core.eda.nokia.com/v1
+kind: DeviationAction
+metadata:
+  name: 'accept-all-deviations-on-rail-04'
+  namespace: clab-ai-fabric-2tier
+spec:
+  nodeEndpoint: 2tier-rail-04
+  actions:
+    - path: "."
+      action: setAccept
+      recurse: true
+---
+apiVersion: core.eda.nokia.com/v1
+kind: DeviationAction
+metadata:
+  name: 'accept-all-deviations-on-rail-05'
+  namespace: clab-ai-fabric-2tier
+spec:
+  nodeEndpoint: 2tier-rail-05
+  actions:
+    - path: "."
+      action: setAccept
+      recurse: true
+---
+apiVersion: core.eda.nokia.com/v1
+kind: DeviationAction
+metadata:
+  name: 'accept-all-deviations-on-rail-06'
+  namespace: clab-ai-fabric-2tier
+spec:
+  nodeEndpoint: 2tier-rail-06
+  actions:
+    - path: "."
+      action: setAccept
+      recurse: true
+---
+apiVersion: core.eda.nokia.com/v1
+kind: DeviationAction
+metadata:
+  name: 'accept-all-deviations-on-rail-07'
+  namespace: clab-ai-fabric-2tier
+spec:
+  nodeEndpoint: 2tier-rail-07
+  actions:
+    - path: "."
+      action: setAccept
+      recurse: true
+---
+apiVersion: core.eda.nokia.com/v1
+kind: DeviationAction
+metadata:
+  name: 'accept-all-deviations-on-rail-08'
+  namespace: clab-ai-fabric-2tier
+spec:
+  nodeEndpoint: 2tier-rail-08
+  actions:
+    - path: "."
+      action: setAccept
+      recurse: true
+---
+apiVersion: core.eda.nokia.com/v1
+kind: DeviationAction
+metadata:
+  name: 'accept-all-deviations-on-rail-09'
+  namespace: clab-ai-fabric-2tier
+spec:
+  nodeEndpoint: 2tier-rail-09
+  actions:
+    - path: "."
+      action: setAccept
+      recurse: true
+---
+apiVersion: core.eda.nokia.com/v1
+kind: DeviationAction
+metadata:
+  name: 'accept-all-deviations-on-rail-10'
+  namespace: clab-ai-fabric-2tier
+spec:
+  nodeEndpoint: 2tier-rail-10
+  actions:
+    - path: "."
+      action: setAccept
+      recurse: true
+---
+apiVersion: core.eda.nokia.com/v1
+kind: DeviationAction
+metadata:
+  name: 'accept-all-deviations-on-rail-11'
+  namespace: clab-ai-fabric-2tier
+spec:
+  nodeEndpoint: 2tier-rail-11
+  actions:
+    - path: "."
+      action: setAccept
+      recurse: true
+---
+apiVersion: core.eda.nokia.com/v1
+kind: DeviationAction
+metadata:
+  name: 'accept-all-deviations-on-rail-12'
+  namespace: clab-ai-fabric-2tier
+spec:
+  nodeEndpoint: 2tier-rail-12
+  actions:
+    - path: "."
+      action: setAccept
+      recurse: true
+---
+apiVersion: core.eda.nokia.com/v1
+kind: DeviationAction
+metadata:
+  name: 'accept-all-deviations-on-rail-13'
+  namespace: clab-ai-fabric-2tier
+spec:
+  nodeEndpoint: 2tier-rail-13
+  actions:
+    - path: "."
+      action: setAccept
+      recurse: true
+---
+apiVersion: core.eda.nokia.com/v1
+kind: DeviationAction
+metadata:
+  name: 'accept-all-deviations-on-rail-14'
+  namespace: clab-ai-fabric-2tier
+spec:
+  nodeEndpoint: 2tier-rail-14
+  actions:
+    - path: "."
+      action: setAccept
+      recurse: true
+---
+apiVersion: core.eda.nokia.com/v1
+kind: DeviationAction
+metadata:
+  name: 'accept-all-deviations-on-rail-15'
+  namespace: clab-ai-fabric-2tier
+spec:
+  nodeEndpoint: 2tier-rail-15
+  actions:
+    - path: "."
+      action: setAccept
+      recurse: true
+---
+apiVersion: core.eda.nokia.com/v1
+kind: DeviationAction
+metadata:
+  name: 'accept-all-deviations-on-rail-16'
+  namespace: clab-ai-fabric-2tier
+spec:
+  nodeEndpoint: 2tier-rail-16
+  actions:
+    - path: "."
+      action: setAccept
+      recurse: true

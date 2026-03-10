@@ -1,0 +1,669 @@
+name: ai-fabric-2tier
+prefix: ""
+
+mgmt:
+  network: mgmt-net3
+  ipv4-subnet: 172.16.0.0/24
+
+topology:
+  kinds:
+    nokia_srlinux:
+      image: ghcr.io/nokia/srlinux:25.3.1
+      type: ixrh4
+    linux:
+      image: ghcr.io/srl-labs/network-multitool
+      type: linux
+      binds:
+        - gpu-base-configs:/config
+
+  nodes:
+    # ====================== STRIPE CONNECTOR (2 SPINES) ======================
+    2tier-spine-01:
+      kind: nokia_srlinux
+      mgmt-ipv4: 172.16.0.9
+      labels:
+        topoViewer-role: stripe
+        topoViewer-group: "Stripe Connector"
+        topoViewer-groupLevel: 1
+        graph-posX: "300"
+        graph-posY: "40"
+        graph-group: Stripe Connector
+        graph-level: "1"
+        graph-groupLabelPos: top-center
+      image: ghcr.io/nokia/srlinux:25.3.1
+      type: ixrh4
+    2tier-spine-02:
+      kind: nokia_srlinux
+      mgmt-ipv4: 172.16.0.10
+      labels:
+        topoViewer-role: stripe
+        topoViewer-group: "Stripe Connector"
+        topoViewer-groupLevel: 1
+        graph-posX: "700"
+        graph-posY: "40"
+        graph-group: Stripe Connector
+        graph-level: "1"
+        graph-groupLabelPos: top-center
+      image: ghcr.io/nokia/srlinux:25.3.1
+      type: ixrh4
+
+    # ====================== STRIPE01 (Leaves 01–08) ======================
+    2tier-leaf-01:
+      kind: nokia_srlinux
+      mgmt-ipv4: 172.16.0.11
+      binds:
+        - ./srl-configs/leaf-01.cfg:/home/admin/leaf-01.cfg
+      labels:
+        topoViewer-role: leaf
+        topoViewer-group: "Data Center Stripe01"
+        topoViewer-groupLevel: 2
+        graph-posX: "0"
+        graph-posY: "220"
+        graph-group: Data Center Stripe01
+        graph-level: "2"
+        graph-groupLabelPos: top-center
+      image: ghcr.io/nokia/srlinux:25.3.1
+      type: ixrh4
+    2tier-leaf-02:
+      kind: nokia_srlinux
+      mgmt-ipv4: 172.16.0.12
+      binds:
+        - ./srl-configs/leaf-02.cfg:/home/admin/leaf-02.cfg
+      labels:
+        topoViewer-role: leaf
+        topoViewer-group: "Data Center Stripe01"
+        topoViewer-groupLevel: 2
+        graph-posX: "100"
+        graph-posY: "220"
+        graph-group: Data Center Stripe01
+        graph-level: "2"
+        graph-groupLabelPos: top-center
+      image: ghcr.io/nokia/srlinux:25.3.1
+      type: ixrh4
+    2tier-leaf-03:
+      kind: nokia_srlinux
+      mgmt-ipv4: 172.16.0.13
+      binds:
+        - ./srl-configs/leaf-03.cfg:/home/admin/leaf-03.cfg
+      labels:
+        topoViewer-role: leaf
+        topoViewer-group: "Data Center Stripe01"
+        topoViewer-groupLevel: 2
+        graph-posX: "200"
+        graph-posY: "220"
+        graph-group: Data Center Stripe01
+        graph-level: "2"
+        graph-groupLabelPos: top-center
+      image: ghcr.io/nokia/srlinux:25.3.1
+      type: ixrh4
+    2tier-leaf-04:
+      kind: nokia_srlinux
+      mgmt-ipv4: 172.16.0.14
+      binds:
+        - ./srl-configs/leaf-04.cfg:/home/admin/leaf-04.cfg
+      labels:
+        topoViewer-role: leaf
+        topoViewer-group: "Data Center Stripe01"
+        topoViewer-groupLevel: 2
+        graph-posX: "300"
+        graph-posY: "220"
+        graph-group: Data Center Stripe01
+        graph-level: "2"
+        graph-groupLabelPos: top-center
+      image: ghcr.io/nokia/srlinux:25.3.1
+      type: ixrh4
+    2tier-leaf-05:
+      kind: nokia_srlinux
+      mgmt-ipv4: 172.16.0.15
+      binds:
+        - ./srl-configs/leaf-05v2.cfg:/home/admin/leaf-05.cfg
+      labels:
+        topoViewer-role: leaf
+        topoViewer-group: "Data Center Stripe01"
+        topoViewer-groupLevel: 2
+        graph-posX: "400"
+        graph-posY: "220"
+        graph-group: Data Center Stripe01
+        graph-level: "2"
+        graph-groupLabelPos: top-center
+      image: ghcr.io/nokia/srlinux:25.3.1
+      type: ixrh4
+    2tier-leaf-06:
+      kind: nokia_srlinux
+      mgmt-ipv4: 172.16.0.16
+      binds:
+        - ./srl-configs/leaf-06v2.cfg:/home/admin/leaf-06.cfg
+      labels:
+        topoViewer-role: leaf
+        topoViewer-group: "Data Center Stripe01"
+        topoViewer-groupLevel: 2
+        graph-posX: "500"
+        graph-posY: "220"
+        graph-group: Data Center Stripe01
+        graph-level: "2"
+        graph-groupLabelPos: top-center
+      image: ghcr.io/nokia/srlinux:25.3.1
+      type: ixrh4
+    2tier-leaf-07:
+      kind: nokia_srlinux
+      mgmt-ipv4: 172.16.0.17
+      binds:
+        - ./srl-configs/leaf-07v2.cfg:/home/admin/leaf-07.cfg
+      labels:
+        topoViewer-role: leaf
+        topoViewer-group: "Data Center Stripe01"
+        topoViewer-groupLevel: 2
+        graph-posX: "600"
+        graph-posY: "220"
+        graph-group: Data Center Stripe01
+        graph-level: "2"
+        graph-groupLabelPos: top-center
+      image: ghcr.io/nokia/srlinux:25.3.1
+      type: ixrh4
+    2tier-leaf-08:
+      kind: nokia_srlinux
+      mgmt-ipv4: 172.16.0.18
+      binds:
+        - ./srl-configs/leaf-08v2.cfg:/home/admin/leaf-08.cfg
+      labels:
+        topoViewer-role: leaf
+        topoViewer-group: "Data Center Stripe01"
+        topoViewer-groupLevel: 2
+        graph-posX: "700"
+        graph-posY: "220"
+        graph-group: Data Center Stripe01
+        graph-level: "2"
+        graph-groupLabelPos: top-center
+      image: ghcr.io/nokia/srlinux:25.3.1
+      type: ixrh4
+
+    # ====================== STRIPE02 (Leaves 09–16) ======================
+    2tier-leaf-09:
+      kind: nokia_srlinux
+      mgmt-ipv4: 172.16.0.19
+      binds:
+        - ./srl-configs/leaf-09.cfg:/home/admin/leaf-09.cfg
+      labels:
+        topoViewer-role: leaf
+        topoViewer-group: "Data Center Stripe02"
+        topoViewer-groupLevel: 2
+        graph-posX: "0"
+        graph-posY: "330"
+        graph-group: Data Center Stripe02
+        graph-level: "2"
+        graph-groupLabelPos: top-center
+      image: ghcr.io/nokia/srlinux:25.3.1
+      type: ixrh4
+    2tier-leaf-10:
+      kind: nokia_srlinux
+      mgmt-ipv4: 172.16.0.20
+      binds:
+        - ./srl-configs/leaf-10.cfg:/home/admin/leaf-10.cfg
+      labels:
+        topoViewer-role: leaf
+        topoViewer-group: "Data Center Stripe02"
+        topoViewer-groupLevel: 2
+        graph-posX: "100"
+        graph-posY: "330"
+        graph-group: Data Center Stripe02
+        graph-level: "2"
+        graph-groupLabelPos: top-center
+      image: ghcr.io/nokia/srlinux:25.3.1
+      type: ixrh4
+    2tier-leaf-11:
+      kind: nokia_srlinux
+      mgmt-ipv4: 172.16.0.21
+      binds:
+        - ./srl-configs/leaf-11.cfg:/home/admin/leaf-11.cfg
+      labels:
+        topoViewer-role: leaf
+        topoViewer-group: "Data Center Stripe02"
+        topoViewer-groupLevel: 2
+        graph-posX: "200"
+        graph-posY: "330"
+        graph-group: Data Center Stripe02
+        graph-level: "2"
+        graph-groupLabelPos: top-center
+      image: ghcr.io/nokia/srlinux:25.3.1
+      type: ixrh4
+    2tier-leaf-12:
+      kind: nokia_srlinux
+      mgmt-ipv4: 172.16.0.22
+      binds:
+        - ./srl-configs/leaf-12.cfg:/home/admin/leaf-12.cfg
+      labels:
+        topoViewer-role: leaf
+        topoViewer-group: "Data Center Stripe02"
+        topoViewer-groupLevel: 2
+        graph-posX: "300"
+        graph-posY: "330"
+        graph-group: Data Center Stripe02
+        graph-level: "2"
+        graph-groupLabelPos: top-center
+      image: ghcr.io/nokia/srlinux:25.3.1
+      type: ixrh4
+    2tier-leaf-13:
+      kind: nokia_srlinux
+      mgmt-ipv4: 172.16.0.23
+      binds:
+        - ./srl-configs/leaf-13.cfg:/home/admin/leaf-13.cfg
+      labels:
+        topoViewer-role: leaf
+        topoViewer-group: "Data Center Stripe02"
+        topoViewer-groupLevel: 2
+        graph-posX: "400"
+        graph-posY: "330"
+        graph-group: Data Center Stripe02
+        graph-level: "2"
+        graph-groupLabelPos: top-center
+      image: ghcr.io/nokia/srlinux:25.3.1
+      type: ixrh4
+    2tier-leaf-14:
+      kind: nokia_srlinux
+      mgmt-ipv4: 172.16.0.24
+      binds:
+        - ./srl-configs/leaf-14.cfg:/home/admin/leaf-14.cfg
+      labels:
+        topoViewer-role: leaf
+        topoViewer-group: "Data Center Stripe02"
+        topoViewer-groupLevel: 2
+        graph-posX: "500"
+        graph-posY: "330"
+        graph-group: Data Center Stripe02
+        graph-level: "2"
+        graph-groupLabelPos: top-center
+      image: ghcr.io/nokia/srlinux:25.3.1
+      type: ixrh4
+    2tier-leaf-15:
+      kind: nokia_srlinux
+      mgmt-ipv4: 172.16.0.25
+      binds:
+        - ./srl-configs/leaf-15.cfg:/home/admin/leaf-15.cfg
+      labels:
+        topoViewer-role: leaf
+        topoViewer-group: "Data Center Stripe02"
+        topoViewer-groupLevel: 2
+        graph-posX: "600"
+        graph-posY: "330"
+        graph-group: Data Center Stripe02
+        graph-level: "2"
+        graph-groupLabelPos: top-center
+      image: ghcr.io/nokia/srlinux:25.3.1
+      type: ixrh4
+    2tier-leaf-16:
+      kind: nokia_srlinux
+      mgmt-ipv4: 172.16.0.26
+      binds:
+        - ./srl-configs/leaf-16.cfg:/home/admin/leaf-16.cfg
+      labels:
+        topoViewer-role: leaf
+        topoViewer-group: "Data Center Stripe02"
+        topoViewer-groupLevel: 2
+        graph-posX: "700"
+        graph-posY: "330"
+        graph-group: Data Center Stripe02
+        graph-level: "2"
+        graph-groupLabelPos: top-center
+      image: ghcr.io/nokia/srlinux:25.3.1
+      type: ixrh4
+
+    # ====================== GPU SERVERS GROUP1 (4 VMs for STRIPE01) ======================
+    2tier-gpu-svr-01:
+      kind: linux
+      mgmt-ipv4: 172.16.0.51
+      exec:
+        - bash /config/gpu-01.sh
+      labels:
+        topoViewer-role: gpu
+        topoViewer-group: "GPU Servers Group1"
+        topoViewer-groupLevel: 3
+        graph-posX: "150"
+        graph-posY: "520"
+        graph-group: GPU Servers Group1
+        graph-level: "3"
+        graph-groupLabelPos: bottom-center
+      image: ghcr.io/srl-labs/network-multitool
+    2tier-gpu-svr-02:
+      kind: linux
+      mgmt-ipv4: 172.16.0.52
+      exec:
+        - bash /config/gpu-02.sh
+      labels:
+        topoViewer-role: gpu
+        topoViewer-group: "GPU Servers Group1"
+        topoViewer-groupLevel: 3
+        graph-posX: "350"
+        graph-posY: "520"
+        graph-group: GPU Servers Group1
+        graph-level: "3"
+        graph-groupLabelPos: bottom-center
+      image: ghcr.io/srl-labs/network-multitool
+    2tier-gpu-svr-03:
+      kind: linux
+      mgmt-ipv4: 172.16.0.53
+      exec:
+        - bash /config/gpu-03.sh
+      labels:
+        topoViewer-role: gpu
+        topoViewer-group: "GPU Servers Group1"
+        topoViewer-groupLevel: 3
+        graph-posX: "550"
+        graph-posY: "520"
+        graph-group: GPU Servers Group1
+        graph-level: "3"
+        graph-groupLabelPos: bottom-center
+      image: ghcr.io/srl-labs/network-multitool
+    2tier-gpu-svr-04:
+      kind: linux
+      mgmt-ipv4: 172.16.0.54
+      labels:
+        topoViewer-role: gpu
+        topoViewer-group: "GPU Servers Group1"
+        topoViewer-groupLevel: 3
+        graph-posX: "750"
+        graph-posY: "520"
+        graph-group: GPU Servers Group1
+        graph-level: "3"
+        graph-groupLabelPos: bottom-center
+      image: ghcr.io/srl-labs/network-multitool
+
+    # ====================== GPU SERVERS GROUP2 (4 VMs for STRIPE02) ======================
+    2tier-gpu-svr-05:
+      kind: linux
+      mgmt-ipv4: 172.16.0.55
+      exec:
+        - bash /config/gpu-05v2.sh
+      labels:
+        topoViewer-role: gpu
+        topoViewer-group: "GPU Servers Group2"
+        topoViewer-groupLevel: 3
+        graph-posX: "150"
+        graph-posY: "630"
+        graph-group: GPU Servers Group2
+        graph-level: "3"
+        graph-groupLabelPos: bottom-center
+      image: ghcr.io/srl-labs/network-multitool
+    2tier-gpu-svr-06:
+      kind: linux
+      mgmt-ipv4: 172.16.0.56
+      labels:
+        topoViewer-role: gpu
+        topoViewer-group: "GPU Servers Group2"
+        topoViewer-groupLevel: 3
+        graph-posX: "350"
+        graph-posY: "630"
+        graph-group: GPU Servers Group2
+        graph-level: "3"
+        graph-groupLabelPos: bottom-center
+      image: ghcr.io/srl-labs/network-multitool
+    2tier-gpu-svr-07:
+      kind: linux
+      mgmt-ipv4: 172.16.0.57
+      labels:
+        topoViewer-role: gpu
+        topoViewer-group: "GPU Servers Group2"
+        topoViewer-groupLevel: 3
+        graph-posX: "550"
+        graph-posY: "630"
+        graph-group: GPU Servers Group2
+        graph-level: "3"
+        graph-groupLabelPos: bottom-center
+      image: ghcr.io/srl-labs/network-multitool
+    2tier-gpu-svr-08:
+      kind: linux
+      mgmt-ipv4: 172.16.0.58
+      labels:
+        topoViewer-role: gpu
+        topoViewer-group: "GPU Servers Group2"
+        topoViewer-groupLevel: 3
+        graph-posX: "750"
+        graph-posY: "630"
+        graph-group: GPU Servers Group2
+        graph-level: "3"
+        graph-groupLabelPos: bottom-center
+      image: ghcr.io/srl-labs/network-multitool
+
+  links:
+    # =================== Spine-01 to all leaves (4 links per leaf) ===================
+    - endpoints: [ 2tier-spine-01:e1-1, 2tier-leaf-01:e1-33 ]
+    - endpoints: [ 2tier-spine-01:e1-2, 2tier-leaf-01:e1-34 ]
+    - endpoints: [ 2tier-spine-01:e1-3, 2tier-leaf-01:e1-35 ]
+    - endpoints: [ 2tier-spine-01:e1-4, 2tier-leaf-01:e1-36 ]
+
+    - endpoints: [ 2tier-spine-01:e1-5, 2tier-leaf-02:e1-33 ]
+    - endpoints: [ 2tier-spine-01:e1-6, 2tier-leaf-02:e1-34 ]
+    - endpoints: [ 2tier-spine-01:e1-7, 2tier-leaf-02:e1-35 ]
+    - endpoints: [ 2tier-spine-01:e1-8, 2tier-leaf-02:e1-36 ]
+
+    - endpoints: [ 2tier-spine-01:e1-9, 2tier-leaf-03:e1-33 ]
+    - endpoints: [ 2tier-spine-01:e1-10, 2tier-leaf-03:e1-34 ]
+    - endpoints: [ 2tier-spine-01:e1-11, 2tier-leaf-03:e1-35 ]
+    - endpoints: [ 2tier-spine-01:e1-12, 2tier-leaf-03:e1-36 ]
+
+    - endpoints: [ 2tier-spine-01:e1-13, 2tier-leaf-04:e1-33 ]
+    - endpoints: [ 2tier-spine-01:e1-14, 2tier-leaf-04:e1-34 ]
+    - endpoints: [ 2tier-spine-01:e1-15, 2tier-leaf-04:e1-35 ]
+    - endpoints: [ 2tier-spine-01:e1-16, 2tier-leaf-04:e1-36 ]
+
+    - endpoints: [ 2tier-spine-01:e1-17, 2tier-leaf-05:e1-33 ]
+    - endpoints: [ 2tier-spine-01:e1-18, 2tier-leaf-05:e1-34 ]
+    - endpoints: [ 2tier-spine-01:e1-19, 2tier-leaf-05:e1-35 ]
+    - endpoints: [ 2tier-spine-01:e1-20, 2tier-leaf-05:e1-36 ]
+
+    - endpoints: [ 2tier-spine-01:e1-21, 2tier-leaf-06:e1-33 ]
+    - endpoints: [ 2tier-spine-01:e1-22, 2tier-leaf-06:e1-34 ]
+    - endpoints: [ 2tier-spine-01:e1-23, 2tier-leaf-06:e1-35 ]
+    - endpoints: [ 2tier-spine-01:e1-24, 2tier-leaf-06:e1-36 ]
+
+    - endpoints: [ 2tier-spine-01:e1-25, 2tier-leaf-07:e1-33 ]
+    - endpoints: [ 2tier-spine-01:e1-26, 2tier-leaf-07:e1-34 ]
+    - endpoints: [ 2tier-spine-01:e1-27, 2tier-leaf-07:e1-35 ]
+    - endpoints: [ 2tier-spine-01:e1-28, 2tier-leaf-07:e1-36 ]
+
+    - endpoints: [ 2tier-spine-01:e1-29, 2tier-leaf-08:e1-33 ]
+    - endpoints: [ 2tier-spine-01:e1-30, 2tier-leaf-08:e1-34 ]
+    - endpoints: [ 2tier-spine-01:e1-31, 2tier-leaf-08:e1-35 ]
+    - endpoints: [ 2tier-spine-01:e1-32, 2tier-leaf-08:e1-36 ]
+
+    - endpoints: [ 2tier-spine-01:e1-33, 2tier-leaf-09:e1-33 ]
+    - endpoints: [ 2tier-spine-01:e1-34, 2tier-leaf-09:e1-34 ]
+    - endpoints: [ 2tier-spine-01:e1-35, 2tier-leaf-09:e1-35 ]
+    - endpoints: [ 2tier-spine-01:e1-36, 2tier-leaf-09:e1-36 ]
+
+    - endpoints: [ 2tier-spine-01:e1-37, 2tier-leaf-10:e1-33 ]
+    - endpoints: [ 2tier-spine-01:e1-38, 2tier-leaf-10:e1-34 ]
+    - endpoints: [ 2tier-spine-01:e1-39, 2tier-leaf-10:e1-35 ]
+    - endpoints: [ 2tier-spine-01:e1-40, 2tier-leaf-10:e1-36 ]
+
+    - endpoints: [ 2tier-spine-01:e1-41, 2tier-leaf-11:e1-33 ]
+    - endpoints: [ 2tier-spine-01:e1-42, 2tier-leaf-11:e1-34 ]
+    - endpoints: [ 2tier-spine-01:e1-43, 2tier-leaf-11:e1-35 ]
+    - endpoints: [ 2tier-spine-01:e1-44, 2tier-leaf-11:e1-36 ]
+
+    - endpoints: [ 2tier-spine-01:e1-45, 2tier-leaf-12:e1-33 ]
+    - endpoints: [ 2tier-spine-01:e1-46, 2tier-leaf-12:e1-34 ]
+    - endpoints: [ 2tier-spine-01:e1-47, 2tier-leaf-12:e1-35 ]
+    - endpoints: [ 2tier-spine-01:e1-48, 2tier-leaf-12:e1-36 ]
+
+    - endpoints: [ 2tier-spine-01:e1-49, 2tier-leaf-13:e1-33 ]
+    - endpoints: [ 2tier-spine-01:e1-50, 2tier-leaf-13:e1-34 ]
+    - endpoints: [ 2tier-spine-01:e1-51, 2tier-leaf-13:e1-35 ]
+    - endpoints: [ 2tier-spine-01:e1-52, 2tier-leaf-13:e1-36 ]
+
+    - endpoints: [ 2tier-spine-01:e1-53, 2tier-leaf-14:e1-33 ]
+    - endpoints: [ 2tier-spine-01:e1-54, 2tier-leaf-14:e1-34 ]
+    - endpoints: [ 2tier-spine-01:e1-55, 2tier-leaf-14:e1-35 ]
+    - endpoints: [ 2tier-spine-01:e1-56, 2tier-leaf-14:e1-36 ]
+
+    - endpoints: [ 2tier-spine-01:e1-57, 2tier-leaf-15:e1-33 ]
+    - endpoints: [ 2tier-spine-01:e1-58, 2tier-leaf-15:e1-34 ]
+    - endpoints: [ 2tier-spine-01:e1-59, 2tier-leaf-15:e1-35 ]
+    - endpoints: [ 2tier-spine-01:e1-60, 2tier-leaf-15:e1-36 ]
+
+    - endpoints: [ 2tier-spine-01:e1-61, 2tier-leaf-16:e1-33 ]
+    - endpoints: [ 2tier-spine-01:e1-62, 2tier-leaf-16:e1-34 ]
+    - endpoints: [ 2tier-spine-01:e1-63, 2tier-leaf-16:e1-35 ]
+    - endpoints: [ 2tier-spine-01:e1-64, 2tier-leaf-16:e1-36 ]
+
+    # =================== Spine-02 to all leaves (4 links per leaf) ===================
+    - endpoints: [ 2tier-spine-02:e1-1, 2tier-leaf-01:e1-41 ]
+    - endpoints: [ 2tier-spine-02:e1-2, 2tier-leaf-01:e1-42 ]
+    - endpoints: [ 2tier-spine-02:e1-3, 2tier-leaf-01:e1-43 ]
+    - endpoints: [ 2tier-spine-02:e1-4, 2tier-leaf-01:e1-44 ]
+
+    - endpoints: [ 2tier-spine-02:e1-5, 2tier-leaf-02:e1-41 ]
+    - endpoints: [ 2tier-spine-02:e1-6, 2tier-leaf-02:e1-42 ]
+    - endpoints: [ 2tier-spine-02:e1-7, 2tier-leaf-02:e1-43 ]
+    - endpoints: [ 2tier-spine-02:e1-8, 2tier-leaf-02:e1-44 ]
+
+    - endpoints: [ 2tier-spine-02:e1-9, 2tier-leaf-03:e1-41 ]
+    - endpoints: [ 2tier-spine-02:e1-10, 2tier-leaf-03:e1-42 ]
+    - endpoints: [ 2tier-spine-02:e1-11, 2tier-leaf-03:e1-43 ]
+    - endpoints: [ 2tier-spine-02:e1-12, 2tier-leaf-03:e1-44 ]
+
+    - endpoints: [ 2tier-spine-02:e1-13, 2tier-leaf-04:e1-41 ]
+    - endpoints: [ 2tier-spine-02:e1-14, 2tier-leaf-04:e1-42 ]
+    - endpoints: [ 2tier-spine-02:e1-15, 2tier-leaf-04:e1-43 ]
+    - endpoints: [ 2tier-spine-02:e1-16, 2tier-leaf-04:e1-44 ]
+
+    - endpoints: [ 2tier-spine-02:e1-17, 2tier-leaf-05:e1-41 ]
+    - endpoints: [ 2tier-spine-02:e1-18, 2tier-leaf-05:e1-42 ]
+    - endpoints: [ 2tier-spine-02:e1-19, 2tier-leaf-05:e1-43 ]
+    - endpoints: [ 2tier-spine-02:e1-20, 2tier-leaf-05:e1-44 ]
+
+    - endpoints: [ 2tier-spine-02:e1-21, 2tier-leaf-06:e1-41 ]
+    - endpoints: [ 2tier-spine-02:e1-22, 2tier-leaf-06:e1-42 ]
+    - endpoints: [ 2tier-spine-02:e1-23, 2tier-leaf-06:e1-43 ]
+    - endpoints: [ 2tier-spine-02:e1-24, 2tier-leaf-06:e1-44 ]
+
+    - endpoints: [ 2tier-spine-02:e1-25, 2tier-leaf-07:e1-41 ]
+    - endpoints: [ 2tier-spine-02:e1-26, 2tier-leaf-07:e1-42 ]
+    - endpoints: [ 2tier-spine-02:e1-27, 2tier-leaf-07:e1-43 ]
+    - endpoints: [ 2tier-spine-02:e1-28, 2tier-leaf-07:e1-44 ]
+
+    - endpoints: [ 2tier-spine-02:e1-29, 2tier-leaf-08:e1-41 ]
+    - endpoints: [ 2tier-spine-02:e1-30, 2tier-leaf-08:e1-42 ]
+    - endpoints: [ 2tier-spine-02:e1-31, 2tier-leaf-08:e1-43 ]
+    - endpoints: [ 2tier-spine-02:e1-32, 2tier-leaf-08:e1-44 ]
+
+    - endpoints: [ 2tier-spine-02:e1-33, 2tier-leaf-09:e1-41 ]
+    - endpoints: [ 2tier-spine-02:e1-34, 2tier-leaf-09:e1-42 ]
+    - endpoints: [ 2tier-spine-02:e1-35, 2tier-leaf-09:e1-43 ]
+    - endpoints: [ 2tier-spine-02:e1-36, 2tier-leaf-09:e1-44 ]
+
+    - endpoints: [ 2tier-spine-02:e1-37, 2tier-leaf-10:e1-41 ]
+    - endpoints: [ 2tier-spine-02:e1-38, 2tier-leaf-10:e1-42 ]
+    - endpoints: [ 2tier-spine-02:e1-39, 2tier-leaf-10:e1-43 ]
+    - endpoints: [ 2tier-spine-02:e1-40, 2tier-leaf-10:e1-44 ]
+
+    - endpoints: [ 2tier-spine-02:e1-41, 2tier-leaf-11:e1-41 ]
+    - endpoints: [ 2tier-spine-02:e1-42, 2tier-leaf-11:e1-42 ]
+    - endpoints: [ 2tier-spine-02:e1-43, 2tier-leaf-11:e1-43 ]
+    - endpoints: [ 2tier-spine-02:e1-44, 2tier-leaf-11:e1-44 ]
+
+    - endpoints: [ 2tier-spine-02:e1-45, 2tier-leaf-12:e1-41 ]
+    - endpoints: [ 2tier-spine-02:e1-46, 2tier-leaf-12:e1-42 ]
+    - endpoints: [ 2tier-spine-02:e1-47, 2tier-leaf-12:e1-43 ]
+    - endpoints: [ 2tier-spine-02:e1-48, 2tier-leaf-12:e1-44 ]
+
+    - endpoints: [ 2tier-spine-02:e1-49, 2tier-leaf-13:e1-41 ]
+    - endpoints: [ 2tier-spine-02:e1-50, 2tier-leaf-13:e1-42 ]
+    - endpoints: [ 2tier-spine-02:e1-51, 2tier-leaf-13:e1-43 ]
+    - endpoints: [ 2tier-spine-02:e1-52, 2tier-leaf-13:e1-44 ]
+
+    - endpoints: [ 2tier-spine-02:e1-53, 2tier-leaf-14:e1-41 ]
+    - endpoints: [ 2tier-spine-02:e1-54, 2tier-leaf-14:e1-42 ]
+    - endpoints: [ 2tier-spine-02:e1-55, 2tier-leaf-14:e1-43 ]
+    - endpoints: [ 2tier-spine-02:e1-56, 2tier-leaf-14:e1-44 ]
+
+    - endpoints: [ 2tier-spine-02:e1-57, 2tier-leaf-15:e1-41 ]
+    - endpoints: [ 2tier-spine-02:e1-58, 2tier-leaf-15:e1-42 ]
+    - endpoints: [ 2tier-spine-02:e1-59, 2tier-leaf-15:e1-43 ]
+    - endpoints: [ 2tier-spine-02:e1-60, 2tier-leaf-15:e1-44 ]
+
+    - endpoints: [ 2tier-spine-02:e1-61, 2tier-leaf-16:e1-41 ]
+    - endpoints: [ 2tier-spine-02:e1-62, 2tier-leaf-16:e1-42 ]
+    - endpoints: [ 2tier-spine-02:e1-63, 2tier-leaf-16:e1-43 ]
+    - endpoints: [ 2tier-spine-02:e1-64, 2tier-leaf-16:e1-44 ]
+
+    # =================== GPU GROUP1 (VMs 01–04) to STRIPE01 leaves (01–08) ===================
+    # VM01 uses eth1..eth8 into leaf-01..leaf-08 (leaf ports e1-1)
+    - endpoints: [ 2tier-leaf-01:e1-1, 2tier-gpu-svr-01:eth1 ]
+    - endpoints: [ 2tier-leaf-02:e1-1, 2tier-gpu-svr-01:eth2 ]
+    - endpoints: [ 2tier-leaf-03:e1-1, 2tier-gpu-svr-01:eth3 ]
+    - endpoints: [ 2tier-leaf-04:e1-1, 2tier-gpu-svr-01:eth4 ]
+    - endpoints: [ 2tier-leaf-05:e1-1, 2tier-gpu-svr-01:eth5 ]
+    - endpoints: [ 2tier-leaf-06:e1-1, 2tier-gpu-svr-01:eth6 ]
+    - endpoints: [ 2tier-leaf-07:e1-1, 2tier-gpu-svr-01:eth7 ]
+    - endpoints: [ 2tier-leaf-08:e1-1, 2tier-gpu-svr-01:eth8 ]
+
+    # VM02 uses e1-2 row
+    - endpoints: [ 2tier-leaf-01:e1-2, 2tier-gpu-svr-02:eth1 ]
+    - endpoints: [ 2tier-leaf-02:e1-2, 2tier-gpu-svr-02:eth2 ]
+    - endpoints: [ 2tier-leaf-03:e1-2, 2tier-gpu-svr-02:eth3 ]
+    - endpoints: [ 2tier-leaf-04:e1-2, 2tier-gpu-svr-02:eth4 ]
+    - endpoints: [ 2tier-leaf-05:e1-2, 2tier-gpu-svr-02:eth5 ]
+    - endpoints: [ 2tier-leaf-06:e1-2, 2tier-gpu-svr-02:eth6 ]
+    - endpoints: [ 2tier-leaf-07:e1-2, 2tier-gpu-svr-02:eth7 ]
+    - endpoints: [ 2tier-leaf-08:e1-2, 2tier-gpu-svr-02:eth8 ]
+
+    # VM03 uses e1-3 row
+    - endpoints: [ 2tier-leaf-01:e1-3, 2tier-gpu-svr-03:eth1 ]
+    - endpoints: [ 2tier-leaf-02:e1-3, 2tier-gpu-svr-03:eth2 ]
+    - endpoints: [ 2tier-leaf-03:e1-3, 2tier-gpu-svr-03:eth3 ]
+    - endpoints: [ 2tier-leaf-04:e1-3, 2tier-gpu-svr-03:eth4 ]
+    - endpoints: [ 2tier-leaf-05:e1-3, 2tier-gpu-svr-03:eth5 ]
+    - endpoints: [ 2tier-leaf-06:e1-3, 2tier-gpu-svr-03:eth6 ]
+    - endpoints: [ 2tier-leaf-07:e1-3, 2tier-gpu-svr-03:eth7 ]
+    - endpoints: [ 2tier-leaf-08:e1-3, 2tier-gpu-svr-03:eth8 ]
+
+    # VM04 uses e1-4 row
+    - endpoints: [ 2tier-leaf-01:e1-4, 2tier-gpu-svr-04:eth1 ]
+    - endpoints: [ 2tier-leaf-02:e1-4, 2tier-gpu-svr-04:eth2 ]
+    - endpoints: [ 2tier-leaf-03:e1-4, 2tier-gpu-svr-04:eth3 ]
+    - endpoints: [ 2tier-leaf-04:e1-4, 2tier-gpu-svr-04:eth4 ]
+    - endpoints: [ 2tier-leaf-05:e1-4, 2tier-gpu-svr-04:eth5 ]
+    - endpoints: [ 2tier-leaf-06:e1-4, 2tier-gpu-svr-04:eth6 ]
+    - endpoints: [ 2tier-leaf-07:e1-4, 2tier-gpu-svr-04:eth7 ]
+    - endpoints: [ 2tier-leaf-08:e1-4, 2tier-gpu-svr-04:eth8 ]
+
+    # =================== GPU GROUP2 (VMs 05–08) to STRIPE02 leaves (09–16) ===================
+    # VM05 uses e1-1 row
+    - endpoints: [ 2tier-leaf-09:e1-1, 2tier-gpu-svr-05:eth1 ]
+    - endpoints: [ 2tier-leaf-10:e1-1, 2tier-gpu-svr-05:eth2 ]
+    - endpoints: [ 2tier-leaf-11:e1-1, 2tier-gpu-svr-05:eth3 ]
+    - endpoints: [ 2tier-leaf-12:e1-1, 2tier-gpu-svr-05:eth4 ]
+    - endpoints: [ 2tier-leaf-13:e1-1, 2tier-gpu-svr-05:eth5 ]
+    - endpoints: [ 2tier-leaf-14:e1-1, 2tier-gpu-svr-05:eth6 ]
+    - endpoints: [ 2tier-leaf-15:e1-1, 2tier-gpu-svr-05:eth7 ]
+    - endpoints: [ 2tier-leaf-16:e1-1, 2tier-gpu-svr-05:eth8 ]
+
+    # VM06 uses e1-2 row
+    - endpoints: [ 2tier-leaf-09:e1-2, 2tier-gpu-svr-06:eth1 ]
+    - endpoints: [ 2tier-leaf-10:e1-2, 2tier-gpu-svr-06:eth2 ]
+    - endpoints: [ 2tier-leaf-11:e1-2, 2tier-gpu-svr-06:eth3 ]
+    - endpoints: [ 2tier-leaf-12:e1-2, 2tier-gpu-svr-06:eth4 ]
+    - endpoints: [ 2tier-leaf-13:e1-2, 2tier-gpu-svr-06:eth5 ]
+    - endpoints: [ 2tier-leaf-14:e1-2, 2tier-gpu-svr-06:eth6 ]
+    - endpoints: [ 2tier-leaf-15:e1-2, 2tier-gpu-svr-06:eth7 ]
+    - endpoints: [ 2tier-leaf-16:e1-2, 2tier-gpu-svr-06:eth8 ]
+
+    # VM07 uses e1-3 row
+    - endpoints: [ 2tier-leaf-09:e1-3, 2tier-gpu-svr-07:eth1 ]
+    - endpoints: [ 2tier-leaf-10:e1-3, 2tier-gpu-svr-07:eth2 ]
+    - endpoints: [ 2tier-leaf-11:e1-3, 2tier-gpu-svr-07:eth3 ]
+    - endpoints: [ 2tier-leaf-12:e1-3, 2tier-gpu-svr-07:eth4 ]
+    - endpoints: [ 2tier-leaf-13:e1-3, 2tier-gpu-svr-07:eth5 ]
+    - endpoints: [ 2tier-leaf-14:e1-3, 2tier-gpu-svr-07:eth6 ]
+    - endpoints: [ 2tier-leaf-15:e1-3, 2tier-gpu-svr-07:eth7 ]
+    - endpoints: [ 2tier-leaf-16:e1-3, 2tier-gpu-svr-07:eth8 ]
+
+    # VM08 uses e1-4 row
+    - endpoints: [ 2tier-leaf-09:e1-4, 2tier-gpu-svr-08:eth1 ]
+    - endpoints: [ 2tier-leaf-10:e1-4, 2tier-gpu-svr-08:eth2 ]
+    - endpoints: [ 2tier-leaf-11:e1-4, 2tier-gpu-svr-08:eth3 ]
+    - endpoints: [ 2tier-leaf-12:e1-4, 2tier-gpu-svr-08:eth4 ]
+    - endpoints: [ 2tier-leaf-13:e1-4, 2tier-gpu-svr-08:eth5 ]
+    - endpoints: [ 2tier-leaf-14:e1-4, 2tier-gpu-svr-08:eth6 ]
+    - endpoints: [ 2tier-leaf-15:e1-4, 2tier-gpu-svr-08:eth7 ]
+    - endpoints: [ 2tier-leaf-16:e1-4, 2tier-gpu-svr-08:eth8 ]

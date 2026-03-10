@@ -1,0 +1,161 @@
+name: ai-fabric-1tier
+prefix: ""
+
+mgmt:
+  network: mgmt-net
+  ipv4-subnet: 165.165.165.0/24
+
+topology:
+  kinds:
+    nokia_srlinux:
+      image: ghcr.io/nokia/srlinux:latest
+      type: ixr-h4
+    linux:
+      image: ghcr.io/srl-labs/network-multitool
+      type: linux
+      binds:
+        - gpu-base-configs:/config
+
+  nodes:
+
+    # IXR H4 Switches - 8 switches in leaf configuration
+    1tier-leaf-01:
+      kind: nokia_srlinux
+      mgmt-ipv4: 165.165.165.11
+      binds:
+       - ./srl-configs/leaf-01.cfg:/home/admin/leaf-01.cfg
+      labels:
+        topoViewer-role: leaf
+        topoViewer-group: "Data Center Stripe-01"
+        topoViewer-groupLevel: 2
+        graph-posX: "100"
+        graph-posY: "250"
+        graph-group: Data Center Stripe-01
+        graph-level: "2"
+        graph-groupLabelPos: top-center
+      type: ixr-h4
+
+    1tier-leaf-02:
+      kind: nokia_srlinux
+      mgmt-ipv4: 165.165.165.12
+      binds:
+        - ./srl-configs/leaf-02.cfg:/home/admin/leaf-02.cfg
+      labels:
+        topoViewer-role: leaf
+        topoViewer-group: "Data Center Stripe-01"
+        topoViewer-groupLevel: 2
+        graph-posX: "150"
+        graph-posY: "250"
+        graph-group: Data Center Stripe-01
+        graph-level: "2"
+        graph-groupLabelPos: top-center
+      type: ixr-h4
+
+    # GPU Servers
+    1tier-gpu-svr-01:
+      kind: linux
+      mgmt-ipv4: 165.165.165.21
+      group: AI GPU Server01
+      exec:
+        - bash /config/gpu-svr-01.sh
+      labels:
+        topoViewer-role: gpu
+        topoViewer-group: "GPU Servers"
+        topoViewer-groupLevel: 4
+        graph-posX: "-100"
+        graph-posY: "500"
+        graph-group: GPU Servers
+        graph-level: "4"
+        graph-groupLabelPos: bottom-center
+      image: ghcr.io/srl-labs/network-multitool
+    1tier-gpu-svr-02:
+      kind: linux
+      mgmt-ipv4: 165.165.165.22
+      group: AI GPU Server02
+      exec:
+        - bash /config/gpu-svr-02.sh
+      labels:
+        topoViewer-role: gpu
+        topoViewer-group: "GPU Servers"
+        topoViewer-groupLevel: 4
+        graph-posX: "0"
+        graph-posY: "500"
+        graph-group: GPU Servers
+        graph-level: "4"
+        graph-groupLabelPos: bottom-center
+      image: ghcr.io/srl-labs/network-multitool
+    1tier-gpu-svr-03:
+      kind: linux
+      mgmt-ipv4: 165.165.165.23
+      group: AI GPU Server03
+      exec:
+        - bash /config/gpu-svr-03.sh
+      labels:
+        topoViewer-role: gpu
+        topoViewer-group: "GPU Servers"
+        topoViewer-groupLevel: 4
+        graph-posX: "100"
+        graph-posY: "500"
+        graph-group: GPU Servers
+        graph-level: "4"
+        graph-groupLabelPos: bottom-center
+      image: ghcr.io/srl-labs/network-multitool
+    1tier-gpu-svr-04:
+      kind: linux
+      mgmt-ipv4: 165.165.165.24
+      group: AI GPU Server04
+      exec:
+        - bash /config/gpu-svr-04.sh
+      labels:
+        topoViewer-role: gpu
+        topoViewer-group: "GPU Servers"
+        topoViewer-groupLevel: 4
+        graph-posX: "200"
+        graph-posY: "500"
+        graph-group: GPU Servers
+        graph-level: "4"
+        graph-groupLabelPos: bottom-center
+      image: ghcr.io/srl-labs/network-multitool
+
+  links:
+    # Leaf 01 to GPU Servers
+    - endpoints: [ 1tier-leaf-01:e1-1, 1tier-gpu-svr-01:eth1 ]
+    - endpoints: [ 1tier-leaf-01:e1-2, 1tier-gpu-svr-01:eth2 ]
+    - endpoints: [ 1tier-leaf-01:e1-3, 1tier-gpu-svr-01:eth3 ]
+    - endpoints: [ 1tier-leaf-01:e1-4, 1tier-gpu-svr-01:eth4 ]
+
+    - endpoints: [ 1tier-leaf-01:e1-5, 1tier-gpu-svr-02:eth1 ]
+    - endpoints: [ 1tier-leaf-01:e1-6, 1tier-gpu-svr-02:eth2 ]
+    - endpoints: [ 1tier-leaf-01:e1-7, 1tier-gpu-svr-02:eth3 ]
+    - endpoints: [ 1tier-leaf-01:e1-8, 1tier-gpu-svr-02:eth4 ]
+
+    - endpoints: [ 1tier-leaf-01:e1-9, 1tier-gpu-svr-03:eth1 ]
+    - endpoints: [ 1tier-leaf-01:e1-10, 1tier-gpu-svr-03:eth2 ]
+    - endpoints: [ 1tier-leaf-01:e1-11, 1tier-gpu-svr-03:eth3 ]
+    - endpoints: [ 1tier-leaf-01:e1-12, 1tier-gpu-svr-03:eth4 ]
+
+    - endpoints: [ 1tier-leaf-01:e1-13, 1tier-gpu-svr-04:eth1 ]
+    - endpoints: [ 1tier-leaf-01:e1-14, 1tier-gpu-svr-04:eth2 ]
+    - endpoints: [ 1tier-leaf-01:e1-15, 1tier-gpu-svr-04:eth3 ]
+    - endpoints: [ 1tier-leaf-01:e1-16, 1tier-gpu-svr-04:eth4 ]
+
+    # Leaf 02
+    - endpoints: [ 1tier-leaf-02:e1-1, 1tier-gpu-svr-01:eth5 ]
+    - endpoints: [ 1tier-leaf-02:e1-2, 1tier-gpu-svr-01:eth6 ]
+    - endpoints: [ 1tier-leaf-02:e1-3, 1tier-gpu-svr-01:eth7 ]
+    - endpoints: [ 1tier-leaf-02:e1-4, 1tier-gpu-svr-01:eth8 ]
+
+    - endpoints: [ 1tier-leaf-02:e1-5, 1tier-gpu-svr-02:eth5 ]
+    - endpoints: [ 1tier-leaf-02:e1-6, 1tier-gpu-svr-02:eth6 ]
+    - endpoints: [ 1tier-leaf-02:e1-7, 1tier-gpu-svr-02:eth7 ]
+    - endpoints: [ 1tier-leaf-02:e1-8, 1tier-gpu-svr-02:eth8 ]
+
+    - endpoints: [ 1tier-leaf-02:e1-9, 1tier-gpu-svr-03:eth5 ]
+    - endpoints: [ 1tier-leaf-02:e1-10, 1tier-gpu-svr-03:eth6 ]
+    - endpoints: [ 1tier-leaf-02:e1-11, 1tier-gpu-svr-03:eth7 ]
+    - endpoints: [ 1tier-leaf-02:e1-12, 1tier-gpu-svr-03:eth8 ]
+
+    - endpoints: [ 1tier-leaf-02:e1-13, 1tier-gpu-svr-04:eth5 ]
+    - endpoints: [ 1tier-leaf-02:e1-14, 1tier-gpu-svr-04:eth6 ]
+    - endpoints: [ 1tier-leaf-02:e1-15, 1tier-gpu-svr-04:eth7 ]
+    - endpoints: [ 1tier-leaf-02:e1-16, 1tier-gpu-svr-04:eth8 ]

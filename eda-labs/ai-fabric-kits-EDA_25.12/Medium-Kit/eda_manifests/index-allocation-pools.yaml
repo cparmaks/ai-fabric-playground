@@ -1,0 +1,213 @@
+---
+metadata:
+  name:         asn-pool
+  namespace:      clab-ai-fabric-singlestripe
+  labels:       
+    eda.nokia.com/bootstrap: "true"
+apiVersion:  core.eda.nokia.com/v1
+kind: IndexAllocationPool
+spec:
+  segments:
+    - size:   255
+      start:  65500
+
+---
+metadata:
+  name:         demo-subif-pool
+  namespace:      clab-ai-fabric-singlestripe
+  labels:       
+    eda.nokia.com/bootstrap: "true"
+apiVersion:  core.eda.nokia.com/v1
+kind: IndexAllocationPool
+spec:
+  segments:
+    - size:   1000
+      start:  100
+
+---
+metadata:
+  name:         es-index-pool
+  namespace:    clab-ai-fabric-singlestripe
+  labels:       
+    eda.nokia.com/bootstrap: "true"
+apiVersion:  core.eda.nokia.com/v1
+kind: IndexAllocationPool
+spec:
+  segments:
+    - size:   16777216
+      start:  1
+
+---
+metadata:
+  name:         evi-pool
+  namespace:    clab-ai-fabric-singlestripe
+  labels:
+    eda.nokia.com/bootstrap: "true"
+apiVersion:  core.eda.nokia.com/v1
+kind: IndexAllocationPool
+spec:
+  segments:
+    - size:   1000
+      start:  100
+
+---
+metadata:
+  name:         irb-subif-pool
+  namespace:    clab-ai-fabric-singlestripe
+  labels:       
+    eda.nokia.com/bootstrap: "true"
+apiVersion:  core.eda.nokia.com/v1
+kind: IndexAllocationPool
+spec:
+  segments:
+    - size:   1000
+      start:  0
+
+---
+metadata:
+  name:         lag-admin-key-pool
+  namespace:    clab-ai-fabric-singlestripe
+  labels:       
+    eda.nokia.com/bootstrap: "true"
+apiVersion:  core.eda.nokia.com/v1
+kind: IndexAllocationPool
+spec:
+  segments:
+    - size:   65535  
+      start:  1
+
+---
+metadata:
+  name:         lagid-pool
+  namespace:    clab-ai-fabric-singlestripe
+  labels:       
+    eda.nokia.com/bootstrap: "true"
+apiVersion:  core.eda.nokia.com/v1
+kind: IndexAllocationPool
+spec:
+  segments:
+    - size:   255
+      start:  1
+
+---
+# metadata:
+#   name:         leafindex-pool
+#   namespace:    clab-ai-fabric-singlestripe
+#   labels:       
+#     eda.nokia.com/bootstrap: "true"
+# apiVersion:  core.eda.nokia.com/v1
+# kind: IndexAllocationPool
+# spec:
+#   segments:
+#     - size:   1000
+#       start:  1
+
+apiVersion: core.eda.nokia.com/v1
+kind: IndexAllocationPool
+metadata:
+  labels:
+    eda.nokia.com/bootstrap: 'true'
+  name: leafindex-pool
+  namespace: clab-ai-fabric-singlestripe
+  annotations: {}
+spec:
+  segments:
+    - size: 10
+      start: 1
+      allocations:
+        - name: singlestripe-leaf-01
+          value: 1
+        - name: singlestripe-leaf-02
+          value: 2
+        - name: singlestripe-leaf-03
+          value: 3
+        - name: singlestripe-leaf-04
+          value: 4
+        - name: singlestripe-leaf-05
+          value: 5
+        - name: singlestripe-leaf-06
+          value: 6
+        - name: singlestripe-leaf-07
+          value: 7
+        - name: singlestripe-leaf-08
+          value: 8
+      reservations: []
+  publishAllocations: true
+
+---
+metadata:
+  name:         loopback-id-pool
+  namespace:    clab-ai-fabric-singlestripe
+  labels:       
+    eda.nokia.com/bootstrap: "true"
+apiVersion:  core.eda.nokia.com/v1
+kind: IndexAllocationPool
+spec:
+  segments:
+    - size:   255
+      start:  0
+
+---
+metadata:
+  name:         mirror-sdp-pool
+  namespace:    clab-ai-fabric-singlestripe
+  labels:       
+    eda.nokia.com/bootstrap: "true"
+apiVersion:  core.eda.nokia.com/v1
+kind: IndexAllocationPool
+spec:
+  segments:
+    - size:   1000
+      start:  1
+
+---
+metadata:
+  name:         subif-pool
+  namespace:    clab-ai-fabric-singlestripe
+  labels:       
+    eda.nokia.com/bootstrap: "true"
+apiVersion:  core.eda.nokia.com/v1
+kind: IndexAllocationPool
+spec:
+  segments:
+    - size:   1000
+      start:  0
+
+---
+metadata:
+  name:         tunnel-index-pool
+  namespace:    clab-ai-fabric-singlestripe
+  labels:       
+    eda.nokia.com/bootstrap: "true"
+apiVersion:  core.eda.nokia.com/v1
+kind: IndexAllocationPool
+spec:
+  segments:
+    - size:   1000
+      start:  100
+
+---
+metadata:
+  name:         vlan-pool
+  namespace:    clab-ai-fabric-singlestripe
+  labels:       
+    eda.nokia.com/bootstrap: "true"
+apiVersion:  core.eda.nokia.com/v1
+kind: IndexAllocationPool
+spec:
+  segments:
+    - size:   4000
+      start:  100
+
+---
+metadata:
+  name:         vni-pool
+  namespace:    clab-ai-fabric-singlestripe
+  labels:       
+    eda.nokia.com/bootstrap: "true"
+apiVersion:  core.eda.nokia.com/v1
+kind: IndexAllocationPool
+spec:
+  segments:
+    - size:   4000
+      start:  100 

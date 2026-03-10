@@ -1,0 +1,30 @@
+apiVersion: aifabrics.eda.nokia.com/v1alpha1
+kind: Backend
+metadata:
+  name: ai-backend-fabric
+  namespace: clab-ai-fabric-singlestripe
+  labels: {}
+  annotations: {}
+spec:
+  asnPool: asn-pool
+  gpuIsolationGroups:
+    - interfaceSelector:
+        - eda.nokia.com/tenant-id=finance-dept
+      name: finance-dept
+    - interfaceSelector:
+        - eda.nokia.com/tenant-id=product-dev
+      name: product-dev
+  rocev2QoS:
+    ecnMaxDropProbabilityPercent: 100
+    ecnSlopeMaxThresholdPercent: 80
+    ecnSlopeMinThresholdPercent: 5
+    pfcDeadlockDetectionTimer: 750
+    pfcDeadlockRecoveryTimer: 750
+    queueMaximumBurstSize: 52110640
+  stripes:
+    - gpuVlan: 1
+      name: stripe01
+      nodeSelector:
+        - eda.nokia.com/stripe-id=stripe1
+      stripeID: 1
+  systemPoolIPV4: system0

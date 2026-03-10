@@ -1,0 +1,367 @@
+name: ai-fabric-singlestripe
+prefix: ""
+
+mgmt:
+  network: mgmt-net2
+  ipv4-subnet: 172.16.2.0/24
+
+topology:
+  kinds:
+    nokia_srlinux:
+      image: ghcr.io/nokia/srlinux:25.10.1
+      type: ixrh4
+    linux:
+      image: ghcr.io/srl-labs/network-multitool
+      type: linux
+      binds:
+        - gpu-base-configs:/config
+
+  nodes:
+
+    # AI leaf H4 Switches - 8 switches in leaf configuration
+    singlestripe-leaf-01:
+      kind: nokia_srlinux
+      mgmt-ipv4: 172.16.2.11
+      # binds:
+      #   - ./srl-configs/leaf-01.cfg:/home/admin/leaf-01.cfg
+      labels:
+        topoViewer-role: leaf
+        topoViewer-group: "Data Center Stripe01"
+        topoViewer-groupLevel: 2
+        graph-posX: "-100"
+        graph-posY: "258"
+        graph-group: Data Center Stripe01
+        graph-level: "2"
+        graph-groupLabelPos: top-center
+      image: ghcr.io/nokia/srlinux:25.10.1
+      type: ixrh4
+
+    singlestripe-leaf-02:
+      kind: nokia_srlinux
+      mgmt-ipv4: 172.16.2.12
+      # binds:
+      #   - ./srl-configs/leaf-02.cfg:/home/admin/leaf-02.cfg
+      labels:
+        topoViewer-role: leaf
+        topoViewer-group: "Data Center Stripe01"
+        topoViewer-groupLevel: 2
+        graph-posX: "0"
+        graph-posY: "258"
+        graph-group: Data Center Stripe01
+        graph-level: "2"
+        graph-groupLabelPos: top-center
+      image: ghcr.io/nokia/srlinux:25.10.1
+      type: ixrh4
+
+    singlestripe-leaf-03:
+      kind: nokia_srlinux
+      mgmt-ipv4: 172.16.2.13
+      # binds:
+      #   - ./srl-configs/leaf-03.cfg:/home/admin/leaf-03.cfg
+      labels:
+        topoViewer-role: leaf
+        topoViewer-group: "Data Center Stripe01"
+        topoViewer-groupLevel: 2
+        graph-posX: "100"
+        graph-posY: "258"
+        graph-group: Data Center Stripe01
+        graph-level: "2"
+        graph-groupLabelPos: top-center
+      image: ghcr.io/nokia/srlinux:25.10.1
+      type: ixrh4
+
+    singlestripe-leaf-04:
+      kind: nokia_srlinux
+      mgmt-ipv4: 172.16.2.14
+      # binds:
+      #   - ./srl-configs/leaf-04.cfg:/home/admin/leaf-04.cfg
+      labels:
+        topoViewer-role: leaf
+        topoViewer-group: "Data Center Stripe01"
+        topoViewer-groupLevel: 2
+        graph-posX: "200"
+        graph-posY: "258"
+        graph-group: Data Center Stripe01
+        graph-level: "2"
+        graph-groupLabelPos: top-center
+      image: ghcr.io/nokia/srlinux:25.10.1
+      type: ixrh4
+
+    singlestripe-leaf-05:
+      kind: nokia_srlinux
+      mgmt-ipv4: 172.16.2.15
+      # binds:
+      #   - ./srl-configs/leaf-05.cfg:/home/admin/leaf-05.cfg
+      labels:
+        topoViewer-role: leaf
+        topoViewer-group: "Data Center Stripe01"
+        topoViewer-groupLevel: 2
+        graph-posX: "300"
+        graph-posY: "258"
+        graph-group: Data Center Stripe01
+        graph-level: "2"
+        graph-groupLabelPos: top-center
+      image: ghcr.io/nokia/srlinux:25.10.1
+      type: ixrh4
+
+    singlestripe-leaf-06:
+      kind: nokia_srlinux
+      mgmt-ipv4: 172.16.2.16
+      # binds:
+      #   - ./srl-configs/leaf-06.cfg:/home/admin/leaf-06.cfg
+      labels:
+        topoViewer-role: leaf
+        topoViewer-group: "Data Center Stripe01"
+        topoViewer-groupLevel: 2
+        graph-posX: "400"
+        graph-posY: "258"
+        graph-group: Data Center Stripe01
+        graph-level: "2"
+        graph-groupLabelPos: top-center
+      image: ghcr.io/nokia/srlinux:25.10.1
+      type: ixrh4
+
+    singlestripe-leaf-07:
+      kind: nokia_srlinux
+      mgmt-ipv4: 172.16.2.17
+      # binds:
+      #   - ./srl-configs/leaf-07.cfg:/home/admin/leaf-07.cfg
+      labels:
+        topoViewer-role: leaf
+        topoViewer-group: "Data Center Stripe01"
+        topoViewer-groupLevel: 2
+        graph-posX: "500"
+        graph-posY: "258"
+        graph-group: Data Center Stripe01
+        graph-level: "2"
+        graph-groupLabelPos: top-center
+      image: ghcr.io/nokia/srlinux:25.10.1
+      type: ixrh4
+
+    singlestripe-leaf-08:
+      kind: nokia_srlinux
+      mgmt-ipv4: 172.16.2.18
+      # binds:
+      #   - ./srl-configs/leaf-08.cfg:/home/admin/leaf-08.cfg
+      labels:
+        topoViewer-role: leaf
+        topoViewer-group: "Data Center Stripe01"
+        topoViewer-groupLevel: 2
+        graph-posX: "600"
+        graph-posY: "258"
+        graph-group: Data Center Stripe01
+        graph-level: "2"
+        graph-groupLabelPos: top-center
+      image: ghcr.io/nokia/srlinux:25.10.1
+      type: ixrh4
+
+    # GPU Servers
+    singlestripe-gpu-svr-01:
+      kind: linux
+      mgmt-ipv4: 172.16.2.21
+      group: AI GPU Server01
+      exec:
+        - bash /config/gpu-01.sh
+      labels:
+        topoViewer-role: gpu
+        topoViewer-group: "GPU Servers"
+        topoViewer-groupLevel: 4
+        graph-posX: "-100"
+        graph-posY: "500"
+        graph-group: GPU Servers
+        graph-level: "4"
+        graph-groupLabelPos: bottom-center
+      image: ghcr.io/srl-labs/network-multitool
+    singlestripe-gpu-svr-02:
+      kind: linux
+      mgmt-ipv4: 172.16.2.22
+      group: AI GPU Server02
+      exec:
+        - bash /config/gpu-02.sh
+      labels:
+        topoViewer-role: gpu
+        topoViewer-group: "GPU Servers"
+        topoViewer-groupLevel: 4
+        graph-posX: "0"
+        graph-posY: "500"
+        graph-group: GPU Servers
+        graph-level: "4"
+        graph-groupLabelPos: bottom-center
+      image: ghcr.io/srl-labs/network-multitool
+    singlestripe-gpu-svr-03:
+      kind: linux
+      mgmt-ipv4: 172.16.2.23
+      group: AI GPU Server03
+      exec:
+        - bash /config/gpu-03.sh
+      labels:
+        topoViewer-role: gpu
+        topoViewer-group: "GPU Servers"
+        topoViewer-groupLevel: 4
+        graph-posX: "100"
+        graph-posY: "500"
+        graph-group: GPU Servers
+        graph-level: "4"
+        graph-groupLabelPos: bottom-center
+      image: ghcr.io/srl-labs/network-multitool
+    singlestripe-gpu-svr-04:
+      kind: linux
+      mgmt-ipv4: 172.16.2.24
+      group: AI GPU Server04
+      exec:
+        - bash /config/gpu-04.sh
+      labels:
+        topoViewer-role: gpu
+        topoViewer-group: "GPU Servers"
+        topoViewer-groupLevel: 4
+        graph-posX: "200"
+        graph-posY: "500"
+        graph-group: GPU Servers
+        graph-level: "4"
+        graph-groupLabelPos: bottom-center
+      image: ghcr.io/srl-labs/network-multitool
+    singlestripe-gpu-svr-05:
+      kind: linux
+      mgmt-ipv4: 172.16.2.25
+      exec:
+        - bash /config/gpu-05.sh
+      group: AI GPU Server05
+      labels:
+        topoViewer-role: gpu
+        topoViewer-group: "GPU Servers"
+        topoViewer-groupLevel: 4
+        graph-posX: "300"
+        graph-posY: "500"
+        graph-group: GPU Servers
+        graph-level: "4"
+        graph-groupLabelPos: bottom-center
+      image: ghcr.io/srl-labs/network-multitool
+    singlestripe-gpu-svr-06:
+      kind: linux
+      mgmt-ipv4: 172.16.2.26
+      group: AI GPU Server06
+      exec:
+        - bash /config/gpu-06.sh
+      labels:
+        topoViewer-role: gpu
+        topoViewer-group: "GPU Servers"
+        topoViewer-groupLevel: 4
+        graph-posX: "400"
+        graph-posY: "500"
+        graph-group: GPU Servers
+        graph-level: "4"
+        graph-groupLabelPos: bottom-center
+      image: ghcr.io/srl-labs/network-multitool
+    singlestripe-gpu-svr-07:
+      kind: linux
+      mgmt-ipv4: 172.16.2.27
+      group: AI GPU Server07
+      exec:
+        - bash /config/gpu-07.sh
+      labels:
+        topoViewer-role: gpu
+        topoViewer-group: "GPU Servers"
+        topoViewer-groupLevel: 4
+        graph-posX: "500"
+        graph-posY: "500"
+        graph-group: GPU Servers
+        graph-level: "4"
+        graph-groupLabelPos: bottom-center
+      image: ghcr.io/srl-labs/network-multitool
+    singlestripe-gpu-svr-08:
+      kind: linux
+      mgmt-ipv4: 172.16.2.28
+      group: AI GPU Server08
+      exec:
+        - bash /config/gpu-08.sh
+      labels:
+        topoViewer-role: gpu
+        topoViewer-group: "GPU Servers"
+        topoViewer-groupLevel: 4
+        graph-posX: "600"
+        graph-posY: "500"
+        graph-group: GPU Servers
+        graph-level: "4"
+        graph-groupLabelPos: bottom-center
+      image: ghcr.io/srl-labs/network-multitool
+
+  links:
+    # leaf 01
+    - endpoints: [ singlestripe-leaf-01:e1-1, singlestripe-gpu-svr-01:eth1 ]
+    - endpoints: [ singlestripe-leaf-01:e1-2, singlestripe-gpu-svr-02:eth1 ]
+    - endpoints: [ singlestripe-leaf-01:e1-3, singlestripe-gpu-svr-03:eth1 ]
+    - endpoints: [ singlestripe-leaf-01:e1-4, singlestripe-gpu-svr-04:eth1 ]
+    - endpoints: [ singlestripe-leaf-01:e1-5, singlestripe-gpu-svr-05:eth1 ]
+    - endpoints: [ singlestripe-leaf-01:e1-6, singlestripe-gpu-svr-06:eth1 ]
+    - endpoints: [ singlestripe-leaf-01:e1-7, singlestripe-gpu-svr-07:eth1 ]
+    - endpoints: [ singlestripe-leaf-01:e1-8, singlestripe-gpu-svr-08:eth1 ]
+
+    # leaf 02
+    - endpoints: [ singlestripe-leaf-02:e1-1, singlestripe-gpu-svr-01:eth2 ]
+    - endpoints: [ singlestripe-leaf-02:e1-2, singlestripe-gpu-svr-02:eth2 ]
+    - endpoints: [ singlestripe-leaf-02:e1-3, singlestripe-gpu-svr-03:eth2 ]
+    - endpoints: [ singlestripe-leaf-02:e1-4, singlestripe-gpu-svr-04:eth2 ]
+    - endpoints: [ singlestripe-leaf-02:e1-5, singlestripe-gpu-svr-05:eth2 ]
+    - endpoints: [ singlestripe-leaf-02:e1-6, singlestripe-gpu-svr-06:eth2 ]
+    - endpoints: [ singlestripe-leaf-02:e1-7, singlestripe-gpu-svr-07:eth2 ]
+    - endpoints: [ singlestripe-leaf-02:e1-8, singlestripe-gpu-svr-08:eth2 ]
+
+    # leaf 03
+    - endpoints: [ singlestripe-leaf-03:e1-1, singlestripe-gpu-svr-01:eth3 ]
+    - endpoints: [ singlestripe-leaf-03:e1-2, singlestripe-gpu-svr-02:eth3 ]
+    - endpoints: [ singlestripe-leaf-03:e1-3, singlestripe-gpu-svr-03:eth3 ]
+    - endpoints: [ singlestripe-leaf-03:e1-4, singlestripe-gpu-svr-04:eth3 ]
+    - endpoints: [ singlestripe-leaf-03:e1-5, singlestripe-gpu-svr-05:eth3 ]
+    - endpoints: [ singlestripe-leaf-03:e1-6, singlestripe-gpu-svr-06:eth3 ]
+    - endpoints: [ singlestripe-leaf-03:e1-7, singlestripe-gpu-svr-07:eth3 ]
+    - endpoints: [ singlestripe-leaf-03:e1-8, singlestripe-gpu-svr-08:eth3 ]
+
+    # leaf 04
+    - endpoints: [ singlestripe-leaf-04:e1-1, singlestripe-gpu-svr-01:eth4 ]
+    - endpoints: [ singlestripe-leaf-04:e1-2, singlestripe-gpu-svr-02:eth4 ]
+    - endpoints: [ singlestripe-leaf-04:e1-3, singlestripe-gpu-svr-03:eth4 ]
+    - endpoints: [ singlestripe-leaf-04:e1-4, singlestripe-gpu-svr-04:eth4 ]
+    - endpoints: [ singlestripe-leaf-04:e1-5, singlestripe-gpu-svr-05:eth4 ]
+    - endpoints: [ singlestripe-leaf-04:e1-6, singlestripe-gpu-svr-06:eth4 ]
+    - endpoints: [ singlestripe-leaf-04:e1-7, singlestripe-gpu-svr-07:eth4 ]
+    - endpoints: [ singlestripe-leaf-04:e1-8, singlestripe-gpu-svr-08:eth4 ]
+
+    # leaf 05
+    - endpoints: [ singlestripe-leaf-05:e1-1, singlestripe-gpu-svr-01:eth5 ]
+    - endpoints: [ singlestripe-leaf-05:e1-2, singlestripe-gpu-svr-02:eth5 ]
+    - endpoints: [ singlestripe-leaf-05:e1-3, singlestripe-gpu-svr-03:eth5 ]
+    - endpoints: [ singlestripe-leaf-05:e1-4, singlestripe-gpu-svr-04:eth5 ]
+    - endpoints: [ singlestripe-leaf-05:e1-5, singlestripe-gpu-svr-05:eth5 ]
+    - endpoints: [ singlestripe-leaf-05:e1-6, singlestripe-gpu-svr-06:eth5 ]
+    - endpoints: [ singlestripe-leaf-05:e1-7, singlestripe-gpu-svr-07:eth5 ]
+    - endpoints: [ singlestripe-leaf-05:e1-8, singlestripe-gpu-svr-08:eth5 ]
+
+    # leaf 06
+    - endpoints: [ singlestripe-leaf-06:e1-1, singlestripe-gpu-svr-01:eth6 ]
+    - endpoints: [ singlestripe-leaf-06:e1-2, singlestripe-gpu-svr-02:eth6 ]
+    - endpoints: [ singlestripe-leaf-06:e1-3, singlestripe-gpu-svr-03:eth6 ]
+    - endpoints: [ singlestripe-leaf-06:e1-4, singlestripe-gpu-svr-04:eth6 ]
+    - endpoints: [ singlestripe-leaf-06:e1-5, singlestripe-gpu-svr-05:eth6 ]
+    - endpoints: [ singlestripe-leaf-06:e1-6, singlestripe-gpu-svr-06:eth6 ]
+    - endpoints: [ singlestripe-leaf-06:e1-7, singlestripe-gpu-svr-07:eth6 ]
+    - endpoints: [ singlestripe-leaf-06:e1-8, singlestripe-gpu-svr-08:eth6 ]
+
+    # leaf 07
+    - endpoints: [ singlestripe-leaf-07:e1-1, singlestripe-gpu-svr-01:eth7 ]
+    - endpoints: [ singlestripe-leaf-07:e1-2, singlestripe-gpu-svr-02:eth7 ]
+    - endpoints: [ singlestripe-leaf-07:e1-3, singlestripe-gpu-svr-03:eth7 ]
+    - endpoints: [ singlestripe-leaf-07:e1-4, singlestripe-gpu-svr-04:eth7 ]
+    - endpoints: [ singlestripe-leaf-07:e1-5, singlestripe-gpu-svr-05:eth7 ]
+    - endpoints: [ singlestripe-leaf-07:e1-6, singlestripe-gpu-svr-06:eth7 ]
+    - endpoints: [ singlestripe-leaf-07:e1-7, singlestripe-gpu-svr-07:eth7 ]
+    - endpoints: [ singlestripe-leaf-07:e1-8, singlestripe-gpu-svr-08:eth7 ]
+
+    # leaf 08
+    - endpoints: [ singlestripe-leaf-08:e1-1, singlestripe-gpu-svr-01:eth8 ]
+    - endpoints: [ singlestripe-leaf-08:e1-2, singlestripe-gpu-svr-02:eth8 ]
+    - endpoints: [ singlestripe-leaf-08:e1-3, singlestripe-gpu-svr-03:eth8 ]
+    - endpoints: [ singlestripe-leaf-08:e1-4, singlestripe-gpu-svr-04:eth8 ]
+    - endpoints: [ singlestripe-leaf-08:e1-5, singlestripe-gpu-svr-05:eth8 ]
+    - endpoints: [ singlestripe-leaf-08:e1-6, singlestripe-gpu-svr-06:eth8 ]
+    - endpoints: [ singlestripe-leaf-08:e1-7, singlestripe-gpu-svr-07:eth8 ]
+    - endpoints: [ singlestripe-leaf-08:e1-8, singlestripe-gpu-svr-08:eth8 ]
